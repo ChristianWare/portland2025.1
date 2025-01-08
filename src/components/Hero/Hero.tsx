@@ -1,13 +1,25 @@
-import LayoutWrapper from "../LayoutWrapper";
+"use client";
+
+import ContentPadding from "../ContentPadding/ContentPadding";
+// import dynamic from "next/dynamic";
+
+import Scene from "../Scene/Scene";
 import styles from "./Hero.module.css";
+
+// const Scene = dynamic(() => import("../Scene/Scene"), {
+//   ssr: false,
+// });
 
 export default function Hero() {
   return (
     <section className={styles.container}>
-      <LayoutWrapper>
+      {/* <div className={styles.sceneContainer}>
+        <Scene />
+      </div> */}
+      <ContentPadding>
         <div className={styles.content}>
           <h1 className={styles.heading}>
-            Attendance done right. <br /> Wellbeing done better.
+            Hello World. <br /> My name is Christian.
           </h1>
           <p className={styles.copy}>
             Functional is a lightweight app for small teams to streamline
@@ -15,8 +27,13 @@ export default function Hero() {
             <span className={styles.span}> employee wellbeing,</span> all inside
             the team chat.
           </p>
+          <div className={styles.box}>
+            <div className={styles.sceneContainer}>
+              <Scene />
+            </div>
+          </div>
         </div>
-      </LayoutWrapper>
+      </ContentPadding>
     </section>
   );
 }

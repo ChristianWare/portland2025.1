@@ -127,12 +127,17 @@ textarea:focus {
   }
 
   h1 {
-    letter-spacing: -2px;
+    font-size: 4.8rem;
+  }
+
+  h2 {
+    font-size: 4rem;
   }
 
   p {
     font-size: 113.7%;
   }
+
 }
 
 @media screen and (max-width: 568px) {
@@ -141,47 +146,14 @@ textarea:focus {
   }
 
   h1 {
-    font-size: 15vw;
-  }
-  p {
-    hyphens: auto;
-  }
-
-  /* h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    text-transform: none;
-  } */
-
-  /* h1,
-  .span1 {
     font-size: 4rem;
-    letter-spacing: -0.02em;
-  } */
-
-  /* h2,
-  .h2v2,
-  .h2v3 {
-    font-size: 3rem;
   }
 
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: 2rem;
-  } */
+  h2 {
+    font-size: 2.4rem;
+  }
 
-  /* h2 {
-    font-size: 5.5rem;
-  } */
-  /* 
-  p,
-  label {
-    font-size: 110%;
-  } */
+
 }
 
 /* .toastFont {

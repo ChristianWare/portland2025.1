@@ -5,7 +5,7 @@ import "./globals.css";
 
 const InterTight = Inter_Tight({
   variable: "--InterTight",
-  weight: ["500", "600", "700"],
+  weight: ["500", "600", "700", "800", "900"],
   subsets: ["latin"],
 });
 

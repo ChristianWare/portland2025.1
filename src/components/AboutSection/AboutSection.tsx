@@ -2,6 +2,7 @@ import LayoutWrapper from "../LayoutWrapper";
 import styles from "./AboutSection.module.css";
 import Terminal from "../../../public/icons/terminal.svg";
 import Button from "../Button/Button";
+import Process from "../Process/Process";
 
 const AboutSection = () => {
   return (
@@ -52,6 +53,7 @@ const AboutSection = () => {
             </div>
           </div>
         </div>
+        <Process />
         <div className={styles.btnContainer}>
           <Button text='Learn More About Me' btnType='purple' href='/' />
         </div>

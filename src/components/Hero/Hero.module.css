@@ -71,10 +71,14 @@
   z-index: -1;
 }
 
-/* @media screen and (max-width: 768px) {
-  .container {
-    height: 100%;
+@media screen and (max-width: 768px) {
+  .btnContainer {
+    width: 50%;
   }
+}
 
-  
-} */
+@media screen and (max-width: 568px) {
+  .btnContainer {
+    width: 100%;
+  }
+}

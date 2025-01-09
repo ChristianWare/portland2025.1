@@ -4,7 +4,6 @@ import Chuxly from "../../../public/images/chuxly.jpg";
 import Honey from "../../../public/images/honey.png";
 import Taco from "../../../public/images/taco.webp";
 import Button from "../Button/Button";
-// import Link from "next/link";
 
 const data = [
   {

@@ -61,6 +61,9 @@ const ProjectsSection = () => {
           </div>
         </div>
         <OtherProjects />
+        <div className={styles.btnContainerii}>
+          <Button text='All Projects' btnType='purple' href='/' />
+        </div>
       </LayoutWrapper>
     </section>
   );

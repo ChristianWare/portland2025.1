@@ -53,7 +53,7 @@ const AboutSection = () => {
           </div>
         </div>
         <div className={styles.btnContainer}>
-          <Button text='Learn More About Me' btnType='secondary' href='/' />
+          <Button text='Learn More About Me' btnType='purple' href='/' />
         </div>
       </LayoutWrapper>
     </section>

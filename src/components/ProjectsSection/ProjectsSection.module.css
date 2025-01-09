@@ -59,6 +59,17 @@
   padding: 1rem;
 }
 
+.btnContainerii {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  width: 30%;
+}
+
 @media screen and (max-width: 1068px) {
   .container {
     padding: 0rem 7rem;
@@ -99,5 +110,12 @@
 
   .bottomLeft {
     height: 300px;
+  }
+
+  .btnContainerii {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    margin-top: 3rem;
   }
 }

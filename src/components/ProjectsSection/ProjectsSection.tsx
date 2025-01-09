@@ -27,7 +27,7 @@ const data = [
     description: "Plausible",
   },
   {
-    id: 4,
+    id: 5,
     title: "Hosting",
     description: "Vercel",
   },

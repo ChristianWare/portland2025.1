@@ -11,7 +11,7 @@
 .middle {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border-bottom: 1px dashed var(--lightGray);
+  border-bottom: 1px solid var(--lightGray);
 }
 
 .heading {
@@ -54,7 +54,7 @@
   gap: 10rem;
   padding: 2rem;
   position: relative;
-  border-right: 1px solid var(--lightGray);
+  border-right: 1px dashed var(--lightGray);
   background-color: var(--tan);
 }
 

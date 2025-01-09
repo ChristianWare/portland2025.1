@@ -24,10 +24,10 @@
 }
 
 .name {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: var(--blue);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   text-align: center;
   cursor: pointer;
   transition: all 0.2s ease-in;

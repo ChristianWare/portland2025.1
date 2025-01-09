@@ -1,16 +1,33 @@
 .container {
-  background-color: var(--blue);
+  background-color: var(--gray2);
   padding-top: 15rem;
 }
 
 .heading {
-  color: var(--white);
+  /* color: var(--white); */
   margin-bottom: 2rem;
+}
+
+.bBottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 2rem;
 }
 
 @media screen and (max-width: 1068px) {
   .heading {
     text-align: center;
     width: 100%;
+  }
+
+  .bBottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 668px) {
+  .bBottom {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

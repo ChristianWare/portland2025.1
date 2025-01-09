@@ -2,6 +2,7 @@ import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import styles from "./ProjectsSection.module.css";
 import Button from "../Button/Button";
+import OtherProjects from "../OtherProjects/OtherProjects";
 
 const data = [
   {
@@ -59,6 +60,7 @@ const ProjectsSection = () => {
             </div>
           </div>
         </div>
+        <OtherProjects />
       </LayoutWrapper>
     </section>
   );

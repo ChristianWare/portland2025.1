@@ -31,6 +31,16 @@
   color: var(--blue);
 }
 
+.primaryii {
+  border: 2px dashed var(--blue);
+  background-color: transparent;
+}
+
+.primaryii:hover {
+  background-color: var(--white);
+  color: var(--blue);
+}
+
 .secondary {
   background-color: var(--white);
   color: var(--blue);

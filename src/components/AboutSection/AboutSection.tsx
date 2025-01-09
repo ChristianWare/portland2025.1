@@ -1,10 +1,11 @@
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./AboutSection.module.css";
 import Terminal from "../../../public/icons/terminal.svg";
+import Button from "../Button/Button";
 
 const AboutSection = () => {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id='about'>
       <LayoutWrapper>
         <div className={styles.top}>
           <span className={styles.span}>About Me</span>
@@ -50,6 +51,9 @@ const AboutSection = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className={styles.btnContainer}>
+          <Button text='Learn More About Me' btnType='secondary' href='/' />
         </div>
       </LayoutWrapper>
     </section>

@@ -23,84 +23,21 @@
 .primary {
   color: var(--white);
   background-color: var(--blue);
-  border: 1px solid var(--lightBlack);
+  border: 2px dashed var(--blue);
 }
 
-.primaryii {
-  color: var(--purple);
-  border: 1px solid var(--purple);
-}
-
-.primaryii:hover {
-  background-color: var(--purple);
-  color: var(--white);
-}
-
-.primaryiii {
-  color: var(--black);
-  background-color: var(--tan2);
-  /* border: 1px solid var(--lightBlack); */
-}
-
-.primaryNav {
-  color: var(--tan);
-  background-color: var(--purple);
-  /* border: 1px solid var(--lightBlack); */
-  padding: 7px 15px;
-  font-size: 1.4rem;
-}
-
-.secondary,
-.secondaryNav {
-  background-color: var(--purple);
-  color: var(--tan);
-}
-
-.secondaryNav {
-  padding: 5px 30px;
-  font-size: 1.6rem;
-  font-weight: 500;
-  user-select: none;
-  gap: 2rem;
-  width: fit-content;
-  transition: background-color 0.1s ease-in, color 0.1s ease-in;
-  line-height: 2rem;
-  text-align: center;
-  text-transform: capitalize;
-  font-family: var(--suisseReg);
-  border: 1px solid var(--purple);
-}
-
-.secondaryNav:hover {
-  background-color: transparent;
-  color: var(--purple);
-}
-
-.secondary:hover,
-.primaryNav:hover {
-  background-color: var(--purple2);
-  color: var(--tan);
-}
-
-.secondaryii {
-  color: #729187;
-  border: 1px solid #729187;
-}
-
-/* .secondaryNav {
-  color: var(--green);
+.primary:hover {
   background-color: var(--white);
-  border: 1px solid var(--green);
-  padding: 5px 30px;
-} */
-
-.tertiary {
-  color: var(--tan);
-  background-color: var(--green);
-  border: 1px solid var(--tan);
+  color: var(--blue);
 }
 
-.arrow {
-  width: 20px;
-  height: 20px;
+.secondary {
+  background-color: var(--white);
+  color: var(--blue);
+  border: 2px dashed var(--white);
+}
+
+.secondary:hover {
+  background-color: var(--blue);
+  color: var(--white);
 }

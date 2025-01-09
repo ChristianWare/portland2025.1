@@ -1,0 +1,21 @@
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
+.span {
+  letter-spacing: 7px;
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.purple {
+  color: var(--purple);
+}
+
+.black {
+  color: var(--black);
+}

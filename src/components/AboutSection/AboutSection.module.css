@@ -122,8 +122,9 @@
 @media screen and (max-width: 1068px) {
   .content {
     padding: 3rem;
+    padding-top: 2rem;
     grid-template-columns: repeat(1, 1fr);
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
   }
 
   .heading {
@@ -139,6 +140,7 @@
 @media screen and (max-width: 768px) {
   .content {
     padding: 0rem;
+    padding-top: 2rem;
   }
 }
 

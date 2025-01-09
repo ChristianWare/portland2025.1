@@ -3,20 +3,26 @@ import styles from "./AboutSection.module.css";
 import Terminal from "../../../public/icons/terminal.svg";
 import Button from "../Button/Button";
 import Process from "../Process/Process";
+import SectionHeading from "../SectionHeading/SectionHeading";
 
 const AboutSection = () => {
   return (
     <section className={styles.container} id='about'>
       <LayoutWrapper>
         <div className={styles.top}>
-          <span className={styles.span}>About Me</span>
+          <SectionHeading
+            title='About Me'
+            color='purple'
+            dotColor='purpleDot'
+          />
+          <h2 className={styles.heading}>
+            I am skilled in both front-end and back-end development. I have the
+            ability to create comprehensive web applications from start to
+            finish. My tools of choice are Next.js/React.
+          </h2>
         </div>
         <div className={styles.content}>
-          <div className={styles.left}>
-            <h2 className={styles.heading}>
-              I am skilled in both front-end and back-end development.
-            </h2>
-          </div>
+          <div className={styles.left}></div>
           <div className={styles.right}>
             <div className={styles.rightSideTop}>
               <h3 className={styles.headingii}>

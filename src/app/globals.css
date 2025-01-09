@@ -7,6 +7,7 @@
   --purple2: #7f62f3;
   --gray: #787a7d;
   --lightGray: #aab9c5;
+  --lightGray2: #6c6c83;
 }
 
 * {
@@ -60,7 +61,7 @@ h1 {
 }
 
 h2 {
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-weight: 500;
   line-height: 1.2em;
 }
@@ -72,9 +73,7 @@ h3 {
 }
 
 h4 {
-  font-size: 2.1rem;
-  font-weight: 500;
-  letter-spacing: -0.04em;
+  font-size: 2rem;
 }
 
 h5 {

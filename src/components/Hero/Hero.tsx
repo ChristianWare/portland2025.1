@@ -30,13 +30,14 @@ export default function Hero() {
             the team chat.
           </p>
           <div className={styles.btnContainer}>
+            <Button text='Projects' btnType='transparent' href='/' />
             <Button text='Projects' btnType='primaryii' href='/' />
           </div>
-          <div className={styles.box}>
+          {/* <div className={styles.box}>
             <div className={styles.sceneContainer}>
               <Scene />
             </div>
-          </div>
+          </div> */}
         </div>
       </LayoutWrapper>
     </section>

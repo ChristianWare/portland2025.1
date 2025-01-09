@@ -45,7 +45,7 @@ const OtherProjects = () => {
                   className={styles.img}
                 />
               </div>
-              <h3 className={styles.title}>{x.title}</h3>
+              <h4 className={styles.title}>{x.title}</h4>
               <p className={styles.description}>{x.desc}</p>
               <div className={styles.linksBox}>
                 <div className={styles.link1}>Live Site</div>

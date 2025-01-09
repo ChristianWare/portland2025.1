@@ -1,4 +1,4 @@
-import SectionHeading from "../SectionHeading/SectionHeading";
+// import SectionHeading from "../SectionHeading/SectionHeading";
 import styles from "./Process.module.css";
 
 const data = [
@@ -27,17 +27,17 @@ const data = [
 const Process = () => {
   return (
     <section className={styles.container}>
-      <SectionHeading title='My Process' color='purple' />
+      {/* <SectionHeading title='My Process' color='purple' /> */}
       <div className={styles.box}>
         <div className={styles.middle}>
           <div className={styles.middleLeft}>
             <span className={styles.sectionTitle}>How I work</span>
           </div>
-          <h2 className={styles.heading}>
+          <h4 className={styles.heading}>
             By taking a holistic approach to web development, I provide clients
             with personalized solutions, ongoing support, and actionable
             insights to ensure their success extends far beyond the launch.
-          </h2>
+          </h4>
         </div>
         <div className={styles.bottom}>
           {data.map((x) => (

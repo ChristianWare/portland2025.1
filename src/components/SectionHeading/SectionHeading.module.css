@@ -1,19 +1,34 @@
 .top {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 10rem;
+  justify-content: flex-start;
+  gap: 2rem;
+  height: fit-content;
+  padding-top: 1rem;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
 }
 
 .span {
-  letter-spacing: 7px;
   text-align: center;
-  font-size: 1.5rem;
-  text-transform: uppercase;
+  font-size: 1.4rem;
+  text-transform: lowercase;
 }
 
 .purple {
   color: var(--purple);
+}
+
+.purpleDot {
+  background-color: var(--purple);
+}
+
+.blackeDot {
+  background-color: var(--black);
 }
 
 .black {

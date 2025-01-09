@@ -14,10 +14,6 @@ const AboutSection = () => {
             <h2 className={styles.heading}>
               I am skilled in both front-end and back-end development.
             </h2>
-            {/* <p className={styles.copy}>
-              I have the ability to create comprehensive web applications from
-              start to finish. My tools of choice are Next.js/React.
-            </p> */}
           </div>
           <div className={styles.right}>
             <div className={styles.rightSideTop}>
@@ -40,9 +36,18 @@ const AboutSection = () => {
               </div>
             </div>
             <div className={styles.bottom}>
-              <div className={styles.b1}>hey</div>
-              <div className={styles.b2}>hey</div>
-              <div className={styles.b3}>hey</div>
+              <div className={styles.b1}>
+                <h4 className={styles.headingiii}>Years Coding:</h4>
+                <p className={styles.copyiii}>10 +</p>
+              </div>
+              <div className={styles.b2}>
+                <h4 className={styles.headingiii}>Github Repo&apos;s:</h4>
+                <p className={styles.copyiii}>≥ 140</p>
+              </div>
+              <div className={styles.b3}>
+                <h4 className={styles.headingiii}>Favorite Movie:</h4>
+                <p className={styles.copyiii}>Inception</p>
+              </div>
             </div>
           </div>
         </div>

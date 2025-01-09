@@ -1,7 +1,8 @@
 "use client";
 
-import Button from "../Button/Button";
-import ContentPadding from "../ContentPadding/ContentPadding";
+// import Button from "../Button/Button";
+// import ContentPadding from "../ContentPadding/ContentPadding";
+import LayoutWrapper from "../LayoutWrapper";
 // import dynamic from "next/dynamic";
 
 import Scene from "../Scene/Scene";
@@ -17,7 +18,7 @@ export default function Hero() {
       {/* <div className={styles.sceneContainer}>
         <Scene />
       </div> */}
-      <ContentPadding>
+      <LayoutWrapper>
         <div className={styles.content}>
           <h1 className={styles.heading}>
             Hello World. <br /> My name is Christian.
@@ -28,16 +29,16 @@ export default function Hero() {
             <span className={styles.span}> employee wellbeing,</span> all inside
             the team chat.
           </p>
-          <div className={styles.btnContainer}>
+          {/* <div className={styles.btnContainer}>
             <Button text='Projects' btnType='primary' href='/' />
-          </div>
-          <div className={styles.box}>
+          </div> */}
+          {/* <div className={styles.box}>
             <div className={styles.sceneContainer}>
               <Scene />
             </div>
-          </div>
+          </div> */}
         </div>
-      </ContentPadding>
+      </LayoutWrapper>
     </section>
   );
 }

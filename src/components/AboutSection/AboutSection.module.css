@@ -43,7 +43,7 @@
 }
 
 .headingii {
-  color: var(--lightGray);
+  color: var(--white);
 }
 
 .middle {
@@ -95,10 +95,21 @@
   color: var(--lightGray);
   height: 100%;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 .b1,
 .b2 {
   border-right: 1px dashed var(--lightGray);
+}
+
+.headingiii {
+  text-align: center;
+  color: var(--white);
+  font-weight: 600;
 }
 
 @media screen and (max-width: 1068px) {
@@ -107,11 +118,11 @@
     grid-template-columns: repeat(1, 1fr);
     margin-top: 3rem;
   }
-  
+
   .heading {
     text-align: center;
   }
-  
+
   .heading,
   .copyii {
     width: 100%;
@@ -122,6 +133,4 @@
   .content {
     padding: 0rem;
   }
-  
 }
-

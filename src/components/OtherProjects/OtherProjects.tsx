@@ -32,7 +32,7 @@ const OtherProjects = () => {
     <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.top}>
-          <h2 className={styles.heading}>Other Projects</h2>
+          <h3 className={styles.heading}>Other Projects</h3>
         </div>
         <div className={styles.bottom}>
           {data.map((x) => (

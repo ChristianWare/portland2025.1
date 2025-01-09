@@ -1,0 +1,130 @@
+.container {
+  background-color: var(--white);
+  position: relative;
+  width: 100%;
+  padding-top: 10rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+}
+
+.left {
+  border-right: 1px solid var(--blueBorder);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--blue);
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--lightGray);
+  position: relative;
+  width: 100%;
+  user-select: none;
+}
+
+.name:hover {
+  background-color: var(--blue);
+  color: var(--purple);
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 200px;
+  background-color: var(--blue);
+  border-radius: 15px;
+  position: relative;
+  width: 100%;
+}
+
+.name::after,
+.right::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  opacity: 0.05;
+  pointer-events: none;
+  background: url(../../../public/noise.gif);
+}
+
+.icon {
+  width: 200px;
+  height: 200px;
+  color: var(--purple);
+  transition: all 0.3s ease-in;
+}
+
+.icon2 {
+  width: 30px;
+  height: 30px;
+  color: var(--purple);
+  transition: all 0.3s ease-in;
+  margin-right: 1.5rem;
+}
+
+.iconSmall {
+  width: 75px;
+  height: 75px;
+  color: var(--purple);
+  transition: all 0.3s ease-in;
+}
+
+.placeholder {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--gray);
+  font-family: var(--GTAmericaMonoRegular);
+  color: var(--blue);
+}
+
+@media screen and (max-width: 1168px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .name:nth-child(18) {
+    border-bottom: 1px solid var(--blueBorder);
+  }
+
+  .icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

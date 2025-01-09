@@ -13,7 +13,7 @@ const navItems = [
 ];
 
 const navItemsii = [
-  { text: "email", href: "/#email" },
+  { text: "Email", href: "/#email" },
   {
     text: "Github",
     href: "https://github.com/ChristianWare",

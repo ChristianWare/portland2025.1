@@ -27,6 +27,14 @@
 .heading {
   color: var(--white);
   width: 80%;
+  background: linear-gradient(
+    135deg,
+    rgba(252, 210, 205, 1) 15%,
+    rgba(189, 183, 213, 1) 65%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .btnContainer {

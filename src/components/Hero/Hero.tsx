@@ -32,9 +32,9 @@ export default function Hero() {
             <Button text='Projects' btnType='primary' href='/' />
           </div>
           <div className={styles.box}>
-            {/* <div className={styles.sceneContainer}>
+            <div className={styles.sceneContainer}>
               <Scene />
-            </div> */}
+            </div>
           </div>
         </div>
       </ContentPadding>

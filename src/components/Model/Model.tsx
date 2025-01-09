@@ -1,7 +1,7 @@
 "use client";
 
 // import { useGLTF } from "@react-three/drei";
-import { useThree, useFrame } from "@react-three/fiber";
+import { useFrame } from "@react-three/fiber";
 import { MeshTransmissionMaterial, useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 import React, { useRef } from "react";
@@ -24,7 +24,7 @@ export default function Model({
 }: ModelProps) {
   const mesh = useRef<THREE.Mesh | null>(null);
   const { nodes } = useGLTF("/3dFiles/torrus.glb");
-  const { viewport } = useThree();
+  // const { viewport } = useThree();
 
   useFrame(() => {
     if (!mesh.current) return;
@@ -32,7 +32,7 @@ export default function Model({
   });
 
   return (
-    <group scale={viewport.height / 4.5}>
+    <group scale={[3, 3, 3]}>
       <mesh ref={mesh} {...nodes.Torus002}>
         {/* <MeshTransmissionMaterial {...materialProps} /> */}
         <MeshTransmissionMaterial

@@ -1,11 +1,13 @@
 .container {
+  position: relative;        /* so absolutely positioned child is constrained here */
+  width: 100%;
+  min-height: 75vh;        /* ensures hero is at least full screen */
+  overflow: hidden;         /* prevents canvas from bleeding beyond container */
   background: linear-gradient(
     135deg,
     rgba(252, 210, 205, 1) 15%,
     rgba(189, 183, 213, 1) 65%
   );
-  position: relative;
-  width: 100%;
 }
 
 .container::after {

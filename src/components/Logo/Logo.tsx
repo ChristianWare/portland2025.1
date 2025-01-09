@@ -1,5 +1,5 @@
 import styles from './Logo.module.css'
-import Torus from '../../../public/icons/torus.svg'
+import Torus from '../../../public/icons/terminal.svg'
 
 const Logo = () => {
   return (

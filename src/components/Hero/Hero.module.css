@@ -47,6 +47,7 @@
   margin-left: auto;
   margin-right: auto;
   line-height: 1.4em;
+  font-size: 2rem;
 }
 
 .span {
@@ -67,3 +68,11 @@
   height: 100vh;
   z-index: -1;
 }
+
+/* @media screen and (max-width: 768px) {
+  .container {
+    height: 100%;
+  }
+
+  
+} */

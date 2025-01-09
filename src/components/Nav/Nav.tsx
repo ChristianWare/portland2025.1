@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import styles from "./Nav.module.css";
 import Logo from "../Logo/Logo";
+import Button from "../Button/Button";
 
 const navItems = [
   { text: "About", href: "/#about" },
@@ -18,7 +19,7 @@ const navItemsii = [
     href: "https://github.com/ChristianWare",
     target: "_blank",
   },
-  { text: "Contact", href: "/#contact" },
+  // { text: "Contact", href: "/#contact" },
 ];
 
 function Nav() {
@@ -70,6 +71,7 @@ function Nav() {
                 </Link>
               </li>
             ))}
+            <Button text='Contact' btnType='primary' href='/' />
           </ul>
         </div>
         <div

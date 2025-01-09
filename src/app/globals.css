@@ -4,6 +4,8 @@
   --white: #ffffff;
   --pink: #fcd2cd;
   --purple: #bdb7d5;
+  --gray: #787a7d;
+  --lightGray: #aab9c5;
 }
 
 * {
@@ -57,7 +59,7 @@ h1 {
 }
 
 h2 {
-  font-size: 4.8rem;
+  font-size: 4.5rem;
   font-weight: 500;
   line-height: 1.2em;
 }
@@ -95,7 +97,8 @@ p,
 input,
 textarea {
   hyphens: auto;
-  font-size: 2rem;
+  font-size: 1.6rem;
+  line-height: 1.6em;
 }
 
 input:focus,

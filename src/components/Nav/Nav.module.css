@@ -1,5 +1,5 @@
 .header {
-  padding: 1.5rem 2.4rem;
+  padding: .7rem;
   transition: all 0.3s ease-in-out;
   position: fixed;
   top: 70px;
@@ -17,7 +17,7 @@
   backdrop-filter: saturate(180%) blur(20px);
   width: 90%;
 
-  border-radius: 16px;
+  border-radius: 15px;
   box-shadow: 0px 4px 4px 0px rgba(153, 126, 152, 1),
     0px 15px 25px 0px rgba(0, 0, 0, 0.15);
   /* padding: 8px 8px 8px 20px; */
@@ -43,7 +43,8 @@
 .logoContainer,
 .logoContainerMobile {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  margin-left: .7rem;
 }
 
 .logoContainerMobile {
@@ -59,9 +60,11 @@
   list-style: none;
   position: relative;
   width: 100%;
-  padding: 0rem 2rem;
+  /* padding: 0rem 2rem; */
   position: relative;
 }
+
+
 
 /* .navItems::after,
 .navItemsii::after {
@@ -86,9 +89,13 @@
 .navItemsii {
   justify-content: flex-end;
   background-color: var(--tan);
-  /* padding: 1rem; */
+  padding: 0rem;
   width: fit-content;
   margin-left: auto;
+}
+
+.navItemsii {
+  justify-content: flex-end;
 }
 
 .navItem {

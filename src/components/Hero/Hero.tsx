@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "../Button/Button";
 import ContentPadding from "../ContentPadding/ContentPadding";
 // import dynamic from "next/dynamic";
 
@@ -27,6 +28,9 @@ export default function Hero() {
             <span className={styles.span}> employee wellbeing,</span> all inside
             the team chat.
           </p>
+          <div className={styles.btnContainer}>
+            <Button text='About me' btnType='primary' href='/' />
+          </div>
           <div className={styles.box}>
             <div className={styles.sceneContainer}>
               <Scene />

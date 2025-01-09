@@ -4,32 +4,25 @@
 }
 
 .btn {
-  font-family: var(--MatterMonoMedium);
-  text-align: center;
-  font-size: 1.6rem;
-  font-weight: 500;
-  letter-spacing: 0.8px;
-  white-space: nowrap;
-  user-select: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  text-transform: uppercase;
-  flex: 1;
-  gap: 1.5rem;
-  border-radius: 50px;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+  font-family: var(--font-secondary);
+  line-height: 1.2em;
   padding: 10px 20px;
-  padding-bottom: 8px;
   position: relative;
   z-index: 1;
   width: 100%;
-  transition: all 0.1s ease-in, color 0.1s ease-in;
+  transition: all 0.3s ease-in-out;
 }
 
 .primary {
-  color: var(--green);
-  background-color: var(--green3);
+  color: var(--white);
+  background-color: var(--blue);
   border: 1px solid var(--lightBlack);
 }
 

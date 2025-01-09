@@ -31,7 +31,10 @@ function Nav() {
 
   return (
     <header className={styles.header} ref={navRef}>
-      <div className={styles.logoContainerMobile}>CW</div>
+      <div className={styles.logoContainerMobile}>
+        {" "}
+        <Logo />
+      </div>
       <nav className={styles.navbar}>
         <div
           className={

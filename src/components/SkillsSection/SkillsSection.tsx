@@ -22,6 +22,8 @@ import Docker from "../../../public/icons/docker.svg";
 import WordPress from "../../../public/icons/wordpress.svg";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
+import Faqs from "../Faqs/Faqs";
+import { homePageFaqs } from "../../../lib/data";
 
 const data = [
   {
@@ -165,6 +167,7 @@ const SkillsSection = () => {
             {isPaused && activeIcon ? activeIcon : data[currentIconIndex].icon}
           </div>
         </div>
+        <Faqs mapData={homePageFaqs} />
       </LayoutWrapper>
     </section>
   );

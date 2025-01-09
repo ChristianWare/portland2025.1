@@ -37,12 +37,9 @@ export default function Model({
     mesh.current.rotation.x += 0.02;
   });
 
-  const groupScale = useViewportScale
-    ? viewport.width / 4.5 // or height / 4.5, or any logic you want
-    : fixedScale;
-    
+  const groupScale = useViewportScale ? viewport.width / 4.5 : fixedScale;
+
   return (
-    // <group scale={viewport.width / 4.5 }>
     <>
       <group scale={groupScale}>
         <mesh ref={mesh} {...nodes.Torus002}>

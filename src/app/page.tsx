@@ -12,6 +12,8 @@ export default function Home() {
       <AboutSection />
       <ProjectsSection />
       <SkillsSection />
+      {/* Blog */}
+      {/* Footer */}
     </main>
   );
 }

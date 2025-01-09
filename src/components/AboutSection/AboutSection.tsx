@@ -7,7 +7,8 @@ import SectionHeading from "../SectionHeading/SectionHeading";
 
 const AboutSection = () => {
   return (
-    <section className={styles.container} id='about'>
+    <section className={styles.container}>
+      <div className={styles.sectionScroll} id='about'></div>
       <LayoutWrapper>
         <div className={styles.top}>
           <SectionHeading
@@ -59,10 +60,13 @@ const AboutSection = () => {
             </div>
           </div>
         </div>
-        <Process />
-        <div className={styles.btnContainer}>
-          <Button text='Learn More About Me' btnType='purple' href='/' />
+        <div className={styles.bottomBtnArea}>
+          <div></div>
+          <div className={styles.btnContainer}>
+            <Button text='Learn More About Me' btnType='purple' href='/' />
+          </div>
         </div>
+        <Process />
       </LayoutWrapper>
     </section>
   );

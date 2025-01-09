@@ -39,7 +39,13 @@ const ProjectsSection = () => {
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.top}>
-            <SectionHeading title='Projects' color='black' />
+            <div className={styles.sectionHeadingContainer}>
+              <SectionHeading
+                title='Projects'
+                color='black'
+                dotColor='blackDot'
+              />
+            </div>
             <h2 className={styles.heading}>Featured Project</h2>
             <p className={styles.copy}>chrisware.dev - Portfolio website</p>
           </div>

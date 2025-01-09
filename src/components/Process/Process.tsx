@@ -1,4 +1,5 @@
 // import SectionHeading from "../SectionHeading/SectionHeading";
+import SectionHeading from "../SectionHeading/SectionHeading";
 import styles from "./Process.module.css";
 
 const data = [
@@ -27,11 +28,16 @@ const data = [
 const Process = () => {
   return (
     <section className={styles.container}>
-      {/* <SectionHeading title='My Process' color='purple' /> */}
       <div className={styles.box}>
         <div className={styles.middle}>
           <div className={styles.middleLeft}>
-            <span className={styles.sectionTitle}>How I work</span>
+            <div className={styles.sectionTitle}>
+              <SectionHeading
+                title='How I work'
+                color='purple'
+                dotColor='purpleDot'
+              />
+            </div>
           </div>
           <h4 className={styles.heading}>
             By taking a holistic approach to web development, I provide clients

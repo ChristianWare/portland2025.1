@@ -14,7 +14,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
-  background-color: var(--purple);
+  /* background-color: var(--purple); */
+  border: 1px solid var(--lightGray2);
   border-radius: 15px;
   padding: 1rem;
 }

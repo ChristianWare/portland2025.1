@@ -7,6 +7,11 @@
   margin-bottom: 2rem;
 }
 
+.sectionHeadingContainer {
+  border-bottom: 1px solid var(--lightGray);
+  padding-bottom: 1rem;
+}
+
 .heading {
   margin-top: 3rem;
 }
@@ -71,6 +76,14 @@
 }
 
 @media screen and (max-width: 1068px) {
+  .sectionHeadingContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+  
   .container {
     padding: 0rem 7rem;
   }

@@ -1,7 +1,6 @@
 .container {
-  margin-top: 15rem;
-  background-color: var(--white);
-  padding: 5rem;
+  padding-top: 15rem;
+  background-color: var(--gray2);
   border-radius: 20px;
 }
 
@@ -166,10 +165,6 @@
 }
 
 @media screen and (max-width: 1068px) {
-  .container {
-    padding: 3rem;
-  }
-
   .sectionHeadingContainer {
     display: flex;
     align-items: center;
@@ -184,7 +179,7 @@
 
   .bottom {
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 10rem;
+    grid-gap: 15rem;
   }
 
   .bLeft {
@@ -195,11 +190,5 @@
     margin-left: auto;
     margin-right: auto;
     height: 350px;
-  }
-}
-
-@media screen and (max-width: 568px) {
-  .container {
-    padding: 2rem;
   }
 }

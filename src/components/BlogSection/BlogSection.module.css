@@ -1,0 +1,16 @@
+.container {
+  background-color: var(--blue);
+  padding-top: 15rem;
+}
+
+.heading {
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1068px) {
+  .heading {
+    text-align: center;
+    width: 100%;
+  }
+}

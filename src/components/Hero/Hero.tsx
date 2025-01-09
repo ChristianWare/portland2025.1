@@ -6,6 +6,7 @@ import LayoutWrapper from "../LayoutWrapper";
 // import dynamic from "next/dynamic";
 
 import Scene from "../Scene/Scene";
+import SectionHeading from "../SectionHeading/SectionHeading";
 
 // const Scene = dynamic(() => import("../Scene/Scene"), {
 //   ssr: false,
@@ -19,6 +20,11 @@ export default function Hero() {
       </div> */}
       <LayoutWrapper>
         <div className={styles.content}>
+          <SectionHeading
+            title='Web Developer'
+            color='black'
+            dotColor='blackDot'
+          />
           <h1 className={styles.heading}>
             Hello World. <br /> My name is Christian.
           </h1>

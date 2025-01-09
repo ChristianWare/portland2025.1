@@ -1,8 +1,11 @@
 import AboutSection from "@/components/AboutSection/AboutSection";
+import Faqs from "@/components/Faqs/Faqs";
 import Hero from "@/components/Hero/Hero";
 import Nav from "@/components/Nav/Nav";
 import ProjectsSection from "@/components/ProjectsSection/ProjectsSection";
 import SkillsSection from "@/components/SkillsSection/SkillsSection";
+import { homePageFaqs } from "../../lib/data";
+import BlogSection from "@/components/BlogSection/BlogSection";
 
 export default function Home() {
   return (
@@ -12,8 +15,8 @@ export default function Home() {
       <AboutSection />
       <ProjectsSection />
       <SkillsSection />
-      {/* Blog */}
-      {/* Footer */}
+      <Faqs mapData={homePageFaqs} />
+      <BlogSection />
     </main>
   );
 }

@@ -2,12 +2,12 @@
 'use client'
 
 import styles from "./Faqs.module.css";
-// import LayoutWrapper from "../LayoutWrapper";
 import { FC, useState } from "react";
 import Plus from "../../../public/icons/plus.svg";
 import Image from "next/image";
 import FAQImage from '../../../public/images/question.png'
 import SectionHeading from "../SectionHeading/SectionHeading";
+import LayoutWrapper from "../LayoutWrapper";
 
 interface Props {
   mapData: any;
@@ -21,6 +21,7 @@ const Faqs: FC<Props> = ({ mapData }) => {
   };
   return (
     <section className={styles.container}>
+      <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.top}>
             <div className={styles.sectionHeadingContainer}>
@@ -80,7 +81,7 @@ const Faqs: FC<Props> = ({ mapData }) => {
             </div>
           </div>
         </div>
-      {/* </LayoutWrapper> */}
+      </LayoutWrapper>
     </section>
   );
 };

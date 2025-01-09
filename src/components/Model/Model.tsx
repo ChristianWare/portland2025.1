@@ -1,8 +1,8 @@
 "use client";
 
 // import { useGLTF } from "@react-three/drei";
-// import { useThree, useFrame } from "@react-three/fiber";
-import { useFrame } from "@react-three/fiber";
+import { useThree, useFrame } from "@react-three/fiber";
+// import { useFrame } from "@react-three/fiber";
 import { MeshTransmissionMaterial, useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 import React, { useRef } from "react";
@@ -14,7 +14,10 @@ export interface ModelProps {
   ior: number;
   chromaticAberration: number;
   backside: boolean;
+  useViewportScale?: boolean;
+  fixedScale?: [number, number, number];
 }
+
 export default function Model({
   thickness,
   roughness,
@@ -22,20 +25,26 @@ export default function Model({
   ior,
   chromaticAberration,
   backside,
+  useViewportScale = false,
+  fixedScale = [2, 2, 2],
 }: ModelProps) {
   const mesh = useRef<THREE.Mesh | null>(null);
   const { nodes } = useGLTF("/3dFiles/torrus.glb");
-  // const { viewport } = useThree();
+  const { viewport } = useThree();
 
   useFrame(() => {
     if (!mesh.current) return;
     mesh.current.rotation.x += 0.02;
   });
 
+  const groupScale = useViewportScale
+    ? viewport.width / 4.5 // or height / 4.5, or any logic you want
+    : fixedScale;
+    
   return (
     // <group scale={viewport.width / 4.5 }>
     <>
-      <group scale={[2, 2, 2]}>
+      <group scale={groupScale}>
         <mesh ref={mesh} {...nodes.Torus002}>
           <MeshTransmissionMaterial
             thickness={thickness}
@@ -44,7 +53,7 @@ export default function Model({
             ior={ior}
             chromaticAberration={chromaticAberration}
             backside={backside}
-          />{" "}
+          />
         </mesh>
       </group>
     </>

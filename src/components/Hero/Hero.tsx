@@ -1,12 +1,11 @@
 "use client";
 
+import styles from "./Hero.module.css";
 import Button from "../Button/Button";
-// import ContentPadding from "../ContentPadding/ContentPadding";
 import LayoutWrapper from "../LayoutWrapper";
 // import dynamic from "next/dynamic";
 
 import Scene from "../Scene/Scene";
-import styles from "./Hero.module.css";
 
 // const Scene = dynamic(() => import("../Scene/Scene"), {
 //   ssr: false,
@@ -33,11 +32,11 @@ export default function Hero() {
             <Button text='Projects' btnType='transparent' href='/' />
             <Button text='Projects' btnType='primaryii' href='/' />
           </div>
-          {/* <div className={styles.box}>
+          <div className={styles.box}>
             <div className={styles.sceneContainer}>
-              <Scene />
+              <Scene useViewportScale={false} fixedScale={[2, 2, 2]} />
             </div>
-          </div> */}
+          </div>
         </div>
       </LayoutWrapper>
     </section>

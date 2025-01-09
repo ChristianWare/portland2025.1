@@ -1,8 +1,11 @@
+// "use client";
+
+import styles from "./ProjectsSection.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
-import styles from "./ProjectsSection.module.css";
 import Button from "../Button/Button";
 import OtherProjects from "../OtherProjects/OtherProjects";
+import Scene from "../Scene/Scene";
 
 const data = [
   {
@@ -50,7 +53,13 @@ const ProjectsSection = () => {
             <p className={styles.copy}>chrisware.dev - Portfolio website</p>
           </div>
           <div className={styles.bottom}>
-            <div className={styles.bottomLeft}></div>
+            <div className={styles.bottomLeft}>
+              <div className={styles.box}>
+                <div className={styles.sceneContainer}>
+                  <Scene useViewportScale={false} fixedScale={[3, 3, 3]} />
+                </div>
+              </div>
+            </div>
             <div className={styles.bottomRight}>
               {data.map((x) => (
                 <div key={x.id} className={styles.section}>
@@ -74,4 +83,5 @@ const ProjectsSection = () => {
     </section>
   );
 };
+
 export default ProjectsSection;

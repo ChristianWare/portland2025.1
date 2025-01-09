@@ -1,0 +1,14 @@
+.logo {
+  font-weight: 600;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.icon {
+  color: var(--black);
+  width: 2.7rem;
+  height:2.7rem;
+}

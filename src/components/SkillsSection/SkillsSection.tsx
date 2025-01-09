@@ -20,7 +20,6 @@ import Sanity from "../../../public/icons/sanity.svg";
 import Contentful from "../../../public/icons/contentful.svg";
 import Docker from "../../../public/icons/docker.svg";
 import WordPress from "../../../public/icons/wordpress.svg";
-// import SectionTitle from "../SectionTitle/SectionTitle";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
 
@@ -138,8 +137,14 @@ const SkillsSection = () => {
 
   return (
     <section className={styles.container}>
-      <SectionHeading title='Skills (Hover to stop)' color='black' />
       <LayoutWrapper>
+        <div className={styles.sectionHeadingContainer}>
+          <SectionHeading
+            title='Skills (Hover to stop)'
+            color='black'
+            dotColor='blackDot'
+          />
+        </div>
         <div className={styles.content}>
           <div className={styles.left}>
             <ul className={styles.list}>

@@ -3,6 +3,11 @@
   position: relative;
   width: 100%;
   padding-top: 10rem;
+  background: linear-gradient(
+    -135deg,
+    rgba(252, 210, 205, 1) 15%,
+    rgba(189, 183, 213, 1) 65%
+  );
 }
 
 .content {
@@ -36,7 +41,7 @@
   justify-content: center;
   padding: 2rem;
   border-radius: 8px;
-  border: 1px solid var(--lightGray);
+  border: 1px solid var(--gray);
   position: relative;
   width: 100%;
   user-select: none;
@@ -82,9 +87,13 @@
 .icon2 {
   width: 30px;
   height: 30px;
-  color: var(--purple);
+  color: var(--blue);
   transition: all 0.3s ease-in;
   margin-right: 1.5rem;
+}
+
+.name:hover .icon2 {
+  color: var(--purple);
 }
 
 .iconSmall {

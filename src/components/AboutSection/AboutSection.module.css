@@ -127,12 +127,20 @@
     /* margin-top: 3rem; */
   }
 
-  .heading {
+  .heading,
+  .headingii {
     text-align: center;
   }
 
   .heading,
   .copyii {
+    width: 100%;
+  }
+
+  .rightSideTop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
   }
 }

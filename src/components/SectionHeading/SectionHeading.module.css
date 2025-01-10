@@ -62,3 +62,11 @@
 .black {
   color: var(--black);
 }
+
+.whiteDot {
+  background-color: var(--white);
+}
+
+.white {
+  color: var(--white);
+}

@@ -1,5 +1,6 @@
 import BlogCard from "../BlogCard/BlogCard";
 import BlogCard2 from "../BlogCard2/BlogCard2";
+import Button from "../Button/Button";
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./BlogSection.module.css";
 
@@ -19,6 +20,9 @@ const BlogSection = () => {
               <BlogCard2 />
             </div>
           </div>
+        </div>
+        <div className={styles.btnContainer}>
+          <Button text='See All Blogs' btnType='primary' href='/' />
         </div>
       </LayoutWrapper>
     </section>

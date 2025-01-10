@@ -19,7 +19,7 @@ const BlogCard = () => {
       </div>
       <div className={styles.right}>
         <div className={styles.sectionHeadingContainer}>
-          <SectionHeading title='Featured' color='black' dotColor='blackDot' />
+          <SectionHeading title='Featured' color='white' dotColor='whiteDot' />
         </div>
         <h3 className={styles.title}>
           How to Create a Restaurant Website That Grows Your Online Orders

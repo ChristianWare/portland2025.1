@@ -4,7 +4,6 @@
 }
 
 .heading {
-  /* color: var(--white); */
   margin-bottom: 2rem;
 }
 
@@ -13,6 +12,15 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-top: 2rem;
+}
+
+.btnContainer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 30%;
+  margin-top: 2rem;
+  margin-left: auto;
+  
 }
 
 @media screen and (max-width: 1068px) {
@@ -24,10 +32,20 @@
   .bBottom {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .btnContainer {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media screen and (max-width: 668px) {
   .bBottom {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .btnContainer {
+    width: 100%;
   }
 }

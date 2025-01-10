@@ -100,7 +100,15 @@
   background: url(../../../public/noise.gif);
 }
 
-.transparent:hover {
+.white {
+  background-color: var(--white);
+  color: var(--blue);
+  box-shadow: 0px 10px 10px 0px rgba(153, 126, 152, 1),
+    0px 15px 25px 0px rgba(0, 0, 0, 0.15);
+}
+
+.transparent:hover,
+.white:hover {
   background-color: var(--purple2);
   color: var(--white);
   box-shadow: 0px 0px 0px 0px rgba(153, 126, 152, 1),

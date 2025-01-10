@@ -1,3 +1,4 @@
+import Button from "../Button/Button";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import styles from "./FinalCTA.module.css";
@@ -19,6 +20,10 @@ const FinalCTA = () => {
             forward to speaking with you soon. Feel free to reach out to me with
             any questions you have.
           </h2>
+          <div className={styles.btnContainer}>
+            <Button text='Contact' btnType='purple' href='/' />
+            {/* <Button text='Projects' btnType='white' href='/' /> */}
+          </div>
         </div>
       </LayoutWrapper>
     </section>

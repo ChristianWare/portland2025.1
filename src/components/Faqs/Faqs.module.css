@@ -164,10 +164,16 @@
   color: var(--blue);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  border: 1px solid var(--blue);
+  border-radius: 50%;
+  padding: 0.5rem;
 }
 
 .iconFlip {
   color: var(--blue);
+  padding: 0.5rem;
+  border: 1px solid var(--white);
+  border-radius: 50%;
   transform: rotate(135deg);
   cursor: pointer;
   transition: all 0.2s ease-in-out;

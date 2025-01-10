@@ -7,6 +7,7 @@ import SkillsSection from "@/components/SkillsSection/SkillsSection";
 import { homePageFaqs } from "../../lib/data";
 // import BlogSection from "@/components/BlogSection/BlogSection";
 import FinalCTA from "@/components/FinalCTA/FinalCTA";
+import ContactSection from "@/components/ContactSection/ContactSection";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <ProjectsSection />
       <SkillsSection />
       <Faqs mapData={homePageFaqs} />
+      <ContactSection />
       <FinalCTA />
     </main>
   );

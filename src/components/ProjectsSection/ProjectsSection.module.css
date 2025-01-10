@@ -12,11 +12,9 @@
 .sectionHeadingContainer {
   border-bottom: 1px solid var(--lightGray);
   padding-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
-.heading {
-  margin-top: 3rem;
-}
 
 .copy {
   font-size: 2rem;
@@ -28,7 +26,7 @@
   grid-template-columns: repeat(2, 1fr);
   border-radius: 15px;
   overflow: hidden;
-  border: 1px solid var(--lightGray);
+  border: 1px solid var(--blue);
 }
 
 .bottomLeft {
@@ -48,16 +46,18 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
-  border-bottom: 1px dashed var(--lightGray);
+  border-bottom: 1px dashed var(--blue);
 }
 
 .title {
   padding: 2rem;
-  border-right: 1px dashed var(--lightGray);
+  border-right: 1px dashed var(--blue);
   font-size: 1.8rem;
+  background-color: var(--gray2);
 }
 
 .description {
+  background-color: var(--gray2);
   padding: 2rem;
   opacity: 0.7;
 }
@@ -65,8 +65,8 @@
 .btnContainer {
   display: grid;
   width: 100%;
-
   padding: 1rem;
+  background-color: var(--gray2);
 }
 
 .btnContainerii {

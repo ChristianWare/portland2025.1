@@ -3,7 +3,7 @@
 }
 
 .box {
-  border: 1px solid var(--lightGray2);
+  border: 1px solid var(--white);
   margin-top: 3rem;
   border-radius: 15px;
 }
@@ -11,7 +11,7 @@
 .middle {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border-bottom: 1px solid var(--lightGray2);
+  border-bottom: 1px solid var(--white);
 }
 
 .heading {

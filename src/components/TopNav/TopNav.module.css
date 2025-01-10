@@ -1,11 +1,12 @@
-.header {
-  background-color: var(--tan);
-}
-
 .content {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  width: 100%;
+  padding: 2rem;
+  border-top: 1px dashed var(--blue);
+  border-right: 1px dashed var(--blue);
+  border-top-right-radius: 15px;
   width: 100%;
 }
 
@@ -30,7 +31,7 @@
 }
 
 .icon {
-  color: var(--tan);
+  color: var(--white);
   width: 20px;
   height: 20px;
   transition: all 0.2s ease-in;

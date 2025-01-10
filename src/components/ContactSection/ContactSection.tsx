@@ -1,7 +1,5 @@
 import styles from "./ContactSection.module.css";
 import LayoutWrapper from "../LayoutWrapper";
-import Image from "next/image";
-import ChrisWare from "../../../public/images/author.png";
 import ContactForm from "../ContactForm/ContactForm";
 import TopNav from "../TopNav/TopNav";
 import Link from "next/link";
@@ -9,15 +7,8 @@ import Link from "next/link";
 const ContactSection = () => {
   return (
     <section className={styles.container}>
-      
       <div className={styles.content}>
-        <div className={styles.top}>
-            <h2 className={styles.heading}>
-              Thank you for taking the time to review my portfolio website. I
-              look forward to speaking with you soon. Feel free to reach out to
-              me with any questions you have.
-            </h2>
-        </div>
+        
 
         <LayoutWrapper>
           <div className={styles.bottom}>
@@ -34,7 +25,6 @@ const ContactSection = () => {
               <h3 className={styles.sectionHeadingii}>Get in touch</h3>
               <div className={styles.brGrid}>
                 <div className={styles.br1}>
-                  
                   <div className={styles.contactBox}>
                     <Link
                       href='mailto:chris.ware.dev@gmail.com'
@@ -61,14 +51,6 @@ const ContactSection = () => {
                     </Link>
                   </div>
                   <TopNav />
-                  <Image
-                    src={ChrisWare}
-                    alt='Christian Ware'
-                    title='Christian Ware'
-                    width={275}
-                    height={275}
-                    className={styles.img}
-                  />
                 </div>
                 <div className={styles.br2}>
                   <ContactForm />

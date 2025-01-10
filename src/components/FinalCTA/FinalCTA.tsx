@@ -20,7 +20,31 @@ const FinalCTA = () => {
             forward to speaking with you soon. Feel free to reach out to me with
             any questions you have.
           </h2>
-        <Footer />
+          <div className={styles.contactContainer}>
+            <div className={styles.secondBox}></div>
+            <div className={styles.left}>
+              <div className={styles.box}>
+                <h3 className={styles.headingii}>Email</h3>
+                <p className={styles.copyii}>chris.ware.dev@gmail.com</p>
+              </div>
+              <div className={styles.box}>
+                <h3 className={styles.headingii}>Phone</h3>
+                <p className={styles.copyii}>623-335-4992</p>
+              </div>
+            </div>
+
+            <div className={styles.right}>
+              <div className={styles.box}>
+                <h3 className={styles.headingii}>LinkedIn</h3>
+                <p className={styles.copyii}>chris.ware.dev@gmail.com</p>
+              </div>
+              <div className={styles.box}>
+                <h3 className={styles.headingii}>GitHub</h3>
+                <p className={styles.copyii}>623-335-4992</p>
+              </div>
+            </div>
+          </div>
+          <Footer />
         </div>
       </LayoutWrapper>
     </section>

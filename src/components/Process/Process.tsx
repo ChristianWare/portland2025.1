@@ -34,8 +34,8 @@ const Process = () => {
             <div className={styles.sectionTitle}>
               <SectionHeading
                 title='How I work'
-                color='purple'
-                dotColor='purpleDot'
+                color='white'
+                dotColor='whiteDot'
               />
             </div>
           </div>

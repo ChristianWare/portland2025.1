@@ -11,11 +11,7 @@ const AboutSection = () => {
       <div className={styles.sectionScroll} id='about'></div>
       <LayoutWrapper>
         <div className={styles.top}>
-          <SectionHeading
-            title='About Me'
-            color='purple'
-            dotColor='purpleDot'
-          />
+          <SectionHeading title='About Me' color='white' dotColor='whiteDot' />
           <h2 className={styles.heading}>
             I am skilled in both front-end and back-end development. I have the
             ability to create comprehensive web applications from start to

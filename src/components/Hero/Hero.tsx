@@ -40,7 +40,7 @@ export default function Hero() {
           </div>
           <div className={styles.box}>
             <div className={styles.sceneContainer}>
-              <Scene useViewportScale={false} fixedScale={[2, 2, 2]} />
+              <Scene useViewportScale={false} fixedScale={[2.5, 2.5, 2.5]} />
             </div>
           </div>
         </div>

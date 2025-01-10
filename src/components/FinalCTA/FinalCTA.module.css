@@ -1,7 +1,10 @@
-.container {
+
+
+.content {
   background-color: var(--blue);
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: -5rem;
 }
 
 .sectionheadingContainer {
@@ -27,24 +30,10 @@
   -webkit-text-fill-color: transparent;
 }
 
-.btnContainer {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 2rem;
-  width: 30%;
-  margin-top: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3rem;
-}
 
 @media screen and (max-width: 1068px) {
   .heading {
     width: 80%;
-  }
-
-  .btnContainer {
-    width: 50%;
   }
 }
 
@@ -54,8 +43,3 @@
   }
 }
 
-@media screen and (max-width: 568px) {
-  .btnContainer {
-    width: 100%;
-  }
-}

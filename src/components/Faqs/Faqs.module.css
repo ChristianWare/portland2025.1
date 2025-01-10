@@ -81,7 +81,7 @@
 }
 
 .qaContainer {
-  padding: 3rem;
+  
   border: 1px dashed var(--blue);
   border-radius: 15px;
   width: 100%;
@@ -111,12 +111,17 @@
 .active .answer,
 .active .iconFlip {
   color: var(--white);
+  
 }
 
 .answerContainer {
   max-height: 0;
   overflow: hidden;
   transition: all 0.2s ease-in-out;
+}
+
+.active .answer {
+  padding: 2rem;
 }
 
 .answerContainer.show {
@@ -127,6 +132,9 @@
   display: grid;
   grid-template-columns: 0.6fr 5fr;
   gap: 2rem;
+  border-bottom: 1px dashed var(--lightGray);
+  width: 100%;
+  padding: 3rem;
 }
 
 .icon {

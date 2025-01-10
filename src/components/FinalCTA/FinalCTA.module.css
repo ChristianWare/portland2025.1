@@ -1,0 +1,40 @@
+.container {
+  background-color: var(--blue);
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.sectionheadingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.heading {
+  text-align: center;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--white);
+  background: linear-gradient(
+    135deg,
+    rgba(252, 210, 205, 1) 35%,
+    rgba(189, 183, 213, 1) 65%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 1068px) {
+  .heading {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading {
+    width: 100%;
+  }
+}

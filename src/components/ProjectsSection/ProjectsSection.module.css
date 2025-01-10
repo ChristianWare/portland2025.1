@@ -24,7 +24,7 @@
 .bottom {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  border-radius: 15px;
+  border-radius: 25px;
   overflow: hidden;
   border: 1px solid var(--blue);
 }
@@ -70,7 +70,7 @@
 }
 
 .btnContainerii {
-  margin-top: 5rem;
+  margin-top: 10rem;
   margin-left: auto;
   margin-right: auto;
   display: grid;
@@ -133,6 +133,6 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     width: 100%;
-    margin-top: 3rem;
+    margin-top: 7rem;
   }
 }

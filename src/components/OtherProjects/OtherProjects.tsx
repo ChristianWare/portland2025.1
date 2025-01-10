@@ -45,14 +45,16 @@ const OtherProjects = () => {
                   className={styles.img}
                 />
               </div>
-              <h4 className={styles.title}>{x.title}</h4>
-              <p className={styles.description}>{x.desc}</p>
-              <div className={styles.linksBox}>
-                <div className={styles.link1}>Live Site</div>
-                <div className={styles.link2}>Github Code</div>
-              </div>
-              <div className={styles.btnContainer}>
-                <Button text='More Details' btnType='primary' href='/' />
+              <div className={styles.cardBottom}>
+                <h4 className={styles.title}>{x.title}</h4>
+                <p className={styles.description}>{x.desc}</p>
+                <div className={styles.linksBox}>
+                  <div className={styles.link1}>Live Site</div>
+                  <div className={styles.link2}>Github Code</div>
+                </div>
+                <div className={styles.btnContainer}>
+                  <Button text='More Details' btnType='primary' href='/' />
+                </div>
               </div>
             </div>
           ))}

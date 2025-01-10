@@ -5,7 +5,7 @@
 .box {
   border: 1px solid var(--white);
   margin-top: 3rem;
-  border-radius: 15px;
+  border-radius: 25px;
 }
 
 .middle {

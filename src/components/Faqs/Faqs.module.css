@@ -28,7 +28,7 @@
 
 .parent {
   border: 1px solid var(--blue);
-  border-radius: 20px;
+  border-radius: 25px;
   padding: 3rem;
   display: flex;
   flex-direction: column;

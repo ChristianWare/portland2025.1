@@ -22,6 +22,7 @@ import Docker from "../../../public/icons/docker.svg";
 import WordPress from "../../../public/icons/wordpress.svg";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
+import WorkSection from "../WorkSection/WorkSection";
 // import Faqs from "../Faqs/Faqs";
 // import { homePageFaqs } from "../../../lib/data";
 
@@ -142,30 +143,35 @@ const SkillsSection = () => {
       <LayoutWrapper>
         <div className={styles.sectionHeadingContainer}>
           <SectionHeading
-            title='Skills (Hover to stop)'
+            title='Skills & Work History'
             color='black'
             dotColor='blackDot'
           />
         </div>
-        <div className={styles.content}>
-          <div className={styles.left}>
-            <ul className={styles.list}>
-              {data.map((item, index) => (
-                <li
-                  key={index}
-                  className={styles.name}
-                  onMouseEnter={() => handleHover(item.icon)}
-                  onMouseLeave={() => handleHover(null)}
-                >
-                  {item.icon2}
-                  {item.name}
-                </li>
-              ))}
-            </ul>
+        <div className={styles.parent}>
+          <div className={styles.content}>
+            <div className={styles.left}>
+              <ul className={styles.list}>
+                {data.map((item, index) => (
+                  <li
+                    key={index}
+                    className={styles.name}
+                    onMouseEnter={() => handleHover(item.icon)}
+                    onMouseLeave={() => handleHover(null)}
+                  >
+                    {item.icon2}
+                    {item.name}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className={styles.right}>
+              {isPaused && activeIcon
+                ? activeIcon
+                : data[currentIconIndex].icon}
+            </div>
           </div>
-          <div className={styles.right}>
-            {isPaused && activeIcon ? activeIcon : data[currentIconIndex].icon}
-          </div>
+          <WorkSection />
         </div>
         {/* <Faqs mapData={homePageFaqs} /> */}
       </LayoutWrapper>

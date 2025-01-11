@@ -47,6 +47,7 @@
   font-weight: 500;
   letter-spacing: 7px;
   text-transform: uppercase;
+  user-select: none;
 }
 
 .purple {
@@ -71,4 +72,12 @@
 
 .white {
   color: var(--white);
+}
+
+.purple2Dot {
+  background-color: var(--purple2);
+}
+
+.purple2 {
+  color: var(--purple2);
 }

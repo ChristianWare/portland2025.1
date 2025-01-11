@@ -1,6 +1,6 @@
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./AboutSection.module.css";
-import Terminal from "../../../public/icons/terminal.svg";
+// import Terminal from "../../../public/icons/terminal.svg";
 import Button from "../Button/Button";
 import Process from "../Process/Process";
 import SectionHeading from "../SectionHeading/SectionHeading";
@@ -17,9 +17,10 @@ const AboutSection = () => {
             ability to create comprehensive web applications from start to
             finish. My tools of choice are Next.js/React.
           </h2>
+          <div></div>
         </div>
         <div className={styles.content}>
-          <div className={styles.left}></div>
+          {/* <div className={styles.left}></div>
           <div className={styles.right}>
             <div className={styles.rightSideTop}>
               <h3 className={styles.headingii}>
@@ -54,15 +55,15 @@ const AboutSection = () => {
                 <p className={styles.copyiii}>Inception</p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
-        <div className={styles.bottomBtnArea}>
+        {/* <div className={styles.bottomBtnArea}>
           <div></div>
-          <div className={styles.btnContainer}>
-            <Button text='Learn More About Me' btnType='purple' href='/' />
-          </div>
-        </div>
+        </div> */}
         <Process />
+        <div className={styles.btnContainer}>
+          <Button text='Learn More About Me' btnType='purple' href='/' />
+        </div>
       </LayoutWrapper>
     </section>
   );

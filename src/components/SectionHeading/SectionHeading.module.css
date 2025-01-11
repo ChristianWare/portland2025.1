@@ -43,8 +43,10 @@
 
 .span {
   text-align: center;
-  font-size: 1.4rem;
-  text-transform: lowercase;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 7px;
+  text-transform: uppercase;
 }
 
 .purple {

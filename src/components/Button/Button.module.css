@@ -11,7 +11,6 @@
   display: inline-block;
   font-size: 15px;
   cursor: pointer;
-  font-family: var(--font-secondary);
   line-height: 1.2em;
   padding: 10px 20px;
   position: relative;
@@ -70,7 +69,8 @@
   color: var(--white);
   border: 1px solid var(--blue);
   position: relative;
-  box-shadow: 0px 10px 10px 0px rgba(153, 126, 152, 1),
+  box-shadow:
+    0px 10px 10px 0px rgba(153, 126, 152, 1),
     0px 15px 25px 0px rgba(0, 0, 0, 0.15);
 }
 
@@ -87,7 +87,8 @@
 }
 
 .purple:hover {
-  box-shadow: 0px 0px 0px 0px rgba(153, 126, 152, 1),
+  box-shadow:
+    0px 0px 0px 0px rgba(153, 126, 152, 1),
     0px 0px 0px 0px rgba(0, 0, 0, 0.15);
 }
 
@@ -96,7 +97,8 @@
   color: var(--blue);
   border: 1px solid var(--blue);
   position: relative;
-  box-shadow: 0px 10px 10px 0px rgba(153, 126, 152, 1),
+  box-shadow:
+    0px 10px 10px 0px rgba(153, 126, 152, 1),
     0px 15px 25px 0px rgba(0, 0, 0, 0.15);
 }
 
@@ -115,7 +117,8 @@
 .white {
   background-color: var(--white);
   color: var(--blue);
-  box-shadow: 0px 10px 10px 0px rgba(153, 126, 152, 1),
+  box-shadow:
+    0px 10px 10px 0px rgba(153, 126, 152, 1),
     0px 15px 25px 0px rgba(0, 0, 0, 0.15);
 }
 
@@ -123,6 +126,7 @@
 .white:hover {
   background-color: var(--purple2);
   color: var(--white);
-  box-shadow: 0px 0px 0px 0px rgba(153, 126, 152, 1),
+  box-shadow:
+    0px 0px 0px 0px rgba(153, 126, 152, 1),
     0px 0px 0px 0px rgba(0, 0, 0, 0.15);
 }

@@ -6,7 +6,7 @@ import styles from "./BlogSection.module.css";
 const BlogSection = () => {
   return (
     <section className={styles.container}>
-        <h2 className={styles.heading}>My Journal</h2>
+      <h2 className={styles.heading}>My Journal</h2>
       <div className={styles.content}>
         <div className={styles.bottom}>
           <div className={styles.bTop}>
@@ -20,7 +20,7 @@ const BlogSection = () => {
         </div>
       </div>
       <div className={styles.btnContainer}>
-        <Button text='See All Blogs' btnType='primary' href='/' />
+        <Button text='See All Blogs' btnType='purple' href='/' />
       </div>
     </section>
   );

@@ -2,11 +2,6 @@
   margin-top: 10rem;
 }
 
-.content {
-  border-top: 1px solid var(--gray);
-  padding-top: 5rem;
-}
-
 .heading {
   margin-bottom: 2rem;
   text-align: center;

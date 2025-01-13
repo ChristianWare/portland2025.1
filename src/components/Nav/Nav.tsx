@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 
 import { useState, useEffect, useRef } from "react";
@@ -6,7 +5,7 @@ import Link from "next/link";
 import styles from "./Nav.module.css";
 import Logo from "../Logo/Logo";
 import Button from "../Button/Button";
-import useInvalidPaths from "../../../lib/use-invalid-paths";
+// import useInvalidPaths from "../../../lib/use-invalid-paths";
 
 const navItems = [
   { text: "About", href: "/#about" },
@@ -25,8 +24,8 @@ const navItemsii = [
 ];
 
 export default function Nav() {
-  const invalidPath: boolean = useInvalidPaths();
-  if (invalidPath) return <></>;
+  // const invalidPath: boolean = useInvalidPaths();
+  // if (invalidPath) return <></>;
 
   const [isOpen, setIsOpen] = useState(false);
   const [navWhite, setNavWhite] = useState(false);

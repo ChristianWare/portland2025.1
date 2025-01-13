@@ -41,6 +41,7 @@
 .heading2 {
   font-family: var(--BoogyBrutPoster);
   font-size: 6rem;
+  mix-blend-mode: overlay;
 }
 
 .copy,

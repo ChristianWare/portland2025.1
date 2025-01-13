@@ -8,7 +8,7 @@ import Image from "next/image";
 import FAQImage from "../../../public/images/question.png";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import LayoutWrapper from "../LayoutWrapper";
-import BlogSection from "../BlogSection/BlogSection";
+// import BlogSection from "../BlogSection/BlogSection";
 
 interface Props {
   mapData: any;
@@ -82,7 +82,7 @@ const Faqs: FC<Props> = ({ mapData }) => {
               </div>
             </div>
           </div>
-          <BlogSection />
+          {/* <BlogSection /> */}
         </div>
       </LayoutWrapper>
     </section>

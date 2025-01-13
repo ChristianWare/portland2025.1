@@ -59,6 +59,7 @@
   margin-left: 0.3rem;
 }
 
+
 .btnContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -69,7 +70,6 @@
 
 .box {
   position: relative;
-  margin-top: 21rem;
 }
 
 .sceneContainer {
@@ -95,6 +95,6 @@
   }
 
   .box {
-    display: none;
+    margin-top: 30rem;
   }
 }

@@ -27,7 +27,7 @@ export default function AboutHero() {
             <div className={styles.sceneContainer}>
               <Scene2
                 useViewportScale={false}
-                fixedScale={[.7, .7, .7]}
+                fixedScale={[1.7, 1.7, 1.7]}
               />
             </div>
           </div>

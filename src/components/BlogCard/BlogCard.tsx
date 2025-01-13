@@ -28,10 +28,16 @@ export default function BlogCard({ post }: BlogPreviewCardProps) {
           <SectionHeading title='Featured' color='white' dotColor='whiteDot' />
         </div>
         <Link href={`/blog/${post.slug.current}`} className={styles.title}>
-         {post.title}
+          {post.title}
         </Link>
         <p className={styles.desc}>{post.description}</p>
-        <div className={styles.small}>15 Minute Read</div>
+        <div className={styles.small}>
+          {new Date(post._createdAt).toLocaleDateString("en-US", {
+            month: "long",
+            day: "numeric",
+            year: "numeric",
+          })}{" "}
+        </div>
       </div>
     </article>
   );

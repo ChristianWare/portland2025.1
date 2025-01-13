@@ -173,7 +173,6 @@ const SkillsSection = () => {
           </div>
           <WorkSection />
         </div>
-        {/* <Faqs mapData={homePageFaqs} /> */}
       </LayoutWrapper>
     </section>
   );

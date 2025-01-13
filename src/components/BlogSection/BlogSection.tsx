@@ -6,6 +6,7 @@ import SectionHeading2 from "../SectionHeading2/SectionHeading2";
 import { client } from "@/sanity/lib/client";
 import { Post } from "../../../@types";
 
+export const revalidate = 60;
 async function getPosts() {
   const query = `
   *[_type == 'post'] | order(_createdAt desc)

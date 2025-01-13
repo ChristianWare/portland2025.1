@@ -49,7 +49,11 @@ const ProjectsSection = () => {
                 dotColor='blackDot'
               />
             </div>
-            <h2 className={styles.heading}>Featured Project</h2>
+            <h2 className={styles.heading}>
+              {" "}
+              <span>Featured</span>
+              Project
+            </h2>
             <p className={styles.copy}>chrisware.dev - Portfolio website</p>
           </div>
           <div className={styles.bottom}>

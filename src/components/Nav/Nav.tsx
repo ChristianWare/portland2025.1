@@ -8,7 +8,7 @@ import Button from "../Button/Button";
 // import useInvalidPaths from "../../../lib/use-invalid-paths";
 
 const navItems = [
-  { text: "About", href: "/#about" },
+  { text: "About", href: "/about" },
   { text: "Projects", href: "/#projects" },
   { text: "Resume", href: "/#resume" },
 ];

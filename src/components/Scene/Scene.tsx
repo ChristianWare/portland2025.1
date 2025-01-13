@@ -1,4 +1,3 @@
-// Scene.tsx
 "use client";
 
 import { Canvas } from "@react-three/fiber";

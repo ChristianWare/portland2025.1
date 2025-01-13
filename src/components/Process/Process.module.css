@@ -2,6 +2,25 @@
   margin-top: 20rem;
 }
 
+.heading1 {
+  text-align: center;
+  color: var(--white);
+}
+
+.heading1 span {
+  font-family: var(--BoogyBrutPoster);
+  color: var(--white);
+  background: linear-gradient(
+    135deg,
+    rgba(252, 210, 205, 1) 15%,
+    rgba(189, 183, 213, 1) 65%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 6rem;
+}
+
 .box {
   border: 1px solid var(--white);
   margin-top: 3rem;
@@ -68,7 +87,7 @@
 }
 
 .index {
-  font-size: 5.5rem;
+  font-size: 4rem;
   color: var(--pink);
   font-family: var(--BoogyBrutPoster);
 }
@@ -76,10 +95,8 @@
 .feature {
   color: var(--white);
   font-size: 1.8rem;
-  /* font-style: normal; */
   font-weight: 600;
   margin-bottom: 2rem;
-  /* text-transform: uppercase; */
 }
 
 .desc {

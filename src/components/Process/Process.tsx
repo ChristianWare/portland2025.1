@@ -1,4 +1,3 @@
-// import SectionHeading from "../SectionHeading/SectionHeading";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import styles from "./Process.module.css";
 
@@ -28,6 +27,10 @@ const data = [
 const Process = () => {
   return (
     <section className={styles.container}>
+      <h2 className={styles.heading1}>
+        My approach to<br />
+        <span>Every project</span>
+      </h2>
       <div className={styles.box}>
         <div className={styles.middle}>
           <div className={styles.middleLeft}>

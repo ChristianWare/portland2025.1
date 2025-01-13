@@ -18,12 +18,12 @@ const data = [
     title: "Font(s)",
     description: '"Inter Tight" via Googl Fonts API',
   },
-  {
-    id: 3,
-    title: "Color Scheme",
-    description:
-      "black: #1e1738, blue: #162f35, white: #ffffff, pink: #fcd2cd, purple: #bdb7d5, gray: #787a7d, lightGray: #aab9c5 ",
-  },
+  // {
+  //   id: 3,
+  //   title: "Color Scheme",
+  //   description:
+  //     "black: #1e1738, blue: #162f35, white: #ffffff, pink: #fcd2cd, purple: #bdb7d5, gray: #787a7d, lightGray: #aab9c5 ",
+  // },
   {
     id: 4,
     title: "Analytics",

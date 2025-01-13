@@ -26,7 +26,7 @@ export default function Model({
   chromaticAberration,
   backside,
   useViewportScale = false,
-  fixedScale = [2, 2, 2],
+  fixedScale = [3, 3, 3],
 }: ModelProps) {
   const mesh = useRef<THREE.Mesh | null>(null);
   const { nodes } = useGLTF("/3dFiles/torrus.glb");

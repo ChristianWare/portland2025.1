@@ -29,7 +29,9 @@ export default function Model({
   fixedScale = [2, 2, 2],
 }: ModelProps) {
   const mesh = useRef<THREE.Mesh | null>(null);
-  const { nodes } = useGLTF("/3dFiles/foot_ball.glb");
+  const { nodes } = useGLTF(
+    "/3dFiles/crystal_from_croc_legend_of_the_gobbos.glb"
+  );
   const { viewport } = useThree();
 
   useFrame(() => {
@@ -42,7 +44,7 @@ export default function Model({
   return (
     <Float>
       <group scale={groupScale}>
-        <mesh ref={mesh} {...nodes.Object_4}>
+        <mesh ref={mesh} {...nodes.Object_6}>
           <MeshTransmissionMaterial
             thickness={thickness}
             roughness={roughness}

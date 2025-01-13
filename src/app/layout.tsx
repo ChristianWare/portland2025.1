@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
+import localFont from "next/font/local";
 
 import "./globals.css";
 
@@ -7,6 +8,12 @@ const InterTight = Inter_Tight({
   variable: "--InterTight",
   weight: ["400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
+});
+
+const BoogyBrutPoster = localFont({
+  src: "../../public/fonts/BoogyBrutPoster.woff2",
+  variable: "--BoogyBrutPoster",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -22,7 +29,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={InterTight.variable}>{children}</body>
+      <body className={`${InterTight.variable} ${BoogyBrutPoster.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
+
+// BoogyBrutPoster.woff2;

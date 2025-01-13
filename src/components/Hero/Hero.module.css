@@ -38,6 +38,11 @@
   text-align: center;
 }
 
+.heading2 {
+  font-family: var(--BoogyBrutPoster);
+  font-size: 6rem;
+}
+
 .copy,
 .span {
   max-width: 640px;

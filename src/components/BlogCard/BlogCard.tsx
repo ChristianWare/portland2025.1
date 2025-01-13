@@ -1,17 +1,23 @@
 import styles from "./BlogCard.module.css";
 import Image from "next/image";
-import Honey from "../../../public/images/honey.png";
 import SectionHeading from "../SectionHeading/SectionHeading";
+import { Post } from "../../../@types";
+import Link from "next/link";
+import { urlFor } from "@/sanity/lib/image";
 
-const BlogCard = () => {
+interface BlogPreviewCardProps {
+  post: Post;
+}
+
+export default function BlogCard({ post }: BlogPreviewCardProps) {
   return (
     <article className={styles.cardContainer}>
       <div className={styles.left}>
         <div className={styles.imgContainer}>
           <Image
-            src={Honey}
-            alt='image'
-            title='image'
+            src={urlFor(post.image).url()}
+            alt={post.title}
+            title={post.title}
             fill
             className={styles.img}
           />
@@ -21,17 +27,12 @@ const BlogCard = () => {
         <div className={styles.sectionHeadingContainer}>
           <SectionHeading title='Featured' color='white' dotColor='whiteDot' />
         </div>
-        <h3 className={styles.title}>
-          How to Create a Restaurant Website That Grows Your Online Orders
-        </h3>
-        <p className={styles.desc}>
-          Discover easy ways to build a website that attracts more customers to
-          your restaurant.
-        </p>
+        <Link href={`/blog/${post.slug.current}`} className={styles.title}>
+         {post.title}
+        </Link>
+        <p className={styles.desc}>{post.description}</p>
         <div className={styles.small}>15 Minute Read</div>
       </div>
     </article>
   );
-};
-
-export default BlogCard;
+}

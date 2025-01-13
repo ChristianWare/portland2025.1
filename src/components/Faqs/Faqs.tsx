@@ -33,7 +33,6 @@ const Faqs: FC<Props> = ({ mapData }) => {
         <div className={styles.parent}>
           <div className={styles.content}>
             <div className={styles.top}>
-              {/* <h2 className={styles.heading}>Questions & Answers</h2> */}
             </div>
             <div className={styles.bottom}>
               <div className={styles.bLeft}>

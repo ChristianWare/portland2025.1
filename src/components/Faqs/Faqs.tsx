@@ -8,6 +8,7 @@ import Image from "next/image";
 import FAQImage from "../../../public/images/question.png";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import LayoutWrapper from "../LayoutWrapper";
+import Scene2 from "../Scene2/Scene2";
 // import BlogSection from "../BlogSection/BlogSection";
 
 interface Props {
@@ -32,12 +33,12 @@ const Faqs: FC<Props> = ({ mapData }) => {
         </div>
         <div className={styles.parent}>
           <div className={styles.content}>
-            <div className={styles.top}>
-            </div>
+            <div className={styles.top}></div>
             <div className={styles.bottom}>
               <div className={styles.bLeft}>
                 <div className={styles.imgContianer}>
-                  <Image src={FAQImage} alt='' fill className={styles.img} />
+                  {/* <Image src={FAQImage} alt='' fill className={styles.img} /> */}
+                  <Scene2 />
                 </div>
               </div>
               <div className={styles.bRight}>

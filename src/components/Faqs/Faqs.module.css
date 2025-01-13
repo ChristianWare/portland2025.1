@@ -55,13 +55,15 @@
 .bottom {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 5rem;
+  grid-gap: 2rem;
 }
 
 .bLeft {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--purple);
+  border-radius: 15px;
 }
 
 .copy {
@@ -70,8 +72,8 @@
 
 .imgContianer {
   position: relative;
-  width: 50%;
-  height: 50%;
+  width: 70%;
+  height: 70%;
   animation: float 5s ease-in-out infinite;
 }
 
@@ -225,7 +227,7 @@
   .imgContianer {
     margin-left: auto;
     margin-right: auto;
-    height: 350px;
+    height: 400px;
   }
 }
 
@@ -233,10 +235,23 @@
   .parent {
     padding: 2rem;
   }
+
+  .imgContianer {
+    width: 50%;
+    height: 250px;
+  }
 }
 
 @media screen and (max-width: 568px) {
   .parent {
     padding: 1rem;
+  }
+
+  .bLeft {
+    margin-bottom: 0rem;
+  }
+
+  .imgContianer {
+    animation: none;
   }
 }

@@ -51,6 +51,7 @@
 .headingii {
   font-family: var(--BoogyBrutPoster);
   font-size: 3rem;
+  letter-spacing: 1px;
 }
 
 .headingii,

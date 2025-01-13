@@ -83,7 +83,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px dashed var(--lightGray);
+  border: 1px dashed var(--lightGray);
 }
 
 .index {

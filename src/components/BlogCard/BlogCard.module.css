@@ -105,4 +105,19 @@
   .imgContainer {
     height: 250px;
   }
+  .sectionHeadingContainer,
+  .title,
+  .desc,
+  .small {
+    padding: 2rem 3rem;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .sectionHeadingContainer,
+  .title,
+  .desc,
+  .small {
+    padding: 2rem;
+  }
 }

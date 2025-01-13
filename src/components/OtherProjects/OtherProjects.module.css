@@ -21,7 +21,7 @@
 
 .card {
   margin-top: -10rem;
-  /* margin-bottom: -5rem; */
+  cursor: pointer;
 }
 
 .imgContainer {
@@ -36,12 +36,19 @@
   top: 125px;
   border: 1px solid var(--lightGray);
   border-radius: 50%;
+  transition: all 0.2s ease-in;
 }
 
 .img {
   border: 10px solid var(--white);
   border-radius: 50%;
   object-fit: cover;
+}
+
+.card:hover .imgContainer {
+  box-shadow:
+    0px 0px 0px 0px rgba(153, 126, 152, 1),
+    0px 15px 25px 0px rgba(0, 0, 0, 0.15);
 }
 
 .cardBottom {

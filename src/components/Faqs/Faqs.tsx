@@ -4,8 +4,8 @@
 import styles from "./Faqs.module.css";
 import { FC, useState } from "react";
 import Plus from "../../../public/icons/plus.svg";
-import Image from "next/image";
-import FAQImage from "../../../public/images/question.png";
+// import Image from "next/image";
+// import FAQImage from "../../../public/images/question.png";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import LayoutWrapper from "../LayoutWrapper";
 import Scene2 from "../Scene2/Scene2";
@@ -37,7 +37,7 @@ const Faqs: FC<Props> = ({ mapData }) => {
             <div className={styles.bottom}>
               <div className={styles.bLeft}>
                 <div className={styles.imgContianer}>
-                  {/* <Image src={FAQImage} alt='' fill className={styles.img} /> */}
+                
                   <Scene2 />
                 </div>
               </div>

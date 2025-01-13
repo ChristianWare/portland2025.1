@@ -3,6 +3,7 @@
 import styles from "./WorkSection.module.css";
 
 import Button from "../Button/Button";
+import SectionHeading2 from "../SectionHeading2/SectionHeading2";
 
 const WorkSection = () => {
   const data = [
@@ -31,7 +32,8 @@ const WorkSection = () => {
 
   return (
     <section className={styles.container} id='resume'>
-      <h2 className={styles.heading}>Work History</h2>
+      {/* <h2 className={styles.heading}>Work History</h2> */}
+      <SectionHeading2 title='Work History' />
 
       <div className={styles.content}>
         <div className={styles.top}>

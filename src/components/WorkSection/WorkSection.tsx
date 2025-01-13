@@ -31,13 +31,8 @@ const WorkSection = () => {
 
   return (
     <section className={styles.container} id='resume'>
-      {/* <div className={styles.sectionHeadingContainer}>
-        <SectionHeading
-          title='Work History'
-          color='black'
-          dotColor='blackDot'
-        />
-      </div> */}
+      <h2 className={styles.heading}>Work History</h2>
+
       <div className={styles.content}>
         <div className={styles.top}>
           <span className={styles.sectionTitle}>My Experience</span>

@@ -1,7 +1,7 @@
+import styles from "./BlogSection.module.css";
 import BlogCard from "../BlogCard/BlogCard";
 import BlogCard2 from "../BlogCard2/BlogCard2";
 import Button from "../Button/Button";
-import styles from "./BlogSection.module.css";
 
 const BlogSection = () => {
   return (

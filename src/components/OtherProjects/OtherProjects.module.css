@@ -14,9 +14,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.5rem;
-  /* border: 1px solid var(--lightGray2); */
   border-radius: 15px;
-  /* padding: 1rem; */
 }
 
 .card {

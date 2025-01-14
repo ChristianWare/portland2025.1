@@ -1,39 +1,43 @@
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./Tools.module.css";
-import SEO from "../../../public/icons/seo.svg";
+import Figma from "../../../public/icons/figma.svg";
 import Process from "../Process/Process";
+import Trello from "../../../public/icons/trello.svg";
+import Github from "../../../public/icons/github.svg";
+import VSCode from "../../../public/icons/visualStudio.svg";
+import SectionHeading from "../SectionHeading/SectionHeading";
 
 const data = [
   {
     id: 1,
-    heading: "One package with everything you need",
+    heading: "Figma: Wireframing & Prototyping",
     description:
-      "With Owner, you get all the tools you need to grow from day one. Our happiest and most successful customers switched to Owner from another solution. They were paying less, but weren’t getting the online sales growth they were looking for.",
-    icon: <SEO width={40} height={40} className={styles.icon} />,
+      "I use Figma to design and prototype with precision. With it I can create wireframes and interactive designs in real time.",
+    icon: <Figma width={40} height={40} className={styles.icon} />,
     gridArea: "one",
   },
   {
     id: 2,
-    heading: "Month to month pricing",
+    heading: "Trello: Collaboration & Productivity",
     description:
-      "Our pricing is month to month. We don’t believe in locking you into long-term contracts. We believe in earning your business every month.",
-    icon: <SEO width={40} height={40} className={styles.icon} />,
+      "Trello helps me to organize tasks, track progress, and collaborate effectively. Trello simplifies the project management process with its intuitive board system.",
+    icon: <Trello width={40} height={40} className={styles.icon} />,
     gridArea: "two",
   },
   {
     id: 3,
-    heading: "No upgrades or upsells",
+    heading: "Git: Version Control",
     description:
-      "There’s no upgrades or upsells. We give you everything you need to grow online.",
-    icon: <SEO width={40} height={40} className={styles.icon} />,
+      "I can easily manage my codebase with via git. This enables me to track changes, collaborate on projects, and maintain version history of my code for any project.",
+    icon: <Github width={40} height={40} className={styles.icon} />,
     gridArea: "three",
   },
   {
     id: 4,
-    heading: "24/7 USA support",
+    heading: "VSCode: Text Editors & IDE",
     description:
-      "Work with a world-class team. You'll have 24/7, USA-based support.",
-    icon: <SEO width={40} height={40} className={styles.icon} />,
+      "VS Code is my IDE of choice. I can write, debug, and edit code efficiently. Visual Studio Code is a powerful and extensible code editor tailored for developers.",
+    icon: <VSCode width={40} height={40} className={styles.icon} />,
     gridArea: "four",
   },
 ];
@@ -43,8 +47,10 @@ export default function Tools() {
     <section className={styles.container}>
       <LayoutWrapper>
         <div className={styles.top}>
+          <SectionHeading title='Toolset' color='black' dotColor='blackDot' />
           <h2 className={styles.heading}>
-            Join thousands of restaurants switching to Owner
+            My essential tools for Building <br />
+            <span className={styles.span}>exceptional websites</span>
           </h2>
           <p className={styles.copy}>
             Here’s why restaurants choose Owner to grow faster online

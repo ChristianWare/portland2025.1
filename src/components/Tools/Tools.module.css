@@ -16,6 +16,16 @@
   width: 50%;
 }
 
+.heading {
+  margin-top: -1rem;
+}
+
+.span {
+  color: var(--purple2);
+  font-family: var(--BoogyBrutPoster);
+  font-size: 6rem;
+}
+
 .copy {
   color: var(--grayText);
 }

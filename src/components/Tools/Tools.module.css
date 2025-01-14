@@ -1,0 +1,141 @@
+.container {
+  background-color: var(--gray2);
+  padding: 10rem 0rem;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.heading {
+  text-align: center;
+  width: 50%;
+}
+
+.copy {
+  color: var(--grayText);
+}
+
+.bottom {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-areas:
+    "one one two two"
+    "one one three four";
+  grid-template-columns: repeat(4, 1fr);
+  padding-bottom: 1rem;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.card {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5rem;
+  border: 1px solid var(--lightGray);
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+}
+
+.cardTop {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+
+.title {
+  font-size: 2rem;
+  letter-spacing: -0.0125em;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.iconContainer {
+  background-color: var(--purple2);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.icon {
+  color: var(--white);
+  padding: 0.5rem;
+}
+
+.desc {
+  font-weight: 500;
+  color: var(--grayText);
+}
+
+@media screen and (max-width: 1068px) {
+  .bottom {
+    grid-template-areas:
+      "one one"
+      "two two"
+      "three four";
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .bottom {
+    grid-template-areas:
+      "one one"
+      "two two"
+      "three three"
+      "four four";
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cardTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .iconContainer {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .desc {
+    text-align: center;
+  }
+}

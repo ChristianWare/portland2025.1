@@ -25,7 +25,6 @@ export default async function BlogSection() {
         <div className={styles.content}>
           <div className={styles.bottom}>
             <div className={styles.bTop}>
-              {/* <BlogCard /> */}
               {posts.map((post: Post) => (
                 <BlogCard key={post._id} post={post} />
               ))}

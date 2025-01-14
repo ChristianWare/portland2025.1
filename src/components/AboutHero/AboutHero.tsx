@@ -17,7 +17,7 @@ export default function AboutHero() {
             <h1 className={styles.heading}>
               I build digital gems
               <br />
-              <span className={styles.heading2}>for Brilliance</span>.
+              <span className={styles.heading2}>for brilliance</span>.
             </h1>
             <p className={styles.copy}>
               Functional is a lightweight app for small teams to streamline

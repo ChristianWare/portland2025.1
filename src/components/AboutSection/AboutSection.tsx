@@ -67,7 +67,9 @@ const AboutSection = () => {
         {/* <div className={styles.bottomBtnArea}>
           <div></div>
         </div> */}
-        <Process />
+        <div className={styles.processContainer}>
+          <Process />
+        </div>
         <div className={styles.btnContainer}>
           <Button text='Learn More About Me' btnType='purple' href='/' />
         </div>

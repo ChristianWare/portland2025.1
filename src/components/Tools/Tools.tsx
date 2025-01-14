@@ -1,6 +1,7 @@
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./Tools.module.css";
 import SEO from "../../../public/icons/seo.svg";
+import Process from "../Process/Process";
 
 const data = [
   {
@@ -61,6 +62,9 @@ export default function Tools() {
               </div>
             </div>
           ))}
+        </div>
+        <div className={styles.processContainer}>
+          <Process />
         </div>
       </LayoutWrapper>
     </section>

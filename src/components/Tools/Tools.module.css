@@ -97,6 +97,13 @@
   color: var(--grayText);
 }
 
+.processContainer {
+  background-color: var(--blue);
+  padding: 2rem;
+  border-radius: 25px;
+  margin-top: 20rem;
+}
+
 @media screen and (max-width: 1068px) {
   .bottom {
     grid-template-areas:

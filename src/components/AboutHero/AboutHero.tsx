@@ -10,13 +10,14 @@ export default function AboutHero() {
         <div className={styles.content}>
           <div className={styles.left}>
             <SectionHeading
-              title='Web Developer'
+              title='About Me'
               color='black'
               dotColor='blackDot'
             />
             <h1 className={styles.heading}>
-              About me. <br />
-              <span className={styles.heading2}>All about Christian</span>.
+              I build digital gems
+              <br />
+              <span className={styles.heading2}>for Brilliance</span>.
             </h1>
             <p className={styles.copy}>
               Functional is a lightweight app for small teams to streamline

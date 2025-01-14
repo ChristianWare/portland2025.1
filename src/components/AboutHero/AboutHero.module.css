@@ -29,6 +29,10 @@
   margin-top: 10rem;
 }
 
+.heading {
+  margin-top: 1rem;
+}
+
 .heading2 {
   font-family: var(--BoogyBrutPoster);
   font-size: 6rem;

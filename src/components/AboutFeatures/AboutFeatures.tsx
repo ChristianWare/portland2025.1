@@ -99,7 +99,7 @@ export default function AboutFeatures() {
           <SectionHeading title='About Me' color='black' dotColor='blackDot' />
           <h2 className={styles.heading}>
             Websites <br />
-            <span className={styles.span}>& everything around it</span>
+            <span className={styles.span}>& everything around them</span>
           </h2>
           <p className={styles.copy}>
             Building a website is only the beginning. It&apos;s important to understand the

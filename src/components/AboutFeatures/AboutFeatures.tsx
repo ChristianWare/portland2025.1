@@ -13,7 +13,7 @@ import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import WorkSection from "../WorkSection/WorkSection";
 
-const ecommerceFeatures = [
+const data = [
   {
     icon: "",
     title: "",
@@ -27,7 +27,7 @@ const ecommerceFeatures = [
     title: "",
   },
   {
-    icon: <WebDesign  className={styles.icon} />,
+    icon: <WebDesign className={styles.icon} />,
     title: "Web Design",
   },
   {
@@ -39,7 +39,7 @@ const ecommerceFeatures = [
     title: "",
   },
   {
-    icon: <WebDev  className={styles.icon} />,
+    icon: <WebDev className={styles.icon} />,
     title: "Web Development",
   },
   {
@@ -98,17 +98,18 @@ export default function AboutFeatures() {
         <div className={styles.top}>
           <SectionHeading title='About Me' color='black' dotColor='blackDot' />
           <h2 className={styles.heading}>
-            <span className={styles.span}>Features</span> of our <br />{" "}
-            Ecommerce Websites
+            Websites <br />
+            <span className={styles.span}>& everything around it</span>
           </h2>
           <p className={styles.copy}>
-            Packed with powerful tools and intuitive design, our e-commerce
-            websites are built to enhance user experience, drive sales, and
-            scale effortlessly with your business.
+            Building a website is only the beginning. It&apos;s important to understand the
+            essential elements that make them thrive. My expertise spans the
+            entire web development ecosystem, combining design, functionality,
+            and optimization to create seamless digital experiences.
           </p>
         </div>
         <div className={styles.dataContainer}>
-          {ecommerceFeatures.map((x, index) => (
+          {data.map((x, index) => (
             <div key={index} className={styles.content}>
               <div className={styles.left}>
                 <div className={styles.iconContainer}>{x.icon}</div>

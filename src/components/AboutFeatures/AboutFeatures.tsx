@@ -3,6 +3,7 @@ import SEO from "../../../public/icons/seo.svg";
 
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
+import WorkSection from "../WorkSection/WorkSection";
 
 const ecommerceFeatures = [
   {
@@ -128,6 +129,7 @@ export default function AboutFeatures() {
             </div>
           ))}
         </div>
+        <WorkSection />
       </LayoutWrapper>
     </section>
   );

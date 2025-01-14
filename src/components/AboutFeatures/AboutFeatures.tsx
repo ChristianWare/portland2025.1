@@ -1,6 +1,14 @@
 import styles from "./AboutFeatures.module.css";
+import Analytics from "../../../public/icons/analytics.svg";
+import Git from "../../../public/icons/git.svg";
+import Performance from "../../../public/icons/performance.svg";
+import Cloud from "../../../public/icons/cloud.svg";
+import Testing from "../../../public/icons/testing.svg";
+import Accessibility from "../../../public/icons/accessibility.svg";
+import Container from "../../../public/icons/container.svg";
 import SEO from "../../../public/icons/seo.svg";
-
+import WebDev from "../../../public/icons/webDev.svg";
+import WebDesign from "../../../public/icons/webDesign.svg";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import WorkSection from "../WorkSection/WorkSection";
@@ -9,93 +17,75 @@ const ecommerceFeatures = [
   {
     icon: "",
     title: "",
-    description: "",
   },
   {
     icon: "",
     title: "",
-    description: "",
   },
   {
     icon: "",
     title: "",
-    description: "",
   },
   {
-    icon: <SEO width={40} height={40} className={styles.icon} />,
-    title: "Platform Integration",
-    description:
-      "We integrate with leading e-commerce platforms like Shopify, WooCommerce, and Magento, ensuring your online store has the functionality and flexibility required to succeed in a competitive market.",
+    icon: <WebDesign  className={styles.icon} />,
+    title: "Web Design",
   },
   {
     icon: "",
     title: "",
-    description: "",
   },
   {
     icon: "",
     title: "",
-    description: "",
   },
   {
-    icon: <SEO width={40} height={40} className={styles.icon} />,
-    title: "Custom Website Design",
-    description:
-      "We offer bespoke design services that reflect your brand’s identity and provide an engaging user experience.",
+    icon: <WebDev  className={styles.icon} />,
+    title: "Web Development",
   },
   {
-    icon: <SEO width={40} height={40} className={styles.icon} />,
-    title: "Search Engine Optimization (SEO)",
-    description:
-      "Our websites are built with SEO best practices to ensure that your business ranks well in search engine results.",
+    icon: <SEO className={styles.icon} />,
+    title: "SEO",
   },
   {
     icon: "",
     title: "",
-    description: "",
   },
   {
-    icon: <SEO width={40} height={40} className={styles.icon} />,
-    title: "E-commerce Analytics",
-    description:
-      "We provide comprehensive analytics and reporting to help you understand your e-commerce performance.",
+    icon: <Container className={styles.icon} />,
+    title: "DevOps & CI/CD",
   },
   {
-    icon: <SEO width={40} height={40} className={styles.icon} />,
-    title: "Inventory Management",
-    description:
-      "Our e-commerce platforms enable efficient management of multiple products.",
+    icon: <Accessibility className={styles.icon} />,
+    title: "Accessibility",
   },
 
   {
-    icon: <SEO width={40} height={40} className={styles.icon} />,
-    title: "Stripe Payment Gateway",
-    description:
-      "Integrating Stripe as your payment gateway ensures secure transactions and supports multiple payment methods.",
+    icon: <Testing className={styles.icon} />,
+    title: "Testing",
   },
 
   {
-    icon: <SEO width={40} height={40} className={styles.icon} />,
-    title: "Hosting",
+    icon: <Cloud className={styles.icon} />,
+    title: "Cloud & Hosting",
     description:
       "We use CDN's, or content delivery networks, to speed up the delivery of web content by bringing it closer to where users are.",
   },
 
   {
-    icon: <SEO width={40} height={40} className={styles.icon} />,
-    title: "Unlimited Edits",
+    icon: <Performance className={styles.icon} />,
+    title: "Performance Optimization",
     description:
       "There are no limits to how many edits you can request. If you ever want to make any changes you can call us any time.",
   },
   {
-    icon: <SEO width={40} height={40} className={styles.icon} />,
-    title: "24/7 Support",
+    icon: <Git className={styles.icon} />,
+    title: "Version Control & Collaboration",
     description:
       "If you ever need to reach out to us for any reason, call us! We're here and ready to help.",
   },
   {
-    icon: <SEO width={40} height={40} className={styles.icon} />,
-    title: "Citations & Listings",
+    icon: <Analytics className={styles.icon} />,
+    title: "Analytics",
     description:
       "A listing on Google appears when potential customers are searching for your business name or a service you offer. We set this up for you.",
   },

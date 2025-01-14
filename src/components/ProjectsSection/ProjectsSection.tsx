@@ -5,42 +5,42 @@ import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import Button from "../Button/Button";
 import OtherProjects from "../OtherProjects/OtherProjects";
-import Scene from "../Scene/Scene";
+// import Scene from "../Scene/Scene";
 
-const data = [
-  {
-    id: 1,
-    title: "Tech Stack",
-    description: "Next.js 15, React 19, CSS Modules, Three.js, Sanity.io ",
-  },
-  {
-    id: 2,
-    title: "Font(s)",
-    description: '"Inter Tight" via Googl Fonts API',
-  },
-  // {
-  //   id: 3,
-  //   title: "Color Scheme",
-  //   description:
-  //     "black: #1e1738, blue: #162f35, white: #ffffff, pink: #fcd2cd, purple: #bdb7d5, gray: #787a7d, lightGray: #aab9c5 ",
-  // },
-  {
-    id: 4,
-    title: "Analytics",
-    description: "Plausible",
-  },
-  {
-    id: 5,
-    title: "Hosting",
-    description: "Vercel",
-  },
-];
+// const data = [
+//   {
+//     id: 1,
+//     title: "Tech Stack",
+//     description: "Next.js 15, React 19, CSS Modules, Three.js, Sanity.io ",
+//   },
+//   {
+//     id: 2,
+//     title: "Font(s)",
+//     description: '"Inter Tight" via Googl Fonts API',
+//   },
+//   // {
+//   //   id: 3,
+//   //   title: "Color Scheme",
+//   //   description:
+//   //     "black: #1e1738, blue: #162f35, white: #ffffff, pink: #fcd2cd, purple: #bdb7d5, gray: #787a7d, lightGray: #aab9c5 ",
+//   // },
+//   {
+//     id: 4,
+//     title: "Analytics",
+//     description: "Plausible",
+//   },
+//   {
+//     id: 5,
+//     title: "Hosting",
+//     description: "Vercel",
+//   },
+// ];
 
 const ProjectsSection = () => {
   return (
     <section className={styles.container} id='projects'>
       <LayoutWrapper>
-        <div className={styles.content}>
+        {/* <div className={styles.content}>
           <div className={styles.top}>
             <div className={styles.sectionHeadingContainer}>
               <SectionHeading
@@ -78,6 +78,21 @@ const ProjectsSection = () => {
               </div>
             </div>
           </div>
+        </div> */}
+        <div className={styles.top}>
+          <div className={styles.sectionHeadingContainer}>
+            <SectionHeading
+              title='My Work'
+              color='black'
+              dotColor='blackDot'
+            />
+          </div>
+          <h2 className={styles.heading}>
+            {" "}
+            <span>Featured</span>
+            Projects
+          </h2>
+          {/* <p className={styles.copy}>chrisware.dev - Portfolio website</p> */}
         </div>
         <OtherProjects />
         <div className={styles.btnContainerii}>

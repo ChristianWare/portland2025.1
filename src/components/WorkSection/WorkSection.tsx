@@ -37,7 +37,7 @@ const WorkSection = () => {
 
       <div className={styles.content}>
         <div className={styles.top}>
-          <span className={styles.sectionTitle}>My Experience</span>
+          <span className={styles.sectionTitle}>Relevant Experience</span>
         </div>
         <div className={styles.bottom}>
           <div className={styles.left}>

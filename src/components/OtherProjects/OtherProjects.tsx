@@ -30,9 +30,9 @@ const OtherProjects = () => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <div className={styles.top}>
+        {/* <div className={styles.top}>
           <h3 className={styles.heading}>Other Projects</h3>
-        </div>
+        </div> */}
         <div className={styles.bottom}>
           {data.map((x) => (
             <div key={x.id} className={styles.card}>

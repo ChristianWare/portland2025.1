@@ -46,7 +46,7 @@
 
 .copy,
 .span {
-  max-width: 640px;
+  width: 60%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;

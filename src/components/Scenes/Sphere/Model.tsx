@@ -3,7 +3,7 @@
 // import { useGLTF } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
 import { useFrame } from "@react-three/fiber";
-import { Float, MeshTransmissionMaterial, useGLTF } from "@react-three/drei";
+import {  MeshTransmissionMaterial, useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 import React, { useRef } from "react";
 
@@ -40,7 +40,7 @@ export default function Model({
   const groupScale = useViewportScale ? viewport.width / 4.5 : fixedScale;
 
   return (
-    <Float>
+    <>
       <group scale={groupScale}>
         <mesh ref={mesh} {...nodes.Object_2}>
           <MeshTransmissionMaterial
@@ -53,6 +53,6 @@ export default function Model({
           />
         </mesh>
       </group>
-    </Float>
+    </>
   );
 }

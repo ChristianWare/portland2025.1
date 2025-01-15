@@ -12,7 +12,6 @@ import SectionHeading from "../SectionHeading/SectionHeading";
 //   ssr: false,
 // });
 
-
 export default function Hero() {
   return (
     <section className={styles.container}>

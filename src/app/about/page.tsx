@@ -5,6 +5,7 @@ import AboutFeatures from "@/components/AboutFeatures/AboutFeatures";
 import BlogSection from "@/components/BlogSection/BlogSection";
 import FinalCTA from "@/components/FinalCTA/FinalCTA";
 import Tools from "@/components/Tools/Tools";
+// import AboutInterests from "@/components/AboutInterests/AboutInterests";
 
 export default function AboutPage() {
   return (
@@ -13,6 +14,7 @@ export default function AboutPage() {
       <AboutHero />
       <AboutFeatures />
       <Tools />
+      {/* <AboutInterests /> */}
       <BlogSection />
       <FinalCTA />
     </main>

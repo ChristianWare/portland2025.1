@@ -18,3 +18,18 @@ export interface Author<T> {
   name: string;
   image: T;
 }
+
+export interface SimplifiedProject {
+  _id: string;
+  imageUrl: string;
+  price: number;
+  slug: string;
+  categoryName: string;
+  description: string;
+  name: string;
+}
+
+export interface FullProject {
+  _id: string;
+  name: string;
+}

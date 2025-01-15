@@ -97,6 +97,11 @@
 }
 
 @media screen and (max-width: 968px) {
+  .copy,
+  .span {
+    width: 80%;
+  }
+
   .btnContainer {
     width: 80%;
   }
@@ -105,6 +110,11 @@
 @media screen and (max-width: 568px) {
   .container {
     padding-bottom: 5rem;
+  }
+
+  .copy,
+  .span {
+    width: 100%;
   }
 
   .sceneContainer {

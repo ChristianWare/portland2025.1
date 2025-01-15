@@ -20,6 +20,7 @@ import Sanity from "../../../public/icons/sanity.svg";
 import Contentful from "../../../public/icons/contentful.svg";
 import Docker from "../../../public/icons/docker.svg";
 import WordPress from "../../../public/icons/wordpress.svg";
+import Three from "../../../public/icons/threejs.svg";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import WorkSection from "../WorkSection/WorkSection";
@@ -117,6 +118,11 @@ const data = [
     icon2: <WordPress className={styles.icon2} />,
     name: "Word Press",
   },
+  {
+    icon: <Three className={styles.icon} />,
+    icon2: <Three className={styles.icon2} />,
+    name: "Three.js",
+  },
 ] as const;
 
 const SkillsSection = () => {
@@ -128,7 +134,7 @@ const SkillsSection = () => {
     if (isPaused) return;
     const interval = setInterval(() => {
       setCurrentIconIndex((prevIndex) => (prevIndex + 1) % data.length);
-    }, 100);
+    }, 300);
 
     return () => clearInterval(interval);
   }, [isPaused]);

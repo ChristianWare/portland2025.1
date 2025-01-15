@@ -82,14 +82,14 @@
   position: relative;
   width: 100%;
   height: 100%;
-  animation: float 5s ease-in-out infinite;
+  /* animation: float 5s ease-in-out infinite; */
 }
 
 .img {
   object-fit: contain;
 }
 
-@keyframes float {
+/* @keyframes float {
   0% {
     transform: translateY(0);
   }
@@ -105,7 +105,7 @@
   100% {
     transform: translateY(0);
   }
-}
+} */
 
 .bRight {
   display: grid;
@@ -245,7 +245,7 @@ font-size: 1.6rem;}
   }
 
   .imgContianer {
-    width: 50%;
+    /* width: 50%; */
     height: 250px;
   }
 }

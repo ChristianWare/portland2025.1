@@ -1,0 +1,112 @@
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 75vh;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    rgba(252, 210, 205, 1) 15%,
+    rgba(189, 183, 213, 1) 65%
+  );
+}
+
+.container::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  opacity: 0.03;
+  pointer-events: none;
+  background: url(../../../public/noise.gif);
+}
+
+.content {
+  padding-top: 10rem;
+  padding-bottom: 18rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 998;
+}
+
+.heading {
+  text-align: center;
+}
+
+.heading2 {
+  font-family: var(--BoogyBrutPoster);
+  font-size: 6rem;
+  mix-blend-mode: overlay;
+}
+
+.copy,
+.span {
+  max-width: 640px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4em;
+  font-size: 2rem;
+}
+
+.copy {
+  mix-blend-mode: overlay;
+}
+
+.span {
+  font-weight: 800;
+  margin-left: 0.3rem;
+}
+
+.btnContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  width: 50%;
+  margin-top: 1rem;
+}
+
+.box {
+  position: relative;
+}
+
+.sceneContainer {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+  transform: translate(-50%, -35%) rotate(0deg);
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+@media screen and (max-width: 968px) {
+  .btnContainer {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .container {
+    padding-bottom: 5rem;
+  }
+
+  .sceneContainer {
+    transform: translate(-50%, -30%);
+  }
+
+  .btnContainer {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* .box {
+    display: none;
+  } */
+}

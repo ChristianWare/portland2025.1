@@ -4,12 +4,9 @@
 import styles from "./Faqs.module.css";
 import { FC, useState } from "react";
 import Plus from "../../../public/icons/plus.svg";
-// import Image from "next/image";
-// import FAQImage from "../../../public/images/question.png";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import LayoutWrapper from "../LayoutWrapper";
-import Scene2 from "../Scene2/Scene2";
-// import BlogSection from "../BlogSection/BlogSection";
+import Sphere from "../Scenes/Sphere/Sphere";
 
 interface Props {
   mapData: any;
@@ -37,8 +34,10 @@ const Faqs: FC<Props> = ({ mapData }) => {
             <div className={styles.bottom}>
               <div className={styles.bLeft}>
                 <div className={styles.imgContianer}>
-                
-                  <Scene2 />
+                  <Sphere
+                    useViewportScale={false}
+                    fixedScale={[0.10, 0.10, 0.10]}
+                  />
                 </div>
               </div>
               <div className={styles.bRight}>

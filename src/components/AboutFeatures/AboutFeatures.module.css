@@ -42,6 +42,19 @@
   padding: 2rem;
   border-radius: 10px;
   background-color: var(--blue);
+  position: relative;
+}
+
+.content::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  opacity: 0.05;
+  pointer-events: none;
+  background: url(../../../public/noise.gif);
 }
 
 .content:nth-child(1),

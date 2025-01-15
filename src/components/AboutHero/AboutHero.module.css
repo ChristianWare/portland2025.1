@@ -47,6 +47,10 @@
   font-size: 2rem;
 }
 
+.copy {
+  margin-top: 3rem;
+}
+
 .span {
   font-weight: 800;
   margin-left: 0.3rem;
@@ -61,6 +65,10 @@
 }
 
 @media screen and (max-width: 968px) {
+  .container {
+    padding-bottom: 20rem;
+  }
+
   .content {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 10rem;
@@ -79,6 +87,6 @@
   }
 
   .sceneContianer {
-    margin-top: 8rem;
+    margin-top: 10rem;
   }
 }

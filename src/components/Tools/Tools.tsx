@@ -49,7 +49,7 @@ export default function Tools() {
         <div className={styles.top}>
           <SectionHeading title='Toolset' color='black' dotColor='blackDot' />
           <h2 className={styles.heading}>
-            My essential tools for Building <br />
+            My preferred tools for building <br />
             <span className={styles.span}>exceptional websites</span>
           </h2>
           <p className={styles.copy}>

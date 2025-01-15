@@ -96,7 +96,7 @@ export default function AboutFeatures() {
     <section className={styles.container} id='features'>
       <LayoutWrapper>
         <div className={styles.top}>
-          <SectionHeading title='About Me' color='black' dotColor='blackDot' />
+          <SectionHeading title='My Skillset' color='black' dotColor='blackDot' />
           <h2 className={styles.heading}>
             Websites <br />
             <span className={styles.span}>& everything around them</span>

@@ -9,8 +9,9 @@ import Button from "../Button/Button";
 
 const navItems = [
   { text: "About", href: "/about" },
-  { text: "Projects", href: "/#projects" },
-  { text: "Resume", href: "/#resume" },
+  { text: "Projects", href: "/projects" },
+  { text: "Blog", href: "/blog" },
+  { text: "Contact", href: "/contact" },
 ];
 
 const navItemsii = [

@@ -19,16 +19,18 @@ export default function Cog({
       <Canvas className={styles.canvas}>
         <directionalLight intensity={3} position={[0, 3, 2]} />
         <Environment preset='city' />
-        <Model
-          thickness={2}
-          roughness={0}
-          transmission={0.9}
-          ior={1}
-          chromaticAberration={0.5}
-          backside={true}
-          useViewportScale={useViewportScale}
-          fixedScale={fixedScale}
-        />
+        <group rotation={[Math.PI / 5, Math.PI / 6, 0]}>
+          <Model
+            thickness={2}
+            roughness={0}
+            transmission={0.9}
+            ior={1}
+            chromaticAberration={0.5}
+            backside={true}
+            useViewportScale={useViewportScale}
+            fixedScale={fixedScale}
+          />
+        </group>
       </Canvas>
     </div>
   );

@@ -84,6 +84,16 @@
   width: 100vw;
   height: 100vh;
   z-index: -1;
+  /* animation: rotateClockwise 5s linear infinite; */
+}
+
+@keyframes rotateClockwise {
+  from {
+    transform: translate(-50%, -35%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -35%) rotate(360deg);
+  }
 }
 
 @media screen and (max-width: 968px) {

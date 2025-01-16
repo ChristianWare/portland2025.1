@@ -1,134 +1,178 @@
 .container {
-  overflow: hidden;
-  margin-top: 7rem;
+  border-radius: 20px;
+  background-color: var(--white);
+  padding: 3rem;
 }
 
-.layoutWrapper {
-  z-index: 1000;
-  max-width: 1500px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 30px;
-  padding-left: 30px;
+.topTop {
+  margin-bottom: 5rem;
+  padding: 5rem;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.top,
+.bottom {
+  /* padding: 3rem; */
+  border-radius: 5px;
 }
 
-.right {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  width: 100%;
+.top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  padding: 3rem;
 }
 
-.middleDesktop {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 2rem;
+.brandInfoMobile {
+  display: none;
 }
 
-.heading {
-  color: var(--white);
-  font-weight: 600;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  user-select: none;
-}
-
-.bottomDesktop {
-  border-top: 1px solid gray;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-  width: 100%;
+.logo {
+  color: var(--green);
 }
 
 .copy {
-  color: var(--white);
-  font: 1.2rem;
-  width: 100%;
-  margin-top: 2rem;
+  font-size: 1.3rem;
+  width: 80%;
+  margin-top: 1rem;
+  color: var(--grayText);
 }
 
-.lb2 {
-  padding: 2rem;
-  font-size: 0;
+.socials {
   display: flex;
   align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.socialContainer {
+  background-color: var(--blue);
+  padding: 0.8rem;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.icon {
+  color: var(--white);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  color: var(--blue);
+}
+
+.heading {
+  color: var(--bgColor);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.link {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  color: var(--blue);
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 2rem;
 }
 
-@media screen and (max-width: 1068px) {
-  .top {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+.iconii {
+  color: var(--blue);
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px dashed var(--gray);
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.logoii {
+  color: var(--blue);
+  font-size: 1.2rem;
+}
+
+.disclosures {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--blue);
+  font-size: 1.2rem;
+}
+
+.disc {
+  font-size: 1.2rem;
 }
 
 @media screen and (max-width: 968px) {
-  .right {
-    align-items: center;
-    margin-top: 3rem;
-  }
-}
-
-@media screen and (max-width: 870px) {
-  .contentPadding {
+  .topTop {
     padding: 3rem;
-    padding-top: 5rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .right {
-    flex-direction: column;
   }
 
-  .bottomDesktop {
-    justify-content: center;
+  .top {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brandInfo {
+    display: none;
+  }
+
+  .brandInfoMobile {
+    display: block;
+    padding: 3rem;
+    border-radius: 5px;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .logo,
+  .copy {
+    text-align: center;
+  }
+
+  .heading,
+  .copy {
+    width: 100%;
+  }
+
+  .socials {
+    justify-content: center;
   }
 }
 
 @media screen and (max-width: 568px) {
-  .layoutWrapper {
-    padding-right: 5px;
-    padding-left: 5px;
+  .topTop {
+    padding: 2rem;
   }
 
-  .contentPadding {
-    padding: 3rem 2rem;
-  }
-
-  .heading {
-    font-size: 1.8rem;
-  }
-
-  .leftBorder3 {
-    display: block;
-    margin-top: 3rem;
-  }
-
-  .heading {
-    font-size: 1.4rem;
-  }
-
-  .bottom {
-    border-top: none;
-    display: grid;
-    grid-template-columns: 1fr;
-    place-items: center;
-    margin-top: 2rem;
-  }
-
-  .copy {
-    text-align: center;
+  .top {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 5rem;
   }
 }

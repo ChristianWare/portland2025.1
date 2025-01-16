@@ -11,8 +11,8 @@ const FinalCTA = () => {
           <div className={styles.sectionheadingContainer}>
             <SectionHeading
               title='thank you'
-              color='purple'
-              dotColor='purpleDot'
+              color='white'
+              dotColor='whiteDot'
             />
           </div>
           <h2 className={styles.heading}>

@@ -3,8 +3,7 @@ import { FullProject } from "../../../../@types";
 import { PortableText } from "next-sanity";
 import ProjectPageDetailsHero from "@/components/ProjectPageDetailsHero/ProjectPageDetailsHero";
 import Nav from "@/components/Nav/Nav";
-import Image from "next/image";
-import { urlFor } from "@/sanity/lib/image";
+import Overview from "@/components/Overview/Overview";
 
 async function getData(slug: string): Promise<FullProject | null> {
   const query = `*[_type == "project" && slug.current == $slug][0] {
@@ -54,16 +53,16 @@ export default async function ProjectDetailsPage({
     <main>
       <Nav />
       <ProjectPageDetailsHero project={project} />
+      <Overview />
 
-            
-      {project.image1 && (
+      {/* {project.image1 && (
         <Image
           src={urlFor(project.image1).url()}
           alt={project.name}
           width={600}
           height={400}
         />
-      )}
+      )} */}
 
       <section>
         <h2>Outcome</h2>

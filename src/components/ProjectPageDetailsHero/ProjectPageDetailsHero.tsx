@@ -3,6 +3,7 @@ import { FullProject } from "../../../@types";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import LayoutWrapper from "../LayoutWrapper";
+import { PortableText } from "next-sanity";
 
 interface ProjectPageDetailsHeroProps {
   project: FullProject;
@@ -16,9 +17,43 @@ export default function ProjectPageDetailsHero({
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.left}>
-            <h1>{project.name}</h1>
+            <div className={styles.leftTop}>
+              <h1 className={styles.heading}>
+                Project name: <br />
+                <span className={styles.heading2}>{project.name}</span>
+              </h1>
+              <div>
+                <h2 className={styles.headingii}>
+                  Category: <br />
+                </h2>
+                <p className={styles.copy}>E-commerce</p>
+              </div>
+              <div>
+                <h2 className={styles.headingii}>
+                  Year: <br />
+                  {/* <span className={styles.heading2ii}></span> */}
+                </h2>
+                <p className={styles.copy}>2024</p>
+              </div>
+              <div>
+                <h2 className={styles.headingii}>Description:</h2>
+                <p className={styles.description}>{project.description}</p>
+              </div>
+              <div>
+                <h2 className={styles.headingii}>Github:</h2>
+                <p className={styles.copy}>github.com/project</p>
+              </div>
+              <div>
+                <h2 className={styles.headingii}>Live site:</h2>
+                <p className={styles.copy}>livesite.com</p>
+              </div>
+            </div>
             <div className={styles.leftBottom}>
-              <p>{project.description}</p>
+              <h2 className={styles.headingii}>Technical stack:</h2>
+
+              <ul className={styles.tagsList}>
+                {project.tags && <PortableText value={project.tags} />}
+              </ul>
             </div>
           </div>
           <div className={styles.right}>

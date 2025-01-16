@@ -1,0 +1,142 @@
+.container {
+  background-color: var(--blue);
+  padding-top: 10rem;
+  padding-bottom: 8rem;
+}
+
+.content {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.right {
+  border: 1px solid var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: 25px;
+}
+
+.rightSideTop {
+  padding: 2rem;
+}
+
+.headingii {
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.middle {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border-top: 1px dashed var(--lightGray);
+  height: 100%;
+}
+
+.middleLeft {
+  padding: 2rem;
+  border-right: 1px dashed var(--lightGray);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  color: var(--pink);
+  width: 5rem;
+  height: 5rem;
+}
+
+.middleRight {
+  padding: 2rem;
+}
+
+.copyii {
+  color: var(--lightGray);
+  font-weight: 400;
+  /* width: 90%; */
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px dashed var(--lightGray);
+  width: 100%;
+}
+
+.b1,
+.b2,
+.b3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--lightGray);
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.b1,
+.b2 {
+  border-right: 1px dashed var(--lightGray);
+}
+
+.headingiii {
+  text-align: center;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 1268px) {
+  .content {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .content {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .rightSideTop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .headingii {
+    width: 100%;
+    text-align: center;
+  }
+
+  .bottom {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .b1,
+  .b2 {
+    border-bottom: 1px dashed var(--lightGray);
+    border-right: none;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .middle {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .middleLeft {
+    border-bottom: 1px dashed var(--lightGray);
+  }
+}

@@ -36,7 +36,7 @@ const FinalCTA = () => {
             <div className={styles.right}>
               <div className={styles.box}>
                 <h3 className={styles.headingii}>LinkedIn</h3>
-                <p className={styles.copyii}>chris.ware.dev@gmail.com</p>
+                <p className={styles.copyii}>linkedin.com/in/christian-ware/</p>
               </div>
               <div className={styles.box}>
                 <h3 className={styles.headingii}>GitHub</h3>

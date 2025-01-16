@@ -73,6 +73,7 @@
 
 .white {
   color: var(--white);
+  opacity: 1;
 }
 
 .purple2Dot {

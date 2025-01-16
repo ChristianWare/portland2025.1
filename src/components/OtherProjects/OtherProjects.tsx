@@ -35,7 +35,11 @@ const OtherProjects = ({ data }: Props) => {
                     <div className={styles.link2}>Github Code</div>
                   </div>
                   <div className={styles.btnContainer}>
-                    <Button text='More Details' btnType='primary' href='/' />
+                    <Button
+                      text='More Details'
+                      btnType='primary'
+                      href={`/projects/${x.slug}`}
+                    />
                   </div>
                 </div>
               </div>

@@ -2,7 +2,6 @@ import FinalCTA from "@/components/FinalCTA/FinalCTA";
 import Nav from "@/components/Nav/Nav";
 import ProjectHero from "@/components/ProjectHero/ProjectHero";
 import { client } from "@/sanity/lib/client";
-// import { SimplifiedProject } from "../../../@types";
 import OtherProjects from "@/components/OtherProjects/OtherProjects";
 import { SimplifiedProject } from "../../../@types";
 
@@ -30,6 +29,7 @@ export default async function ProjectPage() {
 
   const transformedData = projectsData.map((proj: SimplifiedProject) => ({
     id: proj._id,
+    slug: proj.slug,
     previewimage: proj.previewimage,
     name: proj.name,
     description: proj.description,

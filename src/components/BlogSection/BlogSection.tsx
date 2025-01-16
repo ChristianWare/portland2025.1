@@ -7,7 +7,7 @@ import { client } from "@/sanity/lib/client";
 import { Post } from "../../../@types";
 import LayoutWrapper from "../LayoutWrapper";
 
-export const revalidate = 60;
+export const revalidate = 10;
 async function getPosts() {
   const query = `
   *[_type == 'post'] | order(_createdAt desc)

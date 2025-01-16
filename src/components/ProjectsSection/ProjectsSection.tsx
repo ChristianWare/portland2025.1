@@ -62,7 +62,7 @@ const ProjectsSection = () => {
           </h2>
           {/* <p className={styles.copy}>chrisware.dev - Portfolio website</p> */}
         </div>
-        <OtherProjects />
+        {/* <OtherProjects /> */}
         <div className={styles.btnContainerii}>
           <Button text='All Projects' btnType='purple' href='/' />
         </div>

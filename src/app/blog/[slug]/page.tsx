@@ -6,7 +6,7 @@ import { urlFor } from "@/sanity/lib/image";
 import styles from "./BlogPageDetails.module.css";
 import { PortableText } from "next-sanity";
 
-export const revalidate = 60;
+export const revalidate = 10;
 
 async function getPost(slug: string): Promise<any> {
   const query = `

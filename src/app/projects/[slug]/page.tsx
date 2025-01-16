@@ -2,8 +2,10 @@
 import { client } from "@/sanity/lib/client";
 import { FullProject } from "../../../../@types";
 import { PortableText } from "next-sanity";
-import Image from "next/image";
-import { urlFor } from "@/sanity/lib/image";
+// import Image from "next/image";
+// import { urlFor } from "@/sanity/lib/image";
+import ProjectPageDetailsHero from "@/components/ProjectPageDetailsHero/ProjectPageDetailsHero";
+import Nav from "@/components/Nav/Nav";
 // import { FullProject } from "../../../../@types";
 
 async function getData(slug: string): Promise<any> {
@@ -32,7 +34,6 @@ async function getData(slug: string): Promise<any> {
   return await client.fetch(query, { slug });
 }
 
-
 export const revalidate = 10;
 
 export default async function ProjectDetailsPage({
@@ -47,20 +48,11 @@ export default async function ProjectDetailsPage({
   }
 
   return (
-    <div>
-      <h1>{project.name}</h1>
-      <p>{project.description}</p>
+    <main>
+      <Nav />
+      <ProjectPageDetailsHero project={project} />
 
-      {project.image && (
-        <Image
-          src={urlFor(project.image).url()}
-          alt={project.name}
-          width={600}
-          height={400}
-        />
-      )}
-      
-{/*       
+      {/*       
       {project.image1 && (
         <Image
           src={urlFor(project.image1).url()}
@@ -84,6 +76,6 @@ export default async function ProjectDetailsPage({
         <h2>Conclusion</h2>
         {project.conclusion && <PortableText value={project.conclusion} />}
       </section>
-    </div>
+    </main>
   );
 }

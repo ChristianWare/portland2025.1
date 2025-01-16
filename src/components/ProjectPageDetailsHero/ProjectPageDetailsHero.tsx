@@ -47,14 +47,14 @@ export default function ProjectPageDetailsHero({
                 <h2 className={styles.headingii}>Live site:</h2>
                 <p className={styles.copy}>livesite.com</p>
               </div>
+              <div>
+                <h2 className={styles.headingii}>Technical stack:</h2>
+                <ul className={styles.tagsList}>
+                  {project.tags && <PortableText value={project.tags} />}
+                </ul>
+              </div>
             </div>
-            <div className={styles.leftBottom}>
-              <h2 className={styles.headingii}>Technical stack:</h2>
-
-              <ul className={styles.tagsList}>
-                {project.tags && <PortableText value={project.tags} />}
-              </ul>
-            </div>
+            {/* <div className={styles.leftBottom}></div> */}
           </div>
           <div className={styles.right}>
             {project.image && (

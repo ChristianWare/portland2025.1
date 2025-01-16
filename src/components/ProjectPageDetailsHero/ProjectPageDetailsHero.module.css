@@ -96,7 +96,7 @@
 .imgContainer {
   position: relative;
   width: 100%;
-  height: 75vh;
+  height: 100%;
 }
 
 .img {
@@ -111,6 +111,8 @@
 
   .left {
     gap: 2rem;
+    align-items: center;
+    justify-content: center;
   }
 
   .leftTop {
@@ -118,10 +120,17 @@
     justify-content: center;
   }
 
+  .heading,
+  .heading2,
   .headingii,
   .copy,
   .description {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tagsList li {
     margin-left: auto;
     margin-right: auto;
   }
@@ -132,22 +141,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .left {
-    align-items: center;
-    justify-content: center;
-  }
-
-  .heading,
-  .heading2,
-  .copy {
-    text-align: center;
-  }
-
-  .tagsList li {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .imgContainer {
     height: 400px;
   }

@@ -13,7 +13,13 @@ export default {
       validation: (rule) => rule.required().error("Required"),
     }),
     defineField({
-      name: "image",
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      options: { source: "name" },
+    }),
+    defineField({
+      name: "previewimage",
       type: "image",
       title: "Preview Image",
       options: { hotspot: true },
@@ -35,10 +41,6 @@ export default {
         {
           type: "block",
         },
-        // {
-        //   type: "image",
-        //   fields: [{ type: "text", name: "alt", title: "Alt" }],
-        // },
       ],
     }),
     defineField({

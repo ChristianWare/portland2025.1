@@ -1,27 +1,47 @@
 import FinalCTA from "@/components/FinalCTA/FinalCTA";
 import Nav from "@/components/Nav/Nav";
 import ProjectHero from "@/components/ProjectHero/ProjectHero";
-import ProjectsSection from "@/components/ProjectsSection/ProjectsSection";
 import { client } from "@/sanity/lib/client";
+// import { SimplifiedProject } from "../../../@types";
+import OtherProjects from "@/components/OtherProjects/OtherProjects";
 import { SimplifiedProject } from "../../../@types";
 
-export const revalidate = 60;
+// export const revalidate = 60;
+
 async function getProjects() {
   const query = `
-  *[_type == 'project'] | order(_createdAt desc)
+ *[_type == "project"] | order(_createdAt desc) {
+  _id,
+  name,
+  description,
+  "slug": slug.current,
+  "previewimage": previewimage.asset->url
+  }
+    
   `;
-  return await client.fetch(query);
+  const data = await client.fetch(query);
+  return data;
 }
 
+export const revalidate = 10;
+
 export default async function ProjectPage() {
-  const projects: SimplifiedProject[] = await getProjects();
-  console.log(projects);
+  const projectsData = await getProjects();
+
+  const transformedData = projectsData.map((proj: SimplifiedProject) => ({
+    id: proj._id,
+    previewimage: proj.previewimage,
+    name: proj.name,
+    description: proj.description,
+  }));
+
+  console.log(transformedData);
 
   return (
     <main>
       <Nav />
       <ProjectHero />
-      <ProjectsSection />
+      <OtherProjects data={transformedData} />
       <FinalCTA />
     </main>
   );

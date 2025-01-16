@@ -21,10 +21,9 @@ export interface Author<T> {
 
 export interface SimplifiedProject {
   _id: string;
-  imageUrl: string;
+  previewimage: any;
   price: number;
   slug: string;
-  categoryName: string;
   description: string;
   name: string;
 }

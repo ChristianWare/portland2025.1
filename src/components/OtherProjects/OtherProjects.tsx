@@ -36,14 +36,16 @@ const OtherProjects = () => {
         <div className={styles.bottom}>
           {data.map((x) => (
             <div key={x.id} className={styles.card}>
-              <div className={styles.imgContainer}>
-                <Image
-                  src={x.src}
-                  alt={x.title}
-                  title={x.title}
-                  fill
-                  className={styles.img}
-                />
+              <div className={styles.cardTop}>
+                <div className={styles.imgContainer}>
+                  <Image
+                    src={x.src}
+                    alt={x.title}
+                    title={x.title}
+                    fill
+                    className={styles.img}
+                  />
+                </div>
               </div>
               <div className={styles.cardBottom}>
                 <h4 className={styles.title}>{x.title}</h4>

@@ -5,7 +5,7 @@
 }
 
 .top {
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 
 .sectionHeadingContainer {
@@ -75,7 +75,6 @@
 .btnContainerii {
   margin-top: 5rem;
   margin-left: auto;
-  /* margin-right: auto; */
   display: grid;
   width: 30%;
 }

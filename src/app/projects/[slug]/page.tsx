@@ -1,18 +1,17 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { client } from "@/sanity/lib/client";
 import { FullProject } from "../../../../@types";
 import { PortableText } from "next-sanity";
-// import Image from "next/image";
-// import { urlFor } from "@/sanity/lib/image";
 import ProjectPageDetailsHero from "@/components/ProjectPageDetailsHero/ProjectPageDetailsHero";
 import Nav from "@/components/Nav/Nav";
-// import { FullProject } from "../../../../@types";
+import Image from "next/image";
+import { urlFor } from "@/sanity/lib/image";
 
-async function getData(slug: string): Promise<any> {
+async function getData(slug: string): Promise<FullProject | null> {
   const query = `*[_type == "project" && slug.current == $slug][0] {
     _id,
     name,
     description,
+    overview,
     slug,
     image,
     image1,
@@ -31,17 +30,21 @@ async function getData(slug: string): Promise<any> {
     content,
   }`;
 
-  return await client.fetch(query, { slug });
+  const data = await client.fetch(query, { slug });
+  return data ?? null;
 }
 
 export const revalidate = 10;
 
 export default async function ProjectDetailsPage({
-  params: { slug },
+  params,
 }: {
   params: { slug: string };
 }) {
-  const project: FullProject = await getData(slug);
+  // Instead, destructure inside the function
+  const { slug } = params;
+
+  const project = await getData(slug);
 
   if (!project) {
     return <div>Project not found</div>;
@@ -52,7 +55,7 @@ export default async function ProjectDetailsPage({
       <Nav />
       <ProjectPageDetailsHero project={project} />
 
-      {/*       
+            
       {project.image1 && (
         <Image
           src={urlFor(project.image1).url()}
@@ -60,7 +63,7 @@ export default async function ProjectDetailsPage({
           width={600}
           height={400}
         />
-      )} */}
+      )}
 
       <section>
         <h2>Outcome</h2>

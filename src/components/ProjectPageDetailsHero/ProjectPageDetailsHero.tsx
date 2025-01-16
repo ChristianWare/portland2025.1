@@ -57,10 +57,10 @@ export default function ProjectPageDetailsHero({
             {/* <div className={styles.leftBottom}></div> */}
           </div>
           <div className={styles.right}>
-            {project.image && (
+            {project.previewimage && (
               <div className={styles.imgContainer}>
                 <Image
-                  src={urlFor(project.image).url()}
+                  src={urlFor(project.previewimage).url()}
                   alt={project.name}
                   title={project.name}
                   fill

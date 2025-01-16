@@ -34,6 +34,7 @@ export interface FullProject {
   _id: string;
   name: string;
   description?: string;
+  overview?: string;
   slug?: {
     current: string;
   };

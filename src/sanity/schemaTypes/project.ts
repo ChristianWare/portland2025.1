@@ -31,6 +31,12 @@ export default {
       title: "Description of Product",
       validation: (rule) => rule.required().error("Required"),
     }),
+    defineField({
+      name: "overview",
+      type: "text",
+      title: "Overview of Product",
+      validation: (rule) => rule.required().error("Required"),
+    }),
 
     defineField({
       name: "tags",

@@ -1,8 +1,8 @@
+import styles from "./ProjectProcess.module.css";
 import Image from "next/image";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import SectionHeading2 from "../SectionHeading2/SectionHeading2";
-import styles from "./ProjectProcess.module.css";
 import { FullProject } from "../../../@types";
 import { urlFor } from "@/sanity/lib/image";
 
@@ -64,6 +64,8 @@ export default function ProjectProcess({ project }: ProjectProcessProps) {
           </div>
 
           <div className={styles.right}>
+            <div className={styles.imgOverlay}></div>
+            <div className={styles.hover}>~ Hover ~</div>
             <div className={styles.imgContainer}>
               {project.imagedesign && (
                 <div className={styles.imgContainer}>
@@ -72,7 +74,6 @@ export default function ProjectProcess({ project }: ProjectProcessProps) {
                     alt={project.name}
                     title={project.name}
                     fill
-                    style={{ objectFit: "contain" }}
                     sizes='(max-width: 768px) 100vw,
            (max-width: 1200px) 50vw,
            33vw'

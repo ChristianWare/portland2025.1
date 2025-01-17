@@ -35,6 +35,33 @@
   transform: translateY(-50%);
 }
 
+.white {
+  color: var(--white);
+  position: relative;
+}
+
+.white::after {
+  content: "";
+  position: absolute;
+  width: 15vw;
+  height: 1px;
+  background-color: var(--white);
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+}
+
+.white::before {
+  content: "";
+  position: absolute;
+  width: 15vw;
+  height: 1px;
+  background-color: var(--white);
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+}
+
 @media screen and (max-width: 768px) {
   .heading::after {
     width: 10vw;

@@ -8,11 +8,11 @@ export default function ProjectProcess() {
     <section className={styles.container}>
       <LayoutWrapper>
         <div className={styles.top}>
-          <SectionHeading2 title='Process' />
+          <SectionHeading2 title='Process' color='white' />
         </div>
         <div className={styles.content}>
           <div className={styles.left}>
-            <SectionHeading title='Step 1' color='black' dotColor='blackDot' />
+            <SectionHeading title='Step 1' color='white' dotColor='blackDot' />
           </div>
 
           <div className={styles.right}></div>

@@ -4,6 +4,7 @@ import LayoutWrapper from "../LayoutWrapper";
 import styles from "./ImageCollection.module.css";
 import { urlFor } from "@/sanity/lib/image";
 import SectionHeading2 from "../SectionHeading2/SectionHeading2";
+import SectionHeading from "../SectionHeading/SectionHeading";
 
 interface ImageCollectionProps {
   project: FullProject;
@@ -13,7 +14,10 @@ export default function ImageCollection({ project }: ImageCollectionProps) {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        <SectionHeading2 title='Other Pages' />
+        <div className={styles.top}>
+          <SectionHeading title='Gallery' color='black' dotColor='blackDot' />
+          <SectionHeading2 title='Other Pages' />
+        </div>
         <div className={styles.content}>
           <div className={styles.imgContainer}>
             {project.image1 && (
@@ -54,7 +58,6 @@ export default function ImageCollection({ project }: ImageCollectionProps) {
               </div>
             )}
           </div>
-          
         </div>
       </LayoutWrapper>
     </section>

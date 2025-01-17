@@ -64,8 +64,6 @@ export default function ProjectProcess({ project }: ProjectProcessProps) {
           </div>
 
           <div className={styles.right}>
-            <div className={styles.imgOverlay}></div>
-            <div className={styles.hover}>~ Hover ~</div>
             <div className={styles.imgContainer}>
               {project.imagedesign && (
                 <div className={styles.imgContainer}>
@@ -74,9 +72,6 @@ export default function ProjectProcess({ project }: ProjectProcessProps) {
                     alt={project.name}
                     title={project.name}
                     fill
-                    sizes='(max-width: 768px) 100vw,
-           (max-width: 1200px) 50vw,
-           33vw'
                     className={styles.img}
                   />
                 </div>

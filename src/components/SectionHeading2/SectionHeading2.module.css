@@ -63,26 +63,35 @@
 }
 
 @media screen and (max-width: 768px) {
-  .heading::after {
+  .heading::after,
+  .white::after {
     width: 10vw;
   }
 
-  .heading::before {
+  .heading::before,
+  .white::before {
     width: 10vw;
   }
 }
 
 @media screen and (max-width: 568px) {
-  .heading {
+  .heading,
+  .white {
     border-bottom: 1px solid var(--blue);
-    padding: 0rem 1rem;
+    padding: 1rem;
   }
 
-  .heading::after {
+  .white {
+    border-bottom: 1px solid var(--white);
+  }
+
+  .heading::after,
+  .white::after {
     width: 0%;
   }
 
-  .heading::before {
+  .heading::before,
+  .white::before {
     width: 0%;
   }
 }

@@ -87,15 +87,14 @@
   position: relative;
   width: 100%;
   height: 100%;
-  aspect-ratio: 1 / 3.86;
+  
 }
 
 .img {
-  object-fit: contain;
+  object-fit: cover;
   object-position: top;
   border-radius: 15px;
 }
-
 @media screen and (max-width: 968px) {
   .content {
     grid-template-columns: repeat(1, 1fr);

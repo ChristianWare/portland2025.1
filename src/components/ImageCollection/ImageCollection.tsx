@@ -13,7 +13,6 @@ export default function ImageCollection({ project }: ImageCollectionProps) {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        {/* <h2 className={styles.heading}>Remaining Pages</h2> */}
         <SectionHeading2 title='Other Pages' />
         <div className={styles.content}>
           <div className={styles.imgContainer}>

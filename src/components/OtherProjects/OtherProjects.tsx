@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./OtherProjects.module.css";
 import Button from "../Button/Button";
-import LayoutWrapper from "../LayoutWrapper";
+// import LayoutWrapper from "../LayoutWrapper";
 import { SimplifiedProject } from "../../../@types";
 
 interface Props {
@@ -11,7 +11,7 @@ interface Props {
 const OtherProjects = ({ data }: Props) => {
   return (
     <div className={styles.container}>
-      <LayoutWrapper>
+      {/* <LayoutWrapper> */}
         <div className={styles.content}>
           <div className={styles.bottom}>
             {data.map((x) => (
@@ -48,7 +48,7 @@ const OtherProjects = ({ data }: Props) => {
             ))}
           </div>
         </div>
-      </LayoutWrapper>
+      {/* </LayoutWrapper> */}
     </div>
   );
 };

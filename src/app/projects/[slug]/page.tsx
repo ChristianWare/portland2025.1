@@ -9,7 +9,6 @@ import FinalCTA from "@/components/FinalCTA/FinalCTA";
 import ImageCollection from "@/components/ImageCollection/ImageCollection";
 import Conclusion from "@/components/Conclusion/Conclusion";
 
-
 async function getData(slug: string): Promise<FullProject | null> {
   const query = `*[_type == "project" && slug.current == $slug][0] {
     _id,
@@ -62,32 +61,7 @@ export default async function ProjectDetailsPage({
       <Step3 />
       <ImageCollection project={project} />
       <Conclusion project={project} />
-
       <FinalCTA />
-
-      {/* {project.image1 && (
-        <Image
-          src={urlFor(project.image1).url()}
-          alt={project.name}
-          width={600}
-          height={400}
-        />
-      )} */}
-
-      {/* <section>
-        <h2>Outcome</h2>
-        {project.outcome && <PortableText value={project.outcome} />}
-      </section>
-
-      <section>
-        <h2>Key Takeaways</h2>
-        {project.keytakeaways && <PortableText value={project.keytakeaways} />}
-      </section>
-
-      <section>
-        <h2>Conclusion</h2>
-        {project.conclusion && <PortableText value={project.conclusion} />}
-      </section> */}
     </main>
   );
 }

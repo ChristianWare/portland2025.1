@@ -1,7 +1,6 @@
 import { client } from "@/sanity/lib/client";
 import { FullProject } from "../../../../@types";
 import ProjectPageDetailsHero from "@/components/ProjectPageDetailsHero/ProjectPageDetailsHero";
-import Nav from "@/components/Nav/Nav";
 import Overview from "@/components/Overview/Overview";
 import ProjectProcess from "@/components/ProjectProcess/ProjectProcess";
 
@@ -50,10 +49,9 @@ export default async function ProjectDetailsPage({
 
   return (
     <main>
-      <Nav />
       <ProjectPageDetailsHero project={project} />
       <Overview project={project} />
-      <ProjectProcess />
+      <ProjectProcess project={project} />
 
       {/* {project.image1 && (
         <Image

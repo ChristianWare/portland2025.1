@@ -34,7 +34,7 @@ export default function Model({
 
   useFrame(() => {
     if (!mesh.current) return;
-    mesh.current.rotation.x += 0.02;
+    mesh.current.rotation.x += 0.01;
   });
 
   const groupScale = useViewportScale ? viewport.width / 4.5 : fixedScale;

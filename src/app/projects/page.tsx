@@ -1,5 +1,3 @@
-import FinalCTA from "@/components/FinalCTA/FinalCTA";
-import Nav from "@/components/Nav/Nav";
 import ProjectHero from "@/components/ProjectHero/ProjectHero";
 import { client } from "@/sanity/lib/client";
 import OtherProjects from "@/components/OtherProjects/OtherProjects";
@@ -35,14 +33,10 @@ export default async function ProjectPage() {
     description: proj.description,
   }));
 
-  console.log(transformedData);
-
   return (
     <main>
-      <Nav />
       <ProjectHero />
       <OtherProjects data={transformedData} />
-      <FinalCTA />
     </main>
   );
 }

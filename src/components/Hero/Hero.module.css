@@ -36,11 +36,13 @@
 
 .heading {
   text-align: center;
+  user-select: none;
 }
 
 .heading2 {
   font-family: var(--BoogyBrutPoster);
   font-size: 6rem;
+  user-select: none;
   mix-blend-mode: overlay;
 }
 
@@ -52,6 +54,7 @@
   margin-right: auto;
   line-height: 1.4em;
   font-size: 2rem;
+  user-select: none;
 }
 
 .span {
@@ -92,8 +95,7 @@
     width: 100%;
     grid-template-columns: repeat(1, 1fr);
   }
-
-  .box {
+  /* .box {
     display: none;
-  }
+  } */
 }

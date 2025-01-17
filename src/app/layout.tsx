@@ -3,6 +3,8 @@ import { Inter_Tight } from "next/font/google";
 import localFont from "next/font/local";
 
 import "./globals.css";
+import Nav from "@/components/Nav/Nav";
+import FinalCTA from "@/components/FinalCTA/FinalCTA";
 
 const InterTight = Inter_Tight({
   variable: "--InterTight",
@@ -30,7 +32,9 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${InterTight.variable} ${BoogyBrutPoster.variable}`}>
+        <Nav />
         {children}
+        <FinalCTA />
       </body>
     </html>
   );

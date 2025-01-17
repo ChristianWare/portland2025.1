@@ -3,6 +3,7 @@ import { FullProject } from "../../../../@types";
 import ProjectPageDetailsHero from "@/components/ProjectPageDetailsHero/ProjectPageDetailsHero";
 import Overview from "@/components/Overview/Overview";
 import ProjectProcess from "@/components/ProjectProcess/ProjectProcess";
+import Drafting from "@/components/Drafting/Drafting";
 
 async function getData(slug: string): Promise<FullProject | null> {
   const query = `*[_type == "project" && slug.current == $slug][0] {
@@ -52,6 +53,7 @@ export default async function ProjectDetailsPage({
       <ProjectPageDetailsHero project={project} />
       <Overview project={project} />
       <ProjectProcess project={project} />
+      <Drafting project={project} />
 
       {/* {project.image1 && (
         <Image

@@ -4,6 +4,7 @@ import ProjectPageDetailsHero from "@/components/ProjectPageDetailsHero/ProjectP
 import Overview from "@/components/Overview/Overview";
 import ProjectProcess from "@/components/ProjectProcess/ProjectProcess";
 import Drafting from "@/components/Drafting/Drafting";
+import Step3 from "@/components/Step3/Step3";
 
 async function getData(slug: string): Promise<FullProject | null> {
   const query = `*[_type == "project" && slug.current == $slug][0] {
@@ -54,6 +55,7 @@ export default async function ProjectDetailsPage({
       <Overview project={project} />
       <ProjectProcess project={project} />
       <Drafting project={project} />
+      <Step3 />
 
       {/* {project.image1 && (
         <Image

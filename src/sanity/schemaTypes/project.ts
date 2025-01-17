@@ -99,28 +99,7 @@ export default {
       title: "Additianl Image 6",
       options: { hotspot: true },
     }),
-    defineField({
-      name: "outcome",
-      type: "array",
-      title: "Outcome",
-      validation: (rule) => rule.required().error("Required"),
-      of: [
-        {
-          type: "block",
-        },
-      ],
-    }),
-    defineField({
-      name: "keytakeaways",
-      type: "array",
-      title: "Key Takeaways",
-      validation: (rule) => rule.required().error("Required"),
-      of: [
-        {
-          type: "block",
-        },
-      ],
-    }),
+
     defineField({
       name: "conclusion",
       type: "array",

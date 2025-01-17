@@ -4,7 +4,6 @@ import OtherProjects from "@/components/OtherProjects/OtherProjects";
 import { SimplifiedProject } from "../../../@types";
 import FinalCTA from "@/components/FinalCTA/FinalCTA";
 
-// export const revalidate = 60;
 
 async function getProjects() {
   const query = `

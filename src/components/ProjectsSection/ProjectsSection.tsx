@@ -5,52 +5,40 @@ import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import Button from "../Button/Button";
 import OtherProjects from "../OtherProjects/OtherProjects";
-// import { SimplifiedProject } from "../../../@types";
-// import Scene from "../Scene/Scene";
+import { client } from "@/sanity/lib/client";
+import { SimplifiedProject } from "../../../@types";
 
-const ProjectsSection = () => {
+async function getProjects() {
+  const query = `
+ *[_type == "project"] | order(_createdAt desc)[0..1] {
+  _id,
+  name,
+  description,
+  "slug": slug.current,
+  "previewimage": previewimage.asset->url
+  }
+    
+  `;
+  const data = await client.fetch(query);
+  return data;
+}
+
+export const revalidate = 10;
+
+export default async function ProjectsSection() {
+  const projectsData = await getProjects();
+
+  const transformedData = projectsData.map((proj: SimplifiedProject) => ({
+    id: proj._id,
+    slug: proj.slug,
+    previewimage: proj.previewimage,
+    name: proj.name,
+    description: proj.description,
+  }));
+
   return (
     <section className={styles.container} id='projects'>
       <LayoutWrapper>
-        {/* <div className={styles.content}>
-          <div className={styles.top}>
-            <div className={styles.sectionHeadingContainer}>
-              <SectionHeading
-                title='Projects'
-                color='black'
-                dotColor='blackDot'
-              />
-            </div>
-            <h2 className={styles.heading}>
-              {" "}
-              <span>Featured</span>
-              Project
-            </h2>
-            <p className={styles.copy}>chrisware.dev - Portfolio website</p>
-          </div>
-          <div className={styles.bottom}>
-            <div className={styles.bottomLeft}>
-              <div className={styles.box}>
-                <div className={styles.sceneContainer}>
-                  <Scene useViewportScale={false} fixedScale={[3, 3, 3]} />
-                </div>
-              </div>
-            </div>
-            <div className={styles.bottomRight}>
-              {data.map((x) => (
-                <div key={x.id} className={styles.section}>
-                  <h3 className={styles.title}>{x.title}</h3>
-                  <p className={styles.description}>{x.description}</p>
-                </div>
-              ))}
-              <div className={styles.btnContainer}>
-                <div className={styles.btnContainer}>
-                  <Button text='More Details' btnType='primary' href='/' />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
         <div className={styles.top}>
           <div className={styles.sectionHeadingContainer}>
             <SectionHeading title='My Work' color='black' dotColor='blackDot' />
@@ -60,15 +48,12 @@ const ProjectsSection = () => {
             <span>Featured</span>
             Projects
           </h2>
-          {/* <p className={styles.copy}>chrisware.dev - Portfolio website</p> */}
         </div>
-        {/* <OtherProjects /> */}
+        <OtherProjects data={transformedData} />
         <div className={styles.btnContainerii}>
           <Button text='All Projects' btnType='purple' href='/' />
         </div>
       </LayoutWrapper>
     </section>
   );
-};
-
-export default ProjectsSection;
+}

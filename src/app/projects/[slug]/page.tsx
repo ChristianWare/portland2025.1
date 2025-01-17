@@ -1,9 +1,9 @@
 import { client } from "@/sanity/lib/client";
 import { FullProject } from "../../../../@types";
-import { PortableText } from "next-sanity";
 import ProjectPageDetailsHero from "@/components/ProjectPageDetailsHero/ProjectPageDetailsHero";
 import Nav from "@/components/Nav/Nav";
 import Overview from "@/components/Overview/Overview";
+import ProjectProcess from "@/components/ProjectProcess/ProjectProcess";
 
 async function getData(slug: string): Promise<FullProject | null> {
   const query = `*[_type == "project" && slug.current == $slug][0] {
@@ -40,7 +40,6 @@ export default async function ProjectDetailsPage({
 }: {
   params: { slug: string };
 }) {
-  // Instead, destructure inside the function
   const { slug } = params;
 
   const project = await getData(slug);
@@ -54,6 +53,7 @@ export default async function ProjectDetailsPage({
       <Nav />
       <ProjectPageDetailsHero project={project} />
       <Overview project={project} />
+      <ProjectProcess />
 
       {/* {project.image1 && (
         <Image
@@ -64,7 +64,7 @@ export default async function ProjectDetailsPage({
         />
       )} */}
 
-      <section>
+      {/* <section>
         <h2>Outcome</h2>
         {project.outcome && <PortableText value={project.outcome} />}
       </section>
@@ -77,7 +77,7 @@ export default async function ProjectDetailsPage({
       <section>
         <h2>Conclusion</h2>
         {project.conclusion && <PortableText value={project.conclusion} />}
-      </section>
+      </section> */}
     </main>
   );
 }

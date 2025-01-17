@@ -11,10 +11,8 @@ export default function Overview({ project }: OverviewProps) {
     <section className={styles.container}>
       <LayoutWrapper>
         <div className={styles.content}>
-          <div className={styles.top}>
-            <h2 className={styles.heading}>Overview</h2>
-            <div>{project.overview}</div>
-          </div>
+          <h2 className={styles.heading}>Overview</h2>
+          <p className={styles.copy}>{project.overview}</p>
         </div>
       </LayoutWrapper>
     </section>

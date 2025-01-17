@@ -1,0 +1,38 @@
+.container {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.heading,
+.copy {
+  width: 60%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.copy {
+  color: var(--grayText);
+}
+
+@media screen and (max-width: 1068px) {
+  .heading,
+  .copy {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading,
+  .copy {
+    width: 100%;
+  }
+}

@@ -2,6 +2,7 @@ import ProjectHero from "@/components/ProjectHero/ProjectHero";
 import { client } from "@/sanity/lib/client";
 import OtherProjects from "@/components/OtherProjects/OtherProjects";
 import { SimplifiedProject } from "../../../@types";
+import FinalCTA from "@/components/FinalCTA/FinalCTA";
 
 // export const revalidate = 60;
 
@@ -37,6 +38,7 @@ export default async function ProjectPage() {
     <main>
       <ProjectHero />
       <OtherProjects data={transformedData} />
+      <FinalCTA />
     </main>
   );
 }

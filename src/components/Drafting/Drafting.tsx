@@ -15,7 +15,7 @@ export default function Drafting({ project }: DraftingProps) {
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.left}>
-            <SectionHeading title='Step 2' color='white' dotColor='whiteDot' />
+            <SectionHeading title='Step 2' color='black' dotColor='blackDot' />
             <h3 className={styles.headingii}>Drafting the Homepage </h3>
             <p className={styles.copy}>
               With the foundational elements in place, I proceeded to design an
@@ -64,7 +64,7 @@ export default function Drafting({ project }: DraftingProps) {
                     className={styles.img}
                   />
                 </div>
-              )}{" "}
+              )}
             </div>
           </div>
         </div>

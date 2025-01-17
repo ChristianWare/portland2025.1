@@ -34,7 +34,6 @@ export default function RootLayout({
       <body className={`${InterTight.variable} ${BoogyBrutPoster.variable}`}>
         <Nav />
         {children}
-        <FinalCTA />
       </body>
     </html>
   );

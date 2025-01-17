@@ -7,6 +7,8 @@ import Drafting from "@/components/Drafting/Drafting";
 import Step3 from "@/components/Step3/Step3";
 import FinalCTA from "@/components/FinalCTA/FinalCTA";
 import ImageCollection from "@/components/ImageCollection/ImageCollection";
+import Conclusion from "@/components/Conclusion/Conclusion";
+
 
 async function getData(slug: string): Promise<FullProject | null> {
   const query = `*[_type == "project" && slug.current == $slug][0] {
@@ -59,6 +61,8 @@ export default async function ProjectDetailsPage({
       <Drafting project={project} />
       <Step3 />
       <ImageCollection project={project} />
+      <Conclusion project={project} />
+
       <FinalCTA />
 
       {/* {project.image1 && (

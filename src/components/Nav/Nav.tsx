@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 
 import { useState, useEffect, useRef } from "react";
@@ -5,7 +6,7 @@ import Link from "next/link";
 import styles from "./Nav.module.css";
 import Logo from "../Logo/Logo";
 import Button from "../Button/Button";
-// import useInvalidPaths from "../../../lib/use-invalid-paths";
+import useInvalidPaths from "../../../lib/use-invalid-paths";
 
 const navItems = [
   { text: "About", href: "/about" },
@@ -21,16 +22,15 @@ const navItemsii = [
     href: "https://github.com/ChristianWare",
     target: "_blank",
   },
-  // { text: "Contact", href: "/#contact" },
 ];
 
 export default function Nav() {
-  // const invalidPath: boolean = useInvalidPaths();
-  // if (invalidPath) return <></>;
+  const invalidPath: boolean = useInvalidPaths();
+  if (invalidPath) return <></>;
 
   const [isOpen, setIsOpen] = useState(false);
   const [navWhite, setNavWhite] = useState(false);
-  const [showNav, setShowNav] = useState(true); // State to control nav visibility
+  const [showNav, setShowNav] = useState(true); 
   const navRef = useRef<HTMLElement | null>(null);
 
   const openMenu = () => {
@@ -38,7 +38,6 @@ export default function Nav() {
   };
 
   useEffect(() => {
-    // Intersection Observer for dark sections
     const darkSections = document.querySelectorAll(".dark-section");
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
@@ -52,8 +51,8 @@ export default function Nav() {
     };
 
     const observerOptions = {
-      root: null, // viewport
-      threshold: 0.5, // 50% of the section is visible
+      root: null,
+      threshold: 0.5,
     };
 
     const observer = new IntersectionObserver(
@@ -63,7 +62,6 @@ export default function Nav() {
 
     darkSections.forEach((section) => observer.observe(section));
 
-    // Cleanup observer on unmount
     return () => {
       observer.disconnect();
     };

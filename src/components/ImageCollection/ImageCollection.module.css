@@ -29,17 +29,7 @@
   object-position: top;
   border-radius: 15px;
 }
-@media screen and (max-width: 868px) {
-  .content {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 
-@media screen and (max-width: 668px) {
-  .content {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 
 @media screen and (max-width: 568px) {
   .content {

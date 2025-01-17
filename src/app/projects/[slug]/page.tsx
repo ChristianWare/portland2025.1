@@ -53,7 +53,7 @@ export default async function ProjectDetailsPage({
     <main>
       <Nav />
       <ProjectPageDetailsHero project={project} />
-      <Overview />
+      <Overview project={project} />
 
       {/* {project.image1 && (
         <Image

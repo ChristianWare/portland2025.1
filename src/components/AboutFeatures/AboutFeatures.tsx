@@ -96,16 +96,21 @@ export default function AboutFeatures() {
     <section className={styles.container} id='features'>
       <LayoutWrapper>
         <div className={styles.top}>
-          <SectionHeading title='My Skillset' color='black' dotColor='blackDot' />
+          <SectionHeading
+            title='My Skillset'
+            color='black'
+            dotColor='blackDot'
+          />
           <h2 className={styles.heading}>
-            Websites <br />
+            My websites <br />
             <span className={styles.span}>& everything around them</span>
           </h2>
           <p className={styles.copy}>
-            Building a website is only the beginning. It&apos;s important to understand the
-            essential elements that make them thrive. My expertise spans the
-            entire web development ecosystem, combining design, functionality,
-            and optimization to create seamless digital experiences.
+            Building a website is only the beginning. It&apos;s important to
+            understand the essential elements that make them thrive. My
+            expertise spans the entire web development ecosystem, combining
+            design, functionality, and optimization to create seamless digital
+            experiences.
           </p>
         </div>
         <div className={styles.dataContainer}>

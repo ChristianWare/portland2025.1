@@ -29,7 +29,9 @@ const OtherProjects = ({ data }: Props) => {
                 </div>
                 <div className={styles.cardBottom}>
                   <h4 className={styles.title}>{x.name}</h4>
-                  <p className={styles.description}>{x.description}</p>
+                  <div className={styles.descBox}>
+                    <p className={styles.description}>{x.description}</p>
+                  </div>
                   <div className={styles.linksBox}>
                     <div className={styles.link1}>Live Site</div>
                     <div className={styles.link2}>Github Code</div>

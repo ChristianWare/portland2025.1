@@ -14,7 +14,7 @@ export default function ImageCollection({ project }: ImageCollectionProps) {
     <section className={styles.container}>
       <LayoutWrapper>
         {/* <h2 className={styles.heading}>Remaining Pages</h2> */}
-        <SectionHeading2 title='Remaining Pages' />
+        <SectionHeading2 title='Other Pages' />
         <div className={styles.content}>
           <div className={styles.imgContainer}>
             {project.image1 && (
@@ -55,45 +55,7 @@ export default function ImageCollection({ project }: ImageCollectionProps) {
               </div>
             )}
           </div>
-          <div className={styles.imgContainer}>
-            {project.image4 && (
-              <div className={styles.imgContainer}>
-                <Image
-                  src={urlFor(project.image4).url()}
-                  alt={project.name}
-                  title={project.name}
-                  fill
-                  className={styles.img}
-                />
-              </div>
-            )}
-          </div>
-          <div className={styles.imgContainer}>
-            {project.image5 && (
-              <div className={styles.imgContainer}>
-                <Image
-                  src={urlFor(project.image5).url()}
-                  alt={project.name}
-                  title={project.name}
-                  fill
-                  className={styles.img}
-                />
-              </div>
-            )}
-          </div>
-          <div className={styles.imgContainer}>
-            {project.image6 && (
-              <div className={styles.imgContainer}>
-                <Image
-                  src={urlFor(project.image6).url()}
-                  alt={project.name}
-                  title={project.name}
-                  fill
-                  className={styles.img}
-                />
-              </div>
-            )}
-          </div>
+          
         </div>
       </LayoutWrapper>
     </section>

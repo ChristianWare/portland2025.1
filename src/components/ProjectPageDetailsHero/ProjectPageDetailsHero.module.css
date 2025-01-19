@@ -121,8 +121,8 @@
 
 .imgContainer {
   position: relative;
-  width: 375px;
-  height: 375px;
+  width: 425px;
+  height: 425px;
   border: 1px solid var(--lightGray);
   border-radius: 50%;
 }

@@ -15,7 +15,7 @@ export default function BlogHero() {
               <span className={styles.heading2}>Chris Ware</span>.
             </h1>
           </div>
-          <div className={styles.right}>Filter container here....</div>
+          <div className={styles.right}>{/* Filter container here.... */}</div>
         </div>
       </LayoutWrapper>
     </section>

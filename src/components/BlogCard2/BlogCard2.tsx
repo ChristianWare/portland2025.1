@@ -1,47 +1,46 @@
 import styles from "./BlogCard2.module.css";
 import Image from "next/image";
-import Honey from "../../../public/images/honey.png";
 import SectionHeading from "../SectionHeading/SectionHeading";
+import { Post } from "../../../@types";
+import { urlFor } from "@/sanity/lib/image";
 
-const BlogCard2 = () => {
+interface BlogPreviewCardProps {
+  post: Post;
+}
+
+export default function BlogCard2({ post }: BlogPreviewCardProps) {
   return (
     <article className={styles.cardContainer}>
-      <div className={styles.left}>
-        {/* <div className={styles.imgContainer}>
-          <Image
-            src={Honey}
-            alt='image'
-            title='image'
-            fill
-            className={styles.img}
-          />
-        </div> */}
-      </div>
+      <div className={styles.left}></div>
       <div className={styles.right}>
         <div className={styles.sectionHeadingContainer}>
-          <SectionHeading title='Featured' color='black' dotColor='blackDot' />
+          <SectionHeading
+            title='Category here'
+            color='black'
+            dotColor='blackDot'
+          />
         </div>
         <div className={styles.titleImageContainer}>
-          <h3 className={styles.title}>
-            How to Create a Restaurant Website That Grows Your Online Orders
-          </h3>
+          <h3 className={styles.title}>{post.title}</h3>
           <div className={styles.imgContainer}>
             <Image
-              src={Honey}
-              alt='image'
-              title='image'
+              src={urlFor(post.image).url()}
+              alt={post.title}
+              title={post.title}
               fill
               className={styles.img}
             />
           </div>
         </div>
-        <p className={styles.desc}>
-          Discover easy ways to build a website that attracts more customers to
-          your restaurant.
-        </p>
-        <div className={styles.small}>15 Minute Read</div>
+        <p className={styles.desc}>{post.description}</p>
+        <div className={styles.small}>
+          {new Date(post._createdAt).toLocaleDateString("en-US", {
+            month: "long",
+            day: "numeric",
+            year: "numeric",
+          })}{" "}
+        </div>{" "}
       </div>
     </article>
   );
-};
-export default BlogCard2;
+}

@@ -8,6 +8,7 @@
     rgba(252, 210, 205, 1) 15%,
     rgba(189, 183, 213, 1) 65%
   );
+  padding-bottom: 20rem;
 }
 
 .container::after {
@@ -78,7 +79,7 @@
   position: absolute;
   top: 0%;
   left: 50%;
-  transform: translate(-50%, -55%);
+  transform: translate(-50%, -30%);
   width: 100vw;
   height: 100vh;
   z-index: -1;

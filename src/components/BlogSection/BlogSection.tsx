@@ -6,6 +6,7 @@ import SectionHeading2 from "../SectionHeading2/SectionHeading2";
 import { client } from "@/sanity/lib/client";
 import { Post } from "../../../@types";
 import LayoutWrapper from "../LayoutWrapper";
+import BlogCard2 from "../BlogCard2/BlogCard2";
 
 export const revalidate = 10;
 async function getPosts() {
@@ -30,10 +31,9 @@ export default async function BlogSection() {
               ))}
             </div>
             <div className={styles.bBottom}>
-              {/* {posts.slice(1, 4 or post.length).map((post: Post) => (  ))} */}
-              {/* <BlogCard2 /> */}
-              {/* <BlogCard2 />
-              <BlogCard2 /> */}
+              {posts.map((post: Post) => (
+                <BlogCard2 key={post._id} post={post} />
+              ))}
             </div>
           </div>
         </div>

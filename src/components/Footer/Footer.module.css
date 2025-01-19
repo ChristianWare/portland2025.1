@@ -9,17 +9,11 @@
   padding: 5rem;
 }
 
-.top,
-.bottom {
-  /* padding: 3rem; */
-  border-radius: 5px;
-}
-
 .top {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
-  padding: 3rem;
+  margin-bottom: 2rem;
 }
 
 .brandInfoMobile {
@@ -128,10 +122,6 @@
 }
 
 @media screen and (max-width: 968px) {
-  .topTop {
-    padding: 3rem;
-  }
-
   .top {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -167,10 +157,6 @@
 }
 
 @media screen and (max-width: 568px) {
-  .topTop {
-    padding: 2rem;
-  }
-
   .top {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 5rem;

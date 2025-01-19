@@ -28,7 +28,6 @@
 
 .sectionHeadingContainer,
 .title,
-.desc,
 .small {
   padding: 2rem;
   padding-left: 2rem;
@@ -49,10 +48,15 @@
 .desc {
   font-weight: 500;
   border-bottom: 1px dashed var(--lightGray);
-  padding: 2rem;
-  padding-left: 2rem;
   width: 100%;
   color: var(--gray);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  padding: 0.5rem 1rem;
 }
 
 .small {
@@ -75,7 +79,7 @@
     text-align: center;
   }
 
-  .imgContainer{
+  .imgContainer {
     height: 175px;
   }
 

@@ -62,7 +62,7 @@ const audioRef = useRef<HTMLAudioElement | null>(null);
         className={`${styles.container} ${styles.btn}`}
         onClick={() => handleSubmit()}
       >
-        Surprise
+        Surprise !
       </button>
       <audio ref={audioRef} src='/sounds/cash.mp3' />
     </>

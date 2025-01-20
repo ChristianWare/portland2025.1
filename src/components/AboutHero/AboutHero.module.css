@@ -36,7 +36,6 @@
 .heading2 {
   font-family: var(--BoogyBrutPoster);
   font-size: 6rem;
-  /* mix-blend-mode: overlay; */
 }
 
 .copy,
@@ -62,11 +61,12 @@
   justify-content: center;
   width: 100%;
   height: 100%;
+  margin-top: -10rem;
 }
 
 @media screen and (max-width: 968px) {
   .container {
-    padding-bottom: 20rem;
+    padding-bottom: 40rem;
   }
 
   .content {
@@ -87,6 +87,10 @@
   }
 
   .sceneContianer {
-    margin-top: 10rem;
+    margin-top: 0rem;
+    width: 50%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

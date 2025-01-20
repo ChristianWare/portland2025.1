@@ -1,5 +1,6 @@
 import LayoutWrapper from "../LayoutWrapper";
-import Scene2 from "../Scene2/Scene2";
+import Scene from "../Scene/Scene";
+// import Scene2 from "../Scene2/Scene2";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import styles from "./AboutHero.module.css";
 
@@ -15,16 +16,10 @@ export default function AboutHero() {
               dotColor='blackDot'
             />
             <h1 className={styles.heading}>
-              I&lsquo;m a passionate web developer based in
-              <br />
-              <span className={styles.heading2}>Phoenix, AZ</span>.
+              I&lsquo;m a web developer based in{" "}
+              <span className={styles.heading2}> Phoenix, AZ</span>.
             </h1>
             <p className={styles.copy}>
-              {/* Functional is a lightweight app for small teams to streamline
-              <span className={styles.span}> timesheets,</span> time off and
-              track
-              <span className={styles.span}> employee wellbeing,</span> all
-              inside the team chat. */}
               I have extensive knowledge of{" "}
               <span className={styles.span}>
                 HTML, CSS, JavaScript, React, and Next JS.
@@ -48,7 +43,8 @@ export default function AboutHero() {
           </div>
           <div className={styles.right}>
             <div className={styles.sceneContianer}>
-              <Scene2 useViewportScale={false} fixedScale={[1.6, 1.6, 1]} />{" "}
+              <Scene useViewportScale={false} fixedScale={[1.5, 1.5, 1.5]} />{" "}
+              {/* <Scene2 useViewportScale={false} fixedScale={[1.6, 1.6, 1]} />{" "} */}
             </div>
           </div>
         </div>

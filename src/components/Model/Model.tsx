@@ -29,12 +29,12 @@ export default function Model({
   fixedScale = [3, 3, 3],
 }: ModelProps) {
   const mesh = useRef<THREE.Mesh | null>(null);
-  const { nodes } = useGLTF("/3dFiles/torrus.glb");
+  const { nodes } = useGLTF("/3dFiles/usa_map_-_low_poly.glb");
   const { viewport } = useThree();
 
   useFrame(() => {
     if (!mesh.current) return;
-    mesh.current.rotation.x += 0.01;
+    mesh.current.rotation.y += 0.01;
   });
 
   const groupScale = useViewportScale ? viewport.width / 4.5 : fixedScale;
@@ -42,7 +42,7 @@ export default function Model({
   return (
     <>
       <group scale={groupScale}>
-        <mesh ref={mesh} {...nodes.Torus002}>
+        <mesh ref={mesh} {...nodes.Arizona_0}>
           <MeshTransmissionMaterial
             thickness={thickness}
             roughness={roughness}

@@ -12,8 +12,9 @@ export default function ContactHero() {
           <div className={styles.content}>
             <SectionHeading title='Contact' color='black' dotColor='blackDot' />
             <h1 className={styles.heading}>
-              Contact <br />
-              <span className={styles.heading2}>Contact</span>.
+              <span className={styles.heading2}>Let&apos;s Kick Off</span>
+              <br />
+              a conversation <br />
             </h1>
             <p className={styles.copy}>
               My portfolio demonstrates a broad range of my abilities. Each of
@@ -28,10 +29,7 @@ export default function ContactHero() {
             </p>
             <div className={styles.box}>
               <div className={styles.sceneContainer}>
-                <Envelope
-                  useViewportScale={false}
-                  fixedScale={[1, 1, 1]}
-                />
+                <Envelope useViewportScale={false} fixedScale={[1, 1, 1]} />
               </div>
             </div>
           </div>

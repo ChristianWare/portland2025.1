@@ -2,7 +2,7 @@
 
 import styles from "./Envelope.module.css";
 import { Canvas } from "@react-three/fiber";
-import { Environment } from "@react-three/drei";
+import { Environment, OrbitControls } from "@react-three/drei";
 import Model from "./Model";
 
 interface SceneProps {
@@ -19,6 +19,7 @@ export default function Envelope({
       <Canvas className={styles.canvas}>
         <directionalLight intensity={3} position={[0, 3, 2]} />
         <Environment preset='city' />
+        <OrbitControls enableZoom={false} />
         <group rotation={[Math.PI / 2, 0, 0]}>
           <Model
             thickness={2}

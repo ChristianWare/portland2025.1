@@ -27,10 +27,6 @@ export default function ProjectHero() {
               <span className={styles.span}> innovative </span>
               design with <span className={styles.span}> seamless </span>{" "}
               functionality.
-              {/* functionality, ensuring a memorable user experience. Every detail
-              is <span className={styles.span}> meticulously </span>
-              executed to bring ideas to life in the most{" "}
-              <span className={styles.span}> impactful </span> way. */}
             </p>
             <div className={styles.box}>
               <div className={styles.sceneContainer}>

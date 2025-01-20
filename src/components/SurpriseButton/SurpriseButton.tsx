@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef } from "react";
 import styles from "./SurpriseButton.module.css";
 import confetti from "canvas-confetti";
 
@@ -42,16 +43,28 @@ export default function SurpriseButton() {
     });
   };
 
+const audioRef = useRef<HTMLAudioElement | null>(null);
+
   const handleSubmit = () => {
     shootRealisticConfetti();
+
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0;
+      audioRef.current
+        .play()
+        .catch((e) => console.error("audio play failed:", e));
+    }
   };
 
   return (
-    <button
-      className={`${styles.container} ${styles.btn}`}
-      onClick={() => handleSubmit()}
-    >
-      Surprise
-    </button>
+    <>
+      <button
+        className={`${styles.container} ${styles.btn}`}
+        onClick={() => handleSubmit()}
+      >
+        Surprise
+      </button>
+      <audio ref={audioRef} src='/sounds/cash.mp3' />
+    </>
   );
 }

@@ -28,6 +28,7 @@ export default function ProjectHero() {
               design with <span className={styles.span}> seamless </span>{" "}
               functionality.
             </p>
+            <span className={styles.drag}>(drag)</span>
             <div className={styles.box}>
               <div className={styles.sceneContainer}>
                 <Cog useViewportScale={false} fixedScale={[1.2, 1.2, 1.2]} />

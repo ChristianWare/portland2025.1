@@ -58,6 +58,11 @@
   mix-blend-mode: overlay;
 }
 
+.drag {
+  color: var(--grayText);
+  margin-top: 3rem;
+}
+
 .span {
   font-weight: 800;
   margin-left: 0.3rem;

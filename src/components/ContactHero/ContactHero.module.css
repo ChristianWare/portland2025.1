@@ -58,6 +58,12 @@
   mix-blend-mode: overlay;
 }
 
+
+.drag {
+  color: var(--grayText);
+  margin-top: 3rem;
+}
+
 .span {
   font-weight: 800;
   margin-left: 0.3rem;
@@ -79,7 +85,7 @@
   position: absolute;
   top: 0%;
   left: 50%;
-  transform: translate(-50%, -32%);
+  transform: translate(-50%, -33%);
   width: 100vw;
   height: 100vh;
   z-index: -1;

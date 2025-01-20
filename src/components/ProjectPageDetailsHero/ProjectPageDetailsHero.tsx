@@ -3,8 +3,9 @@ import { FullProject } from "../../../@types";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import LayoutWrapper from "../LayoutWrapper";
-import { PortableText } from "next-sanity";
 import Button from "../Button/Button";
+// import { PortableText } from "next-sanity";
+// import Button from "../Button/Button";
 
 interface ProjectPageDetailsHeroProps {
   project: FullProject;
@@ -15,10 +16,9 @@ export default function ProjectPageDetailsHero({
 }: ProjectPageDetailsHeroProps) {
   return (
     <section className={styles.container}>
-      <LayoutWrapper>
-        <div className={styles.content}>
-          <div className={styles.left}>
-            <h1 className={styles.heading}>{project.name}</h1>
+      <div className={styles.contentParent}>
+        <LayoutWrapper>
+          <div className={styles.content}>
             {project.previewimage && (
               <div className={styles.imgContainer}>
                 <Image
@@ -30,8 +30,32 @@ export default function ProjectPageDetailsHero({
                 />
               </div>
             )}
-          </div>
-          <div className={styles.right}>
+            <h1 className={styles.heading}>{project.name}</h1>
+            <div>
+              <h2 className={styles.headingii}>
+                Category: <br />
+              </h2>
+              <p className={styles.copy}>E-commerce</p>
+            </div>
+            <div>
+              <h2 className={styles.headingii}>
+                Year: <br />
+              </h2>
+              <p className={styles.copy}>2024</p>
+            </div>
+            <div className={styles.descBox}>
+              <h2 className={styles.headingii}>Description:</h2>
+              <p className={styles.description}>{project.description}</p>
+            </div>
+            <div className={styles.btnContainer}>
+              <Button
+                text='Live Site'
+                btnType='primary'
+                href='/'
+                target='_blank'
+              />
+            </div>
+            {/* <div className={styles.right}>
             <div className={styles.rightContent}>
               <div className={styles.mobileImage}>
                 {project.previewimage && (
@@ -82,9 +106,10 @@ export default function ProjectPageDetailsHero({
                 />
               </div>
             </div>
+          </div> */}
           </div>
-        </div>
-      </LayoutWrapper>
+        </LayoutWrapper>
+      </div>
     </section>
   );
 }

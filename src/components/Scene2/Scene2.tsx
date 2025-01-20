@@ -2,7 +2,7 @@
 
 import { Canvas } from "@react-three/fiber";
 import Model from "./Model";
-import { Environment, OrbitControls } from "@react-three/drei";
+import { Environment } from "@react-three/drei";
 import styles from "./Scene2.module.css";
 
 interface SceneProps {
@@ -18,7 +18,6 @@ export default function Scene2({
       <Canvas className={styles.canvas}>
         <directionalLight intensity={3} position={[0, 3, 2]} />
         <Environment preset='city' />
-        <OrbitControls enableZoom={false} />
 
         <Model
           thickness={2}

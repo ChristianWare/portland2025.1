@@ -6,7 +6,7 @@ import { FC, useState } from "react";
 import Plus from "../../../public/icons/plus.svg";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import LayoutWrapper from "../LayoutWrapper";
-import Sphere from "../Scenes/Sphere/Sphere";
+import Cog from "../Scenes/Cog/Cog";
 
 interface Props {
   mapData: any;
@@ -34,9 +34,9 @@ const Faqs: FC<Props> = ({ mapData }) => {
             <div className={styles.bottom}>
               <div className={styles.bLeft}>
                 <div className={styles.imgContianer}>
-                  <Sphere
+                  <Cog
                     useViewportScale={false}
-                    fixedScale={[0.10, 0.10, 0.10]}
+                    fixedScale={[1.7, 1.7, 1.7]}
                   />
                 </div>
               </div>

@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import { FC, ReactNode } from "react";
+import { ReactNode } from "react";
 import Link from "next/link";
 import styles from "./Button.module.css";
+
 
 interface ButtonProps {
   href: string;
@@ -13,25 +14,28 @@ interface ButtonProps {
   download?: boolean;
   arrow?: boolean;
   onClick?: any;
-  disabled?: boolean; 
+  disabled?: boolean;
 }
 
-const Button: FC<ButtonProps> = ({
+export default function Button({
   href = "",
   text,
   btnType,
   target = "",
   download,
-  onClick,
+  // onClick,
   disabled = false,
-}) => {
+}: ButtonProps) {
+
   return (
     <button
       className={styles.container}
-      onClick={() => {
-        if (!disabled && onClick) onClick();
-      }}
-      disabled={disabled} 
+      // onClick={() => {
+      //   if (!disabled && onClick) onClick();
+      // }}
+      disabled={disabled}
+      // onClick={() => handleSubmit()}
+      // onClick={() => handleSubmit()}
     >
       <Link
         href={href}
@@ -43,5 +47,4 @@ const Button: FC<ButtonProps> = ({
       </Link>
     </button>
   );
-};
-export default Button;
+}

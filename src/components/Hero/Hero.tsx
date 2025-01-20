@@ -1,12 +1,12 @@
 "use client";
 
 import styles from "./Hero.module.css";
-import Button from "../Button/Button";
 import LayoutWrapper from "../LayoutWrapper";
 // import dynamic from "next/dynamic";
 
-import Scene from "../Scene/Scene";
 import SectionHeading from "../SectionHeading/SectionHeading";
+import SurpriseButton from "../SurpriseButton/SurpriseButton";
+// import Scene from "../Scene/Scene";
 
 // const Scene = dynamic(() => import("../Scene/Scene"), {
 //   ssr: false,
@@ -15,13 +15,15 @@ import SectionHeading from "../SectionHeading/SectionHeading";
 export default function Hero() {
   return (
     <section className={styles.container}>
-      <LayoutWrapper>
-        <div className={styles.content}>
-          <SectionHeading
-            title='Web Developer'
-            color='black'
-            dotColor='blackDot'
-          />
+      <div className={styles.content}>
+        <LayoutWrapper>
+          <div className={styles.sectionHeadingContainer}>
+            <SectionHeading
+              title='Web Developer'
+              color='black'
+              dotColor='blackDot'
+            />
+          </div>
           <h1 className={styles.heading}>
             Hello World. <br />
             <span className={styles.heading2}>My name is Christian</span>.
@@ -33,16 +35,16 @@ export default function Hero() {
             the team chat.
           </p>
           <div className={styles.btnContainer}>
-            <Button text='Projects' btnType='transparent' href='/' />
-            <Button text='Projects' btnType='primaryii' href='/' />
+            <SurpriseButton />
           </div>
           <div className={styles.box}>
-            <div className={styles.sceneContainer}>
+            {/* <div className={styles.sceneContainer}>
+              
               <Scene useViewportScale={false} fixedScale={[2.5, 2.5, 2.5]} />
-            </div>
+            </div> */}
           </div>
-        </div>
-      </LayoutWrapper>
+        </LayoutWrapper>
+      </div>
     </section>
   );
 }

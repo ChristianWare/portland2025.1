@@ -4,7 +4,6 @@ import styles from "./AboutSection.module.css";
 import Button from "../Button/Button";
 import Process from "../Process/Process";
 import SectionHeading from "../SectionHeading/SectionHeading";
-import Scene2 from "../Scene2/Scene2";
 
 const AboutSection = () => {
   return (
@@ -27,11 +26,7 @@ const AboutSection = () => {
           </div>
           <div></div>
         </div>
-        <div className={styles.content}>
-          <div className={styles.sceneContianer}>
-            <Scene2 useViewportScale={false} fixedScale={[1, 1, 1]} />{" "}
-          </div>
-        </div>
+        <div className={styles.content}></div>
         <div className={styles.processContainer}>
           <Process />
         </div>

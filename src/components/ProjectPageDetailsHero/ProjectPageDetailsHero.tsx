@@ -4,8 +4,6 @@ import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import LayoutWrapper from "../LayoutWrapper";
 import Button from "../Button/Button";
-// import { PortableText } from "next-sanity";
-// import Button from "../Button/Button";
 
 interface ProjectPageDetailsHeroProps {
   project: FullProject;
@@ -19,6 +17,7 @@ export default function ProjectPageDetailsHero({
       <div className={styles.contentParent}>
         <LayoutWrapper>
           <div className={styles.content}>
+            <h1 className={styles.heading}>{project.name}</h1>
             {project.previewimage && (
               <div className={styles.imgContainer}>
                 <Image
@@ -30,7 +29,6 @@ export default function ProjectPageDetailsHero({
                 />
               </div>
             )}
-            <h1 className={styles.heading}>{project.name}</h1>
             <div>
               <h2 className={styles.headingii}>
                 Category: <br />

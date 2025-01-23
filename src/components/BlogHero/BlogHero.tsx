@@ -10,7 +10,7 @@ export default function BlogHero() {
           <div className={styles.left}>
             <SectionHeading title='Blog' color='black' dotColor='blackDot' />
             <h1 className={styles.heading}>
-              Insights from me,
+              Insights from me -
               <br />
               <span className={styles.heading2}>Chris Ware</span>.
             </h1>

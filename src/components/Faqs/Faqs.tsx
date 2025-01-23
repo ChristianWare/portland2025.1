@@ -23,7 +23,7 @@ const Faqs: FC<Props> = ({ mapData }) => {
       <LayoutWrapper>
         <div className={styles.sectionHeadingContainer}>
           <SectionHeading
-            title='FAQs and blog'
+            title='Frequently asked questions'
             color='black'
             dotColor='blackDot'
           />

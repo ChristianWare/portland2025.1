@@ -14,7 +14,7 @@ const aboutPhrases = [
   "I am skilled in both front-end and back-end development.",
   "I have the ability to create comprehensive web applications",
   "from start to finish. My tools of choice are",
-  "Next.js/React.",
+  "Next.js/React."
 ];
 
 const AboutSection = () => {
@@ -31,17 +31,9 @@ const AboutSection = () => {
             />
             <div className={styles.headingContainer}>
               {aboutPhrases.map((phrase, index) => (
-                <AnimatedLine key={index}>{phrase}</AnimatedLine>
-              ))}
-            </div>
-          </div>
-          <br />
-          <br />
-          <br />
-          <div className={styles.box}>
-            <div className={styles.headingContainer}>
-              {aboutPhrases.map((phrase, index) => (
-                <AnimatedLine2 key={index}>{phrase}</AnimatedLine2>
+                <AnimatedLine key={index}>
+                  {phrase}
+                </AnimatedLine>
               ))}
             </div>
           </div>
@@ -64,13 +56,12 @@ const AnimatedLine = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-
+    
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        lineRef.current,
+      gsap.fromTo(lineRef.current, 
         {
           opacity: 0,
-          left: "-200px",
+          left: "-200px"
         },
         {
           opacity: 1,
@@ -81,46 +72,8 @@ const AnimatedLine = ({ children }: { children: React.ReactNode }) => {
             scrub: true,
             start: "top bottom-=100px",
             end: "bottom center",
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-    });
-
-    return () => ctx.revert();
-  }, []);
-
-  return (
-    <h2 ref={lineRef} className={styles.animatedLine}>
-      {children}
-    </h2>
-  );
-};
-
-const AnimatedLine2 = ({ children }: { children: React.ReactNode }) => {
-  const lineRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        lineRef.current,
-        {
-          opacity: 0,
-          left: "200px",
-        },
-        {
-          opacity: 1,
-          left: "0",
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: lineRef.current,
-            scrub: true,
-            start: "top bottom-=100px",
-            end: "bottom center",
-            toggleActions: "play none none reverse",
-          },
+            toggleActions: "play none none reverse"
+          }
         }
       );
     });

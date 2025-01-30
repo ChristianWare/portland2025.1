@@ -9,6 +9,9 @@ import FinalCTA from "@/components/FinalCTA/FinalCTA";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import AboutHero from "@/components/AboutHero/AboutHero";
 import AboutFeatures from "@/components/AboutFeatures/AboutFeatures";
+import Tools from "@/components/Tools/Tools";
+import Offer from "@/components/Offer/Offer";
+import ProjectHero from "@/components/ProjectHero/ProjectHero";
 
 export default function Home() {
   return (
@@ -19,6 +22,9 @@ export default function Home() {
         <AboutHero />
         <AboutFeatures />
         <SkillsSection />
+        <ProjectHero />
+        <Offer />
+        <Tools />
         <Faqs mapData={homePageFaqs} />
         <FinalCTA />
       </main>

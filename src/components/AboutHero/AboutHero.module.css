@@ -1,5 +1,7 @@
 .container {
   background-color: var(--blue);
+  padding-top: 10rem;
+  padding-bottom: 15rem;
 }
 
 .content {

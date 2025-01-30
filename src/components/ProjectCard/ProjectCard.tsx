@@ -43,7 +43,7 @@ export default function ProjectCard({
           <p className={styles.description}>{description}</p>
         </div>
         <div className={styles.linksBox}>
-          <div className={styles.link1}>
+          <div>
             <Link
               href={link}
               className={styles.link1}

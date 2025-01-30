@@ -9,10 +9,9 @@ import Button from "../Button/Button";
 import useInvalidPaths from "../../../lib/use-invalid-paths";
 
 const navItems = [
-  { text: "About", href: "/about" },
-  // { text: "Projects", href: "/projects" },
-  { text: "Blog", href: "/blog" },
-  { text: "Contact", href: "/contact" },
+  { text: "About", href: "/#about" },
+  { text: "Skills", href: "/#skills" },
+  { text: "Contact", href: "/#contact" },
 ];
 
 const navItemsii = [
@@ -30,7 +29,7 @@ export default function Nav() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [navWhite, setNavWhite] = useState(false);
-  const [showNav, setShowNav] = useState(true); 
+  const [showNav, setShowNav] = useState(true);
   const navRef = useRef<HTMLElement | null>(null);
 
   const openMenu = () => {

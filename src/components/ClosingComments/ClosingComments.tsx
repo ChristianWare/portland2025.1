@@ -3,9 +3,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./ClosingComments.module.css";
-import { motion } from "framer-motion";
-
-import { fadeIn } from "../../../animation/variants";
 
 export default function ClosingComments() {
   const [lettersRef, setLettersRef] = useArrayRef();
@@ -22,7 +19,7 @@ export default function ClosingComments() {
 
   gsap.registerPlugin(ScrollTrigger);
 
-const text =
+  const text =
     "Thank you for taking the time to review my portfolio website. I lookforward to speaking with you soon. Feel free to reach out to me with any questions you have.";
 
   useEffect(() => {
@@ -31,12 +28,11 @@ const text =
         trigger: triggerRef.current,
         scrub: 0.9,
         start: "top center",
-        end: "bottom center", // Adjusted for better coverage
-        markers: false, // Enable for debug
+        end: "bottom center",
+        markers: false,
       },
     });
 
-    // Add staggered animations to timeline
     lettersRef.current.forEach((letter, index) => {
       tl.to(
         letter,
@@ -45,7 +41,7 @@ const text =
           duration: 0.2,
         },
         index * 0.015
-      ); // Adjust stagger value (0.015) as needed
+      );
     });
 
     return () => {
@@ -68,17 +64,6 @@ const text =
               </span>
             ))}
           </h2>
-          <motion.h2
-            variants={fadeIn("", 0.3)}
-            initial='hidden'
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.1 }}
-            className={styles.headingii}
-          >
-            Thank you for taking the time to review my portfolio website. I look
-            forward to speaking with you soon. Feel free to reach out to me with
-            any questions you have.
-          </motion.h2>
         </div>
       </LayoutWrapper>
     </section>

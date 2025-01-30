@@ -123,14 +123,21 @@ export default function AboutFeatures() {
           </div>
           <div className={styles.dataContainer}>
             {data.map((x, index) => (
-              <div key={index} className={styles.content}>
+              <motion.div
+                variants={fadeIn(index % 2 !== 0 ? "up" : "left", 0.3)}
+                initial='hidden'
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.3 }}
+                key={index}
+                className={styles.content}
+              >
                 <div className={styles.left}>
                   <div className={styles.iconContainer}>{x.icon}</div>
                 </div>
                 <div className={styles.right}>
                   <h3 className={styles.title}>{x.title}</h3>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
           {/* <WorkSection /> */}

@@ -136,7 +136,7 @@ const SkillsSection = () => {
     if (isPaused) return;
     const interval = setInterval(() => {
       setCurrentIconIndex((prevIndex) => (prevIndex + 1) % data.length);
-    }, 300);
+    }, 100);
 
     return () => clearInterval(interval);
   }, [isPaused]);

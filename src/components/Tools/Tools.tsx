@@ -65,29 +65,24 @@ export default function Tools() {
             </p>
           </div>
           <div className={styles.bottom}>
-            {data.map(
-              (
-                x,
-                index // Add index parameter to map callback
-              ) => (
-                <motion.div
-                  variants={fadeIn(index % 2 !== 0 ? "left" : "right", 0.3)} // Conditional direction
-                  initial='hidden'
-                  whileInView={"show"}
-                  viewport={{ once: false, amount: 0.3 }}
-                  key={x.id}
-                  className={`${styles.card} ${styles[x.gridArea]}`}
-                >
-                  <div className={styles.cardTop}>
-                    <h3 className={styles.title}>{x.heading}</h3>
-                    <div className={styles.iconContainer}>{x.icon}</div>
-                  </div>
-                  <div className={styles.cardBottom}>
-                    <p className={styles.desc}>{x.description}</p>
-                  </div>
-                </motion.div>
-              )
-            )}
+            {data.map((x, index) => (
+              <motion.div
+                variants={fadeIn(index % 2 !== 0 ? "left" : "right", 0.3)}
+                initial='hidden'
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.3 }}
+                key={x.id}
+                className={`${styles.card} ${styles[x.gridArea]}`}
+              >
+                <div className={styles.cardTop}>
+                  <h3 className={styles.title}>{x.heading}</h3>
+                  <div className={styles.iconContainer}>{x.icon}</div>
+                </div>
+                <div className={styles.cardBottom}>
+                  <p className={styles.desc}>{x.description}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </LayoutWrapper>
       </div>

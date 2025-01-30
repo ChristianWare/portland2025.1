@@ -4,7 +4,6 @@ import localFont from "next/font/local";
 
 import "./globals.css";
 import Nav from "@/components/Nav/Nav";
-import FinalCTA from "@/components/FinalCTA/FinalCTA";
 
 const InterTight = Inter_Tight({
   variable: "--InterTight",

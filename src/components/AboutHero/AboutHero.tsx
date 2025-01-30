@@ -51,7 +51,7 @@ export default function AboutHero() {
               </p>
             </div>
             <div className={styles.right}>
-              <span className={styles.drag}> － drag －</span>
+              <span className={styles.drag}> • drag •</span>
               <div className={styles.sceneContianer}>
                 <Scene useViewportScale={false} fixedScale={[3.2, 3.2, 3.2]} />{" "}
                 {/* <Scene2 useViewportScale={false} fixedScale={[1.6, 1.6, 1]} />{" "} */}

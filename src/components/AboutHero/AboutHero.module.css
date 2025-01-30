@@ -47,6 +47,10 @@
   text-align: center;
   display: block;
   color: var(--white);
+  opacity: 0.7;
+  user-select: none;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 .sceneContianer {

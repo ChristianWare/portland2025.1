@@ -1,4 +1,4 @@
-import BlogSection from "@/components/BlogSection/BlogSection";
+// import BlogSection from "@/components/BlogSection/BlogSection";
 import ContactHero from "@/components/ContactHero/ContactHero";
 import Faqs from "@/components/Faqs/Faqs";
 import FinalCTA from "@/components/FinalCTA/FinalCTA";
@@ -9,7 +9,7 @@ export default function ContactPage() {
     <main>
       <ContactHero />
       <Faqs mapData={homePageFaqs} />
-      <BlogSection />
+      {/* <BlogSection /> */}
       <FinalCTA />
     </main>
   );

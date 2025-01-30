@@ -1,11 +1,13 @@
 "use client";
 
 // import { useGLTF } from "@react-three/drei";
-import { useThree, useFrame } from "@react-three/fiber";
+// import { useThree, useFrame } from "@react-three/fiber";
+import { useThree } from "@react-three/fiber";
 // import { useFrame } from "@react-three/fiber";
 import { MeshTransmissionMaterial, useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 import React, { useRef } from "react";
+import { Float } from "@react-three/drei";
 
 export interface ModelProps {
   thickness: number;
@@ -32,16 +34,16 @@ export default function Model({
   const { nodes } = useGLTF("/3dFiles/usa_map_-_low_poly.glb");
   const { viewport } = useThree();
 
-  useFrame(() => {
-    if (!mesh.current) return;
-    mesh.current.rotation.y += 0.01;
-  });
+  // useFrame(() => {
+  //   if (!mesh.current) return;
+  //   mesh.current.rotation.y += 0.01;
+  // });
 
   const groupScale = useViewportScale ? viewport.width / 4.5 : fixedScale;
 
   return (
-    <>
-      <group scale={groupScale}>
+    <Float>
+      <group scale={groupScale} position={[-1, 2, 0]}>
         <mesh ref={mesh} {...nodes.Arizona_0}>
           <MeshTransmissionMaterial
             thickness={thickness}
@@ -53,6 +55,6 @@ export default function Model({
           />
         </mesh>
       </group>
-    </>
+    </Float>
   );
 }

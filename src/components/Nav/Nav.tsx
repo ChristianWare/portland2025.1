@@ -10,7 +10,7 @@ import useInvalidPaths from "../../../lib/use-invalid-paths";
 
 const navItems = [
   { text: "About", href: "/about" },
-  { text: "Projects", href: "/projects" },
+  // { text: "Projects", href: "/projects" },
   { text: "Blog", href: "/blog" },
   { text: "Contact", href: "/contact" },
 ];

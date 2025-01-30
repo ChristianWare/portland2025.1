@@ -2,7 +2,7 @@
 "use client";
 
 import { Canvas } from "@react-three/fiber";
-import { Environment } from "@react-three/drei";
+import { Environment, OrbitControls } from "@react-three/drei";
 import Model from "../Model/Model";
 import styles from "./Scene.module.css";
 
@@ -20,6 +20,7 @@ export default function Scene({
       <Canvas className={styles.canvas}>
         <directionalLight intensity={3} position={[0, 3, 2]} />
         <Environment preset='city' />
+        <OrbitControls enableZoom={false} />
         <Model
           thickness={2}
           roughness={0}

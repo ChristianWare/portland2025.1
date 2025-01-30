@@ -1,9 +1,10 @@
 "use client";
 
 import styles from "./WorkSection.module.css";
-
 import Button from "../Button/Button";
 import SectionHeading2 from "../SectionHeading2/SectionHeading2";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../../animation/variants";
 
 const WorkSection = () => {
   const data = [
@@ -61,7 +62,13 @@ const WorkSection = () => {
             <ul className={styles.list}>
               {data.map((x, index) => (
                 <li key={index} className={styles.name}>
-                  {x.title} - {x.company}
+                  <motion.div
+                    variants={fadeIn("left", 0.3)}
+                    initial='hidden'
+                    whileInView={"show"}
+                  >
+                    {x.title} - {x.company}
+                  </motion.div>
                 </li>
               ))}
             </ul>

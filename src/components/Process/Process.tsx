@@ -1,5 +1,9 @@
+import { fadeIn } from "../../../animation/variants";
+import LayoutWrapper from "../LayoutWrapper";
+import Offer from "../Offer/Offer";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import styles from "./Process.module.css";
+import { motion } from "framer-motion";
 
 const data = [
   {
@@ -27,41 +31,54 @@ const data = [
 const Process = () => {
   return (
     <section className={styles.container}>
-      <h2 className={styles.heading1}>
-        My approach to<br />
-        <span>Every project</span>
-      </h2>
-      <div className={styles.box}>
-        <div className={styles.middle}>
-          <div className={styles.middleLeft}>
-            <div className={styles.sectionTitle}>
-              <SectionHeading
-                title='How I work'
-                color='white'
-                dotColor='whiteDot'
-              />
+      <motion.div
+        variants={fadeIn("", 0.3)}
+        initial='hidden'
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.3 }}
+        className={styles.parent}
+      >
+        <LayoutWrapper>
+          <h2 className={styles.heading1}>
+            My approach to
+            <br />
+            <span>Every project</span>
+          </h2>
+          <div className={styles.box}>
+            <div className={styles.middle}>
+              <div className={styles.middleLeft}>
+                <div className={styles.sectionTitle}>
+                  <SectionHeading
+                    title='How I work'
+                    color='white'
+                    dotColor='whiteDot'
+                  />
+                </div>
+              </div>
+              <h4 className={styles.heading}>
+                By taking a holistic approach to web development, I provide
+                clients with personalized solutions, ongoing support, and
+                actionable insights to ensure their success extends far beyond
+                the launch.
+              </h4>
+            </div>
+            <div className={styles.bottom}>
+              {data.map((x) => (
+                <div key={x.id} className={styles.card}>
+                  <div className={styles.indexContainer}>
+                    <span className={styles.index}>{x.id}</span>
+                  </div>
+                  <div>
+                    <h3 className={styles.feature}>{x.feature}</h3>
+                    <p className={styles.desc}>{x.desc}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-          <h4 className={styles.heading}>
-            By taking a holistic approach to web development, I provide clients
-            with personalized solutions, ongoing support, and actionable
-            insights to ensure their success extends far beyond the launch.
-          </h4>
-        </div>
-        <div className={styles.bottom}>
-          {data.map((x) => (
-            <div key={x.id} className={styles.card}>
-              <div className={styles.indexContainer}>
-                <span className={styles.index}>{x.id}</span>
-              </div>
-              <div>
-                <h3 className={styles.feature}>{x.feature}</h3>
-                <p className={styles.desc}>{x.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+          <Offer />
+        </LayoutWrapper>
+      </motion.div>
     </section>
   );
 };

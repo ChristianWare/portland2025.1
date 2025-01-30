@@ -11,7 +11,8 @@ import WebDev from "../../../public/icons/webDev.svg";
 import WebDesign from "../../../public/icons/webDesign.svg";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
-import WorkSection from "../WorkSection/WorkSection";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../../animation/variants";
 
 const data = [
   {
@@ -94,39 +95,47 @@ const data = [
 export default function AboutFeatures() {
   return (
     <section className={styles.container} id='features'>
-      <LayoutWrapper>
-        <div className={styles.top}>
-          <SectionHeading
-            title='My Skillset'
-            color='black'
-            dotColor='blackDot'
-          />
-          <h2 className={styles.heading}>
-            My websites <br />
-            <span className={styles.span}>& everything around them</span>
-          </h2>
-          <p className={styles.copy}>
-            Building a website is only the beginning. It&apos;s important to
-            understand the essential elements that make them thrive. My
-            expertise spans the entire web development ecosystem, combining
-            design, functionality, and optimization to create seamless digital
-            experiences.
-          </p>
-        </div>
-        <div className={styles.dataContainer}>
-          {data.map((x, index) => (
-            <div key={index} className={styles.content}>
-              <div className={styles.left}>
-                <div className={styles.iconContainer}>{x.icon}</div>
+      <motion.div
+        variants={fadeIn("", 0.3)}
+        initial='hidden'
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.3 }}
+        className={styles.parent}
+      >
+        <LayoutWrapper>
+          <div className={styles.top}>
+            <SectionHeading
+              title='My Skillset'
+              color='black'
+              dotColor='blackDot'
+            />
+            <h2 className={styles.heading}>
+              My websites <br />
+              <span className={styles.span}>& everything around them</span>
+            </h2>
+            <p className={styles.copy}>
+              Building a website is only the beginning. It&apos;s important to
+              understand the essential elements that make them thrive. My
+              expertise spans the entire web development ecosystem, combining
+              design, functionality, and optimization to create seamless digital
+              experiences.
+            </p>
+          </div>
+          <div className={styles.dataContainer}>
+            {data.map((x, index) => (
+              <div key={index} className={styles.content}>
+                <div className={styles.left}>
+                  <div className={styles.iconContainer}>{x.icon}</div>
+                </div>
+                <div className={styles.right}>
+                  <h3 className={styles.title}>{x.title}</h3>
+                </div>
               </div>
-              <div className={styles.right}>
-                <h3 className={styles.title}>{x.title}</h3>
-              </div>
-            </div>
-          ))}
-        </div>
-        <WorkSection />
-      </LayoutWrapper>
+            ))}
+          </div>
+          {/* <WorkSection /> */}
+        </LayoutWrapper>
+      </motion.div>
     </section>
   );
 }

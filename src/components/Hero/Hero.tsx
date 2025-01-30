@@ -9,21 +9,20 @@ import SurpriseButton from "../SurpriseButton/SurpriseButton";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../animation/variants";
 
-
 // const Cog = dynamic(() => import("../Scenes/Cog/Cog"), {
 //   ssr: false,
 // });
 
 export default function Hero() {
   return (
-      <motion.div
+    <div className={styles.parent}>
+      <motion.section
         variants={fadeIn("", 0.3)}
         initial='hidden'
         whileInView={"show"}
         viewport={{ once: false, amount: 0.3 }}
-        className={styles.parent}
+        className={styles.container}
       >
-    <section className={styles.container}>
         <div className={styles.content}>
           <LayoutWrapper>
             <div className={styles.sectionHeadingContainer}>
@@ -54,7 +53,7 @@ export default function Hero() {
             </div> */}
           </LayoutWrapper>
         </div>
-    </section>
-      </motion.div>
+      </motion.section>
+    </div>
   );
 }

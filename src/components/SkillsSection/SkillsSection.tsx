@@ -24,6 +24,8 @@ import Three from "../../../public/icons/threejs.svg";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import WorkSection from "../WorkSection/WorkSection";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../../animation/variants";
 // import Faqs from "../Faqs/Faqs";
 // import { homePageFaqs } from "../../../lib/data";
 
@@ -165,17 +167,36 @@ const SkillsSection = () => {
                     onMouseEnter={() => handleHover(item.icon)}
                     onMouseLeave={() => handleHover(null)}
                   >
-                    {item.icon2}
-                    {item.name}
+                    <motion.div
+                      variants={fadeIn("right", 0.3)}
+                      initial='hidden'
+                      whileInView={"show"}
+                      viewport={{ once: false, amount: 0.3 }}
+                    >
+                      {item.icon2}
+                    </motion.div>
+                    <motion.div
+                      variants={fadeIn("right", 0.3)}
+                      initial='hidden'
+                      whileInView={"show"}
+                    >
+                      {item.name}
+                    </motion.div>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className={styles.right}>
+            <motion.div
+              variants={fadeIn("left", 0.3)}
+              initial='hidden'
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.3 }}
+              className={styles.right}
+            >
               {isPaused && activeIcon
                 ? activeIcon
                 : data[currentIconIndex].icon}
-            </div>
+            </motion.div>
           </div>
           <WorkSection />
         </div>

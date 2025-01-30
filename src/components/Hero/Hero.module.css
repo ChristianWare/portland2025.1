@@ -1,13 +1,16 @@
-.container {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
+.parent {
   background: linear-gradient(
     135deg,
     rgba(252, 210, 205, 1) 15%,
     rgba(189, 183, 213, 1) 65%
   );
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
   padding-bottom: 25rem;
   display: flex;
   align-items: center;

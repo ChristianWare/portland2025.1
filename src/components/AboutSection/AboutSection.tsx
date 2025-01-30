@@ -24,11 +24,7 @@ const AboutSection = () => {
       <LayoutWrapper>
         <div className={styles.top}>
           <div className={styles.box}>
-            {/* <SectionHeading
-              title='Skillset'
-              color='white'
-              dotColor='whiteDot'
-            /> */}
+           
             <div className={styles.headingContainer}>
               {aboutPhrases.map((phrase, index) => (
                 <AnimatedLine key={index}>{phrase}</AnimatedLine>

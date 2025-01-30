@@ -3,14 +3,72 @@
 import styles from "./ProjectsSection.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
-import Button from "../Button/Button";
-import OtherProjects from "../OtherProjects/OtherProjects";
+import Chuxly from "../../../public/images/chuxly.jpg";
+import FNF from "../../../public/images/posthero.png";
+import Honey from "../../../public/images/honey.png";
+import Nier from "../../../public/images/nier.png";
+import Taco from "../../../public/images/taco.webp";
+import ProjectCard from "../ProjectCard/ProjectCard";
 
+const data = [
+  {
+    id: 1,
+    name: "Chuxly",
+    year: 2024,
+    framework: "Next.js",
+    src: Chuxly,
+    link: "https://www.chuxly.com/",
+    github: "https://github.com/ChristianWare/claro15",
+    description:
+      "Chuxly is an e-commerce website offering wireless, portable, and home theater speakers, along with headphones, components, and accessories.",
+  },
+  {
+    id: 2,
+    name: "Fonts & Footers",
+    year: 2024,
+    framework: "Next.js",
+    src: FNF,
+    link: "https://www.fontsandfooters.com/",
+    github: "https://github.com/ChristianWare/fnfii.15",
+    description:
+      "Fonts & Footers is a web development agency specializing in creating fully functional e-commerce websites for small business owners, tailored to meet their unique needs.",
+  },
+  {
+    id: 3,
+    name: "Golden Drips",
+    year: 2024,
+    framework: "Next.js",
+    src: Honey,
+    link: "https://www.goldendrips.com/",
+    github: "https://github.com/ChristianWare/honey",
+    description:
+      "Golden Drips is an e-commerce website dedicated to selling high-quality honey products across Arizona. The platform supports state-wide delivery with an easy-to-navigate user interface.",
+  },
+  {
+    id: 4,
+    name: "Taco Bell",
+    year: 2024,
+    framework: "Next.js with Sanity.io",
+    src: Taco,
+    link: "https://www.newtacobell.com/",
+    github: "https://github.com/ChristianWare/Tacobell-ii",
+    description:
+      "Taco Bell's redesigned website integrates a seamless user experience with a robust CMS powered by Sanity.io, showcasing the full menu and promotional offers in a visually engaging way.",
+  },
+  {
+    id: 5,
+    name: "Nier Transportation",
+    year: 2024,
+    framework: "Next.js",
+    src: Nier,
+    link: "https://www.niertransportation.com",
+    github: "https://github.com/ChristianWare/Nier-Transport-Redesign",
+    description:
+      "Nier Transportation's website highlights a luxury black car service with features that make booking and navigation effortless for clients seeking reliable and premium transportation services.",
+  },
+];
 
-
-
-export default  function ProjectsSection() {
-
+export default function ProjectsSection() {
   return (
     <section className={styles.container} id='projects'>
       <LayoutWrapper>
@@ -24,10 +82,19 @@ export default  function ProjectsSection() {
             Projects
           </h2>
         </div>
-        <OtherProjects/>
-        <div className={styles.btnContainerii}>
-          <Button text='All Projects' btnType='purple' href='/' />
+        <div className={styles.bottom}>
+
+        {data.map((project, index) => (
+          <ProjectCard
+          key={index}
+          src={project.src}
+          name={project.name}
+          description={project.description}
+          link={project.link}
+          />
+        ))}
         </div>
+        
       </LayoutWrapper>
     </section>
   );

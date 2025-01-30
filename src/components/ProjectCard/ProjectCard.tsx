@@ -1,43 +1,68 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from "next/image";
-import { SimplifiedProject } from "../../../@types";
 import styles from "./ProjectCard.module.css";
-import Button from "../Button/Button";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../../animation/variants";
 
 interface ProjectCardProps {
-  project: SimplifiedProject;
+  src: any;
+  name: string;
+  description: string;
+  link: string;
 }
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({
+  src,
+  name,
+  description,
+  link,
+}: ProjectCardProps) {
   return (
-    <article className={styles.card}>
+    <motion.article
+      variants={fadeIn("up", 0.3)}
+      initial='hidden'
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.3 }}
+      className={styles.card}
+    >
       <div className={styles.cardTop}>
         <div className={styles.imgContainer}>
           <Image
-            src={project.previewimage}
-            alt={project.name}
-            title={project.name}
+            src={src}
+            alt={name}
+            title={name}
             fill
             className={styles.img}
           />
         </div>
       </div>
       <div className={styles.cardBottom}>
-        <h4 className={styles.title}>{project.name}</h4>
+        <h4 className={styles.title}>{name}</h4>
         <div className={styles.descBox}>
-          <p className={styles.description}>{project.description}</p>
+          <p className={styles.description}>{description}</p>
         </div>
         <div className={styles.linksBox}>
-          <div className={styles.link1}>Live Site</div>
+          <div className={styles.link1}>
+            <Link
+              href={link}
+              className={styles.link1}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Live Site
+            </Link>
+          </div>
           <div className={styles.link2}>Github Code</div>
         </div>
-        <div className={styles.btnContainer}>
+        {/* <div className={styles.btnContainer}>
           <Button
             text='More Details'
             btnType='primary'
             href={`/projects/${project.slug}`}
           />
-        </div>
+        </div> */}
       </div>
-    </article>
+    </motion.article>
   );
 }

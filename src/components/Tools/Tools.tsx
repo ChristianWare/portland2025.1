@@ -1,11 +1,12 @@
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./Tools.module.css";
 import Figma from "../../../public/icons/figma.svg";
-import Process from "../Process/Process";
 import Trello from "../../../public/icons/trello.svg";
 import Github from "../../../public/icons/github.svg";
 import VSCode from "../../../public/icons/visualStudio.svg";
 import SectionHeading from "../SectionHeading/SectionHeading";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../../animation/variants";
 
 const data = [
   {
@@ -45,34 +46,51 @@ const data = [
 export default function Tools() {
   return (
     <section className={styles.container}>
-      <LayoutWrapper>
-        <div className={styles.top}>
-          <SectionHeading title='Toolset' color='black' dotColor='blackDot' />
-          <h2 className={styles.heading}>
-            My preferred tools for building <br />
-            <span className={styles.span}>exceptional websites</span>
-          </h2>
-          <p className={styles.copy}>
-            Here’s why restaurants choose Owner to grow faster online
-          </p>
-        </div>
-        <div className={styles.bottom}>
-          {data.map((x) => (
-            <div key={x.id} className={`${styles.card} ${styles[x.gridArea]}`}>
-              <div className={styles.cardTop}>
-                <h3 className={styles.title}>{x.heading}</h3>
-                <div className={styles.iconContainer}>{x.icon}</div>
-              </div>
-              <div className={styles.cardBottom}>
-                <p className={styles.desc}>{x.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className={styles.processContainer}>
-          <Process />
-        </div>
-      </LayoutWrapper>
+      <div className={styles.parent}>
+        <LayoutWrapper>
+          <div className={styles.top}>
+            <SectionHeading title='Toolset' color='black' dotColor='blackDot' />
+            <motion.h2
+              variants={fadeIn("", 0.3)}
+              initial='hidden'
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.3 }}
+              className={styles.heading}
+            >
+              My preferred tools for building <br />
+              <span className={styles.span}>exceptional websites</span>
+            </motion.h2>
+            <p className={styles.copy}>
+              Here’s why restaurants choose Owner to grow faster online
+            </p>
+          </div>
+          <div className={styles.bottom}>
+            {data.map(
+              (
+                x,
+                index // Add index parameter to map callback
+              ) => (
+                <motion.div
+                  variants={fadeIn(index % 2 !== 0 ? "left" : "right", 0.3)} // Conditional direction
+                  initial='hidden'
+                  whileInView={"show"}
+                  viewport={{ once: false, amount: 0.3 }}
+                  key={x.id}
+                  className={`${styles.card} ${styles[x.gridArea]}`}
+                >
+                  <div className={styles.cardTop}>
+                    <h3 className={styles.title}>{x.heading}</h3>
+                    <div className={styles.iconContainer}>{x.icon}</div>
+                  </div>
+                  <div className={styles.cardBottom}>
+                    <p className={styles.desc}>{x.description}</p>
+                  </div>
+                </motion.div>
+              )
+            )}
+          </div>
+        </LayoutWrapper>
+      </div>
     </section>
   );
 }

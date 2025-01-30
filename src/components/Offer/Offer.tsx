@@ -1,11 +1,11 @@
 import styles from "./Offer.module.css";
 import Terminal from "../../../public/icons/terminal.svg";
-import LayoutWrapper from "../LayoutWrapper";
+// import LayoutWrapper from "../LayoutWrapper";
 
 export default function Offer() {
   return (
     <section className={styles.container}>
-      <LayoutWrapper>
+      {/* <LayoutWrapper> */}
         <div className={styles.content}>
           <div className={styles.left}></div>
           <div className={styles.right}>
@@ -44,7 +44,7 @@ export default function Offer() {
             </div>
           </div>
         </div>
-      </LayoutWrapper>
+      {/* </LayoutWrapper> */}
     </section>
   );
 }

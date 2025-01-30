@@ -23,10 +23,10 @@ export default function AboutHero() {
                 color='white'
                 dotColor='whiteDot'
               />
-              <h1 className={styles.heading}>
-                I&lsquo;m a web developer based in{" "}
+              <h2 className={styles.heading}>
+                I&lsquo;m a web developer based in{" "} <br />
                 <span className={styles.heading2}> Phoenix, AZ</span>.
-              </h1>
+              </h2>
               <p className={styles.copy}>
                 I have extensive knowledge of{" "}
                 <span className={styles.span}>

@@ -1,9 +1,7 @@
-import { fadeIn } from "../../../animation/variants";
 import LayoutWrapper from "../LayoutWrapper";
 import Offer from "../Offer/Offer";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import styles from "./Process.module.css";
-import { motion } from "framer-motion";
 
 const data = [
   {
@@ -31,13 +29,7 @@ const data = [
 const Process = () => {
   return (
     <section className={styles.container}>
-      <motion.div
-        variants={fadeIn("", 0.3)}
-        initial='hidden'
-        whileInView={"show"}
-        viewport={{ once: false, amount: 0.3 }}
-        className={styles.parent}
-      >
+      <div className={styles.parent}>
         <LayoutWrapper>
           <h2 className={styles.heading1}>
             My approach to
@@ -78,7 +70,7 @@ const Process = () => {
           </div>
           <Offer />
         </LayoutWrapper>
-      </motion.div>
+      </div>
     </section>
   );
 };

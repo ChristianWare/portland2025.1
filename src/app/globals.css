@@ -9,7 +9,7 @@
   --gray2: #f1f1f2;
   --lightGray: #aab9c5;
   --lightGray2: #6c6c83;
-  --grayText: #6C6F75;
+  --grayText: #6c6f75;
 }
 
 * {
@@ -23,6 +23,7 @@
   overscroll-behavior: none; */
   -webkit-tap-highlight-color: transparent;
   font-family: var(--InterTight);
+  overflow: hidden;
 }
 
 html {

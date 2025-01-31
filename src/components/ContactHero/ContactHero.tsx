@@ -36,8 +36,10 @@ export default function ContactHero() {
                 functionality.
               </p>
               <span className={styles.drag}></span>
+            <div className={styles.footerContainer}>
+              <FinalCTA />
             </div>
-            <FinalCTA />
+            </div>
           </LayoutWrapper>
         </div>
       </motion.section>

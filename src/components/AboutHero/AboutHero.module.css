@@ -68,7 +68,7 @@
 .sceneContianer * {
   /* If you want the child to NOT capture the mouse. 
    * This often breaks 3D interactions, so be careful */
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 @media screen and (max-width: 1068px) {
@@ -78,7 +78,7 @@
 
   .content {
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 0rem;
+    grid-gap: 5rem;
   }
 
   .left {
@@ -97,3 +97,10 @@
     height: 400px;
   }
 }
+
+@media screen and (max-width: 568px) {
+  .right, .sceneContianer {
+    user-select: none;
+  }
+}
+  

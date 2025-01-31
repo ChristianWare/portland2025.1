@@ -16,7 +16,7 @@
   width: 100%;
   height: 100%;
   content: "";
-  opacity: 0.03;
+  opacity: 0.02;
   pointer-events: none;
   background: url(../../../public/noise.gif);
 }
@@ -56,7 +56,6 @@
   mix-blend-mode: overlay;
 }
 
-
 .drag {
   color: var(--grayText);
   margin-top: 3rem;
@@ -88,6 +87,10 @@
   height: 100vh;
   z-index: -1;
   /* animation: rotateClockwise 5s linear infinite; */
+}
+
+.footerContainer {
+  z-index: 998;
 }
 
 @keyframes rotateClockwise {

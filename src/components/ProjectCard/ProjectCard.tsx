@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import Image from "next/image";
+// import Image from "next/image";
 import styles from "./ProjectCard.module.css";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { fadeIn } from "../../../animation/variants";
+// import { motion } from "framer-motion";
+// import { fadeIn } from "../../../animation/variants";
 
 interface ProjectCardProps {
   src: any;
@@ -13,20 +13,14 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({
-  src,
+  // src,
   name,
   description,
   link,
 }: ProjectCardProps) {
   return (
-    <motion.article
-      variants={fadeIn("up", 0.3)}
-      initial='hidden'
-      whileInView={"show"}
-      viewport={{ once: false, amount: 0.3 }}
-      className={styles.card}
-    >
-      <div className={styles.cardTop}>
+    <article className={styles.card}>
+      {/* <div className={styles.cardTop}>
         <div className={styles.imgContainer}>
           <Image
             src={src}
@@ -36,7 +30,7 @@ export default function ProjectCard({
             className={styles.img}
           />
         </div>
-      </div>
+      </div> */}
       <div className={styles.cardBottom}>
         <h4 className={styles.title}>{name}</h4>
         <div className={styles.descBox}>
@@ -63,6 +57,6 @@ export default function ProjectCard({
           />
         </div> */}
       </div>
-    </motion.article>
+    </article>
   );
 }

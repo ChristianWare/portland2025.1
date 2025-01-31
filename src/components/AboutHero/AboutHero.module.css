@@ -56,13 +56,19 @@
 }
 
 .sceneContianer {
-  /* position: absolute; */
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  /* width: 100%; */
-  /* height: 100%; */
-  /* margin-top: -10rem; */
+  cursor: grab;
+  /* Force pointer events on the container itself */
+  pointer-events: auto;
+}
+
+.sceneContianer:active {
+  cursor: grabbing;
+}
+
+.sceneContianer * {
+  /* If you want the child to NOT capture the mouse. 
+   * This often breaks 3D interactions, so be careful */
+  pointer-events: none; 
 }
 
 @media screen and (max-width: 1068px) {

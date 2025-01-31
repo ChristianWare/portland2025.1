@@ -8,7 +8,11 @@ import FNF from "../../../public/images/posthero.png";
 import Honey from "../../../public/images/honey.png";
 import Nier from "../../../public/images/nier.png";
 import Taco from "../../../public/images/taco.webp";
-import ProjectCard from "../ProjectCard/ProjectCard";
+// import ProjectCard from "../ProjectCard/ProjectCard";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../../animation/variants";
+import Link from "next/link";
+import Image from "next/image";
 
 const data = [
   {
@@ -83,18 +87,64 @@ export default function ProjectsSection() {
           </h2>
         </div>
         <div className={styles.bottom}>
+          {data.map((project, index) => (
+            // <motion.div
 
-        {data.map((project, index) => (
-          <ProjectCard
-          key={index}
-          src={project.src}
-          name={project.name}
-          description={project.description}
-          link={project.link}
+            //   key={index}
+            // >
+            //   <ProjectCard
+            //     src={project.src}
+            //     name={project.name}
+            //     description={project.description}
+            //     link={project.link}
+            //   />
+            // </motion.div>
+            <motion.div
+              variants={fadeIn(index % 2 !== 0 ? "up" : "left", 0.3)}
+              initial='hidden'
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.3 }}
+              key={index}
+              className={styles.cardContainer}
+            >
+              <div className={styles.cardTop}>
+                <div className={styles.imgContainer}>
+                  <Image
+                    src={project.src}
+                    alt={project.name}
+                    title={project.name}
+                    fill
+                    className={styles.img}
+                  />
+                </div>
+              </div>
+              <h4 className={styles.title}>{project.name}</h4>
+              <div className={styles.descBox}>
+                <p className={styles.description}>{project.description}</p>
+              </div>
+              <div className={styles.linksBox}>
+                <div>
+                  <Link
+                    href={project.link}
+                    className={styles.link1}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    Live Site
+                  </Link>
+                </div>
+                <div className={styles.link2}>Github Code</div>
+              </div>
+              {/* <div className={styles.btnContainer}>
+          <Button
+            text='More Details'
+            btnType='primary'
+            href={`/projects/${project.slug}`}
           />
-        ))}
+        </div> */}
+            </motion.div>
+          ))}
         </div>
-        
       </LayoutWrapper>
     </section>
   );

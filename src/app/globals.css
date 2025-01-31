@@ -23,7 +23,7 @@
   overscroll-behavior: none; */
   -webkit-tap-highlight-color: transparent;
   font-family: var(--InterTight);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 html {

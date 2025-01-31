@@ -1,5 +1,9 @@
 .container {
-  background-color: var(--blue);
+  background: rgb(22,47,53);
+background: -moz-linear-gradient(180deg, rgba(22,47,53,1) 0%, rgba(127,98,243,1) 100%);
+background: -webkit-linear-gradient(180deg, rgba(22,47,53,1) 0%, rgba(127,98,243,1) 100%);
+background: linear-gradient(180deg, rgba(22,47,53,1) 0%, rgba(127,98,243,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#162f35",endColorstr="#7f62f3",GradientType=1);
   padding-top: 10rem;
 }
 
@@ -101,7 +105,8 @@
 }
 
 .desc {
-  color: var(--lightGray);
+  color: var(--white);
+  opacity: 0.7;
   font-size: 1.4rem;
 }
 

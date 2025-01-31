@@ -9,7 +9,7 @@ import AboutFeatures from "@/components/AboutFeatures/AboutFeatures";
 import Tools from "@/components/Tools/Tools";
 import Process from "@/components/Process/Process";
 import ContactHero from "@/components/ContactHero/ContactHero";
-import ClosingComments from "@/components/ClosingComments/ClosingComments";
+// import ClosingComments from "@/components/ClosingComments/ClosingComments";
 import ProjectsSection from "@/components/ProjectsSection/ProjectsSection";
 
 export default function Home() {
@@ -24,7 +24,6 @@ export default function Home() {
         <Tools />
         <SkillsSection />
         <Process />
-        <ClosingComments />
         <ContactHero />
       </main>
     </ReactLenis>

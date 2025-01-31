@@ -1,5 +1,5 @@
 import LayoutWrapper from "../LayoutWrapper";
-import Offer from "../Offer/Offer";
+// import Offer from "../Offer/Offer";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import styles from "./Process.module.css";
 
@@ -68,7 +68,7 @@ const Process = () => {
               ))}
             </div>
           </div>
-          <Offer />
+          {/* <Offer /> */}
         </LayoutWrapper>
       </div>
     </section>

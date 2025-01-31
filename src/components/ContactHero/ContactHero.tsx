@@ -4,10 +4,12 @@ import SectionHeading from "../SectionHeading/SectionHeading";
 import FinalCTA from "../FinalCTA/FinalCTA";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../animation/variants";
+import ClosingComments from "../ClosingComments/ClosingComments";
 
 export default function ContactHero() {
   return (
     <section className={styles.container}>
+      <ClosingComments />
       <motion.section
         variants={fadeIn("", 0.3)}
         initial='hidden'
@@ -36,9 +38,9 @@ export default function ContactHero() {
                 functionality.
               </p>
               <span className={styles.drag}></span>
-            <div className={styles.footerContainer}>
-              <FinalCTA />
-            </div>
+              <div className={styles.footerContainer}>
+                <FinalCTA />
+              </div>
             </div>
           </LayoutWrapper>
         </div>

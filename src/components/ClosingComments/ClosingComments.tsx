@@ -12,7 +12,6 @@ const text = [
   "I look forward to speaking with you soon.",
 ];
 
-
 const ClosingComments = () => {
   return (
     <section className={styles.container}>
@@ -20,11 +19,6 @@ const ClosingComments = () => {
       <LayoutWrapper>
         <div className={styles.top}>
           <div className={styles.box}>
-            {/* <SectionHeading
-              title='Skillset'
-              color='white'
-              dotColor='whiteDot'
-            /> */}
             <div className={styles.headingContainer}>
               {text.map((phrase, index) => (
                 <AnimatedLine key={index}>{phrase}</AnimatedLine>
@@ -33,12 +27,6 @@ const ClosingComments = () => {
           </div>
         </div>
         <div className={styles.content}></div>
-        {/* <div className={styles.processContainer}>
-          <Process />
-        </div> */}
-        {/* <div className={styles.btnContainer}>
-          <Button text='Learn More About Me' btnType='purple' href='/' />
-        </div> */}
       </LayoutWrapper>
     </section>
   );

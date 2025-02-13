@@ -3,6 +3,7 @@
 import styles from "./Hero.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 // import dynamic from "next/dynamic";
+import Scene from "../Scene/Scene";
 
 import SectionHeading from "../SectionHeading/SectionHeading";
 import SurpriseButton from "../SurpriseButton/SurpriseButton";
@@ -23,36 +24,40 @@ export default function Hero() {
         viewport={{ once: false, amount: 0.3 }}
         className={styles.container}
       >
-        <div className={styles.content}>
-          <LayoutWrapper>
-            <div className={styles.sectionHeadingContainer}>
-              <SectionHeading
-                title='Web Developer'
-                color='black'
-                dotColor='blackDot'
-              />
-            </div>
-            <h1 className={styles.heading}>
-              Hello World. <br />
-              <span className={styles.heading2}>My name is Christian</span>.
-            </h1>
-            <p className={styles.copy}>
-              Functional is a lightweight app for small teams to streamline
-              <span className={styles.span}> timesheets,</span> time off and
-              track
-              <span className={styles.span}> employee wellbeing,</span> all
-              inside the team chat.
-            </p>
-            <div className={styles.btnContainer}>
-              <SurpriseButton />
-            </div>
-            {/* <div className={styles.box}>
-              <div className={styles.sceneContainer}>
-                <Cog useViewportScale={false} fixedScale={[1.2, 1.2, 1.2]} />
+        <LayoutWrapper>
+          <div className={styles.content}>
+            <div className={styles.left}>
+              <div className={styles.sectionHeadingContainer}>
+                <SectionHeading
+                  title='Chris Ware'
+                  color='black'
+                  dotColor='blackDot'
+                />
               </div>
-            </div> */}
-          </LayoutWrapper>
-        </div>
+              <h1 className={styles.heading}>
+                Web developer <br />
+                based in
+                <span className={styles.heading2}> Phoenix, Arizona</span>.
+              </h1>
+              <p className={styles.copy}>
+                Functional is a lightweight app for small teams to streamline
+                <span className={styles.span}> timesheets,</span> time off and
+                track
+                <span className={styles.span}> employee wellbeing,</span> all
+                inside the team chat.
+              </p>
+              <div className={styles.btnContainer}>
+                <SurpriseButton />
+              </div>
+            </div>
+            <div className={styles.right}>
+              <div className={styles.sceneContianer}>
+                <Scene useViewportScale={false} fixedScale={[3.5, 3.5, 3.5]} />
+              </div>
+              {/* <p className={styles.drag}> • drag •</p> */}
+            </div>{" "}
+          </div>
+        </LayoutWrapper>
       </motion.section>
     </div>
   );

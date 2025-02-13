@@ -17,6 +17,12 @@ const BoogyBrutPoster = localFont({
   display: "swap",
 });
 
+const HoloCondensedBold = localFont({
+  src: "../../public/fonts/HoloCondensedBold.woff2",
+  variable: "--HoloCondensedBold",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Christian Ware's Portfolio Website",
   description:
@@ -30,7 +36,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${InterTight.variable} ${BoogyBrutPoster.variable}`}>
+      <body
+        className={`${InterTight.variable} ${BoogyBrutPoster.variable} ${HoloCondensedBold.variable}`}
+      >
         <Nav />
         {children}
       </body>

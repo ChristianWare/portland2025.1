@@ -27,6 +27,7 @@
     "react-hook-form": "^7.54.2",
     "react-hot-toast": "^2.5.1",
     "sanity": "^3.69.0",
+    "sharp": "^0.33.5",
     "styled-components": "^6.1.14",
     "three": "^0.172.0"
   },

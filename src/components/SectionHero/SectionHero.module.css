@@ -1,6 +1,6 @@
 .container {
   background-color: var(--blue);
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,6 +18,7 @@
 .heading {
   color: var(--white);
   text-align: center;
+  width: 80%;
 }
 
 .heading2 {
@@ -29,7 +30,7 @@
 
 .copy,
 .span {
-  width: 60%;
+  width: 80%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -38,16 +39,25 @@
   color: var(--pink);
 }
 
-.btnContainer {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  width: 250px;
-  margin-top: 1rem;
+.directionLeft {
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 @media screen and (max-width: 1068px) {
   .copy {
-    width: 70%;
+    width: 100%;
+  }
+  .directionLeft {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
   }
 }
 
@@ -55,11 +65,5 @@
   .copy {
     width: 100%;
   }
-}
 
-@media screen and (max-width: 568px) {
-  .btnContainer {
-    width: 100%;
-    grid-template-columns: repeat(1, 1fr);
-  }
 }

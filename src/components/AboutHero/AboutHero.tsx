@@ -20,14 +20,11 @@ export default function AboutHero() {
             <div className={styles.left}>
               <div className={styles.top}>
                 <SectionHeading
-                  title='About Me'
+                  title='More Details'
                   color='white'
                   dotColor='whiteDot'
                 />
-                <h2 className={styles.heading}>
-                  I&apos;m a Web developer based in <br />
-                  Phoenix, AZ.
-                </h2>
+               
               </div>
               <div className={styles.copyContainer}>
                 <div></div>

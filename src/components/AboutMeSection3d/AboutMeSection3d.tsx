@@ -1,10 +1,9 @@
-"use client";
+import LayoutWrapper from '../LayoutWrapper';
+import styles from './AboutMeSection3d.module.css'
+import Arizona from "../Scene/Scene";
 
-import styles from "./ProjectHero.module.css";
-import LayoutWrapper from "../LayoutWrapper";
-import Torrus from "../Scenes/Torrus/Torrus";
 
-export default function ProjectHero() {
+export default function AboutMeSection3d() {
   return (
     <section className={styles.container}>
       <section className={styles.container}>
@@ -12,7 +11,7 @@ export default function ProjectHero() {
           <div className={styles.content}>
             <div className={styles.box}>
               <div className={styles.sceneContainer}>
-                <Torrus useViewportScale={false} fixedScale={[2, 2, 2]} />
+                <Arizona useViewportScale={false} fixedScale={[1.5, 1.5, 1.5]} />
               </div>
             </div>
           </div>

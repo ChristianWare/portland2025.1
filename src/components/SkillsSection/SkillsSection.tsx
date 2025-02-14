@@ -23,7 +23,7 @@ import WordPress from "../../../public/icons/wordpress.svg";
 import Three from "../../../public/icons/threejs.svg";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
-import WorkSection from "../WorkSection/WorkSection";
+// import WorkSection from "../WorkSection/WorkSection";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../animation/variants";
 // import Faqs from "../Faqs/Faqs";
@@ -150,11 +150,7 @@ const SkillsSection = () => {
     <section className={styles.container}>
       <LayoutWrapper>
         <div className={styles.sectionHeadingContainer}>
-          <SectionHeading
-            title='Skills & Work History'
-            color='black'
-            dotColor='blackDot'
-          />
+          <SectionHeading title='Skills' color='black' dotColor='blackDot' />
         </div>
         <div className={styles.parent}>
           <div className={styles.content}>
@@ -198,7 +194,7 @@ const SkillsSection = () => {
                 : data[currentIconIndex].icon}
             </motion.div>
           </div>
-          <WorkSection />
+          {/* <WorkSection /> */}
         </div>
       </LayoutWrapper>
     </section>

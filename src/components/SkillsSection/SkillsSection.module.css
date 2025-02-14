@@ -18,7 +18,7 @@
 
 .content {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 3rem;
 }
 
@@ -63,10 +63,10 @@
   align-items: center;
   padding: 2rem;
   min-height: 200px;
-  /* background-color: var(--blue); */
   border-radius: 15px;
   position: relative;
   width: 100%;
+  order: -1;
 }
 
 .name::after {
@@ -82,8 +82,8 @@
 }
 
 .icon {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   color: var(--blue);
   transition: all 0.3s ease-in;
 }
@@ -115,8 +115,17 @@
   color: var(--blue);
 }
 
+@media screen and (max-width: 1500px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media screen and (max-width: 1168px) {
   .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .list {
     grid-template-columns: repeat(1, 1fr);
   }
 
@@ -131,6 +140,15 @@
     padding-bottom: 2rem;
     margin-bottom: 2rem;
   }
+}
+
+@media screen and (max-width: 1068px) {
+
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  
 }
 
 @media screen and (max-width: 768px) {

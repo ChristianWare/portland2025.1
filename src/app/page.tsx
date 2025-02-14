@@ -13,16 +13,15 @@
 // import ContactHero from "@/components/ContactHero/ContactHero";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import HeroSection from "@/components/HeroSection/HeroSection";
+import AboutMeSection from "@/components/AboutMeSection/AboutMeSection";
 
 export default function Home() {
   return (
     <ReactLenis root>
       <main>
         <HeroSection />
+        <AboutMeSection />
         {/* <ProjectHero />
-        <Hero />
-        <ProjectHero />
-        <AboutHero />
         <Process />
         <Tools />
         <AboutSection />

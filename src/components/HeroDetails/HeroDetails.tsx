@@ -3,7 +3,6 @@ import SurpriseButton from "../SurpriseButton/SurpriseButton";
 import styles from "./HeroDetails.module.css";
 import Cog from "../Scenes/Cog/Cog";
 
-
 export default function HeroDetails() {
   return (
     <section className={styles.container}>
@@ -20,11 +19,8 @@ export default function HeroDetails() {
           <span className={styles.heading2}>My name is Christian</span>
         </h1>
         <p className={styles.copy}>
-          My portfolio demonstrates a broad range of my abilities. Each of my
-          projects are thoughtfully crafted to combine{" "}
-          <span className={styles.span}> innovative </span>
-          design with <span className={styles.span}> seamless </span>{" "}
-          functionality.
+          Phoenix, AZ based developer with a strong interest in ecommerce
+          websites, UI design and full stack web applications.
         </p>
         <div className={styles.btnContainer}>
           <SurpriseButton text='Surprise!' />

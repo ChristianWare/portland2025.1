@@ -6,8 +6,12 @@
 
 .content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 3rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.top {
+  border-bottom: 1px solid var(--white);
+  padding-bottom: 2rem;
 }
 
 .heading {
@@ -15,16 +19,13 @@
   color: var(--white);
 }
 
-.heading2 {
-  color: var(--white);
-  font-family: var(--BoogyBrutPoster);
-  font-size: 6rem;
+.copyContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.copy,
-.span {
+.copy {
   color: var(--lightGray);
-  max-width: 640px;
   margin-top: 1rem;
   line-height: 1.4em;
   font-size: 2rem;
@@ -41,24 +42,11 @@
   color: var(--pink);
 }
 
-.right {
-  position: relative;
-}
-
-.drag {
-  text-align: center;
-  display: block;
-  color: var(--white);
-  opacity: 0.7;
-  user-select: none;
-  font-weight: 600;
-  letter-spacing: 2px;
-}
-
 .sceneContianer {
   cursor: grab;
-  /* Force pointer events on the container itself */
   pointer-events: auto;
+  /* height: 400px; */
+  /* margin-top: -7rem; */
 }
 
 .sceneContianer:active {
@@ -66,41 +54,11 @@
 }
 
 .sceneContianer * {
-  /* If you want the child to NOT capture the mouse. 
-   * This often breaks 3D interactions, so be careful */
   pointer-events: none;
 }
 
-@media screen and (max-width: 1068px) {
-  /* .container {
-    padding-bottom: 40rem;
-  } */
-
-  .content {
+@media screen and (max-width: 1368px) {
+  .copyContainer {
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 5rem;
-  }
-
-  .left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .heading,
-  .copy {
-    text-align: center;
-  }
-
-  .right {
-    height: 400px;
   }
 }
-
-@media screen and (max-width: 568px) {
-  .right, .sceneContianer {
-    user-select: none;
-  }
-}
-  

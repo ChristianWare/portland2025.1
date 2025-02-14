@@ -5,10 +5,13 @@ import styles from "./SurpriseButton.module.css";
 import confetti from "canvas-confetti";
 
 export default function SurpriseButton() {
-  const shootRealisticConfetti = () => {
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const shootRealisticConfetti = (origin: { x: number; y: number }) => {
     const count = 200;
     const defaults = {
-      origin: { x: 0.5, y: 0.5 },
+      origin: origin,
     };
 
     function fire(particleRatio: number, opts: confetti.Options | undefined) {
@@ -43,10 +46,14 @@ export default function SurpriseButton() {
     });
   };
 
-const audioRef = useRef<HTMLAudioElement | null>(null);
-
   const handleSubmit = () => {
-    shootRealisticConfetti();
+    if (buttonRef.current) {
+      const rect = buttonRef.current.getBoundingClientRect();
+      const x = (rect.left + rect.width / 2) / window.innerWidth;
+      const y = (rect.top + rect.height / 2) / window.innerHeight;
+
+      shootRealisticConfetti({ x, y });
+    }
 
     if (audioRef.current) {
       audioRef.current.currentTime = 0;
@@ -59,8 +66,9 @@ const audioRef = useRef<HTMLAudioElement | null>(null);
   return (
     <>
       <button
+        ref={buttonRef}
         className={`${styles.container} ${styles.btn}`}
-        onClick={() => handleSubmit()}
+        onClick={handleSubmit}
       >
         Surprise !
       </button>

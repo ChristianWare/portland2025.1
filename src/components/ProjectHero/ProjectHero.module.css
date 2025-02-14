@@ -1,13 +1,16 @@
 .container {
   position: relative;
   width: 100%;
-  min-height: 75vh;
+  min-height: 100vh;
   overflow: hidden;
   background: linear-gradient(
     135deg,
     rgba(252, 210, 205, 1) 15%,
     rgba(189, 183, 213, 1) 65%
   );
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container::after {
@@ -23,8 +26,8 @@
 }
 
 .content {
-  padding-top: 10rem;
-  padding-bottom: 18rem;
+  /* padding-top: 10rem; */
+  /* padding-bottom: 18rem; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,7 +87,7 @@
   position: absolute;
   top: 0%;
   left: 50%;
-  transform: translate(-50%, -32%);
+  transform: translate(-50%, -50%);
   width: 100vw;
   height: 100vh;
   z-index: -1;

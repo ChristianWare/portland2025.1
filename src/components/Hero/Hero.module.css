@@ -4,19 +4,12 @@
     rgba(252, 210, 205, 1) 15%,
     rgba(189, 183, 213, 1) 65%
   );
+  height: 100vh;
 }
 
-.container {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-  /* padding-bottom: 25rem; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
+/* .container {
+  padding-top: 10rem;
+} */
 
 .container::after {
   position: absolute;
@@ -30,10 +23,19 @@
   background: url(../../../public/noise.gif);
 }
 
-.content {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 3rem;
+.container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  height: 100%;
 }
 
 .sectionHeadingContainer {
@@ -45,15 +47,7 @@
   margin-bottom: 1rem;
 }
 
-.heading2 {
-  font-family: var(--BoogyBrutPoster);
-  font-size: 6rem;
-  mix-blend-mode: overlay;
-  margin-left: 1rem;
-}
-
-.copy,
-.span {
+.copy {
   max-width: 640px;
   line-height: 1.4em;
   font-size: 2rem;
@@ -75,38 +69,10 @@
 }
 
 .right {
-  position: relative;
-  height: 500px;
-  order: -1
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.content {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 0rem;
-  }
-
-  .right {
-    order: -1
-  }
-
-  .left,
-  .sectionHeadingContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .heading,
-  .copy {
-    width: 100%;
-    text-align: center;
-  }
-
-  .sceneContianer {
-    margin-top: -1rem;
-  }
 
 .drag {
   text-align: center;
@@ -120,8 +86,7 @@
 .sceneContianer {
   cursor: grab;
   pointer-events: auto;
-      margin-top: -1rem;
-
+  margin-top: -1rem;
 }
 
 .sceneContianer:active {
@@ -135,11 +100,15 @@
 @media screen and (max-width: 1068px) {
   .content {
     grid-template-columns: repeat(1, 1fr);
-    gap: 0rem;
+    gap: 5rem;
+  }
+
+  .container {
+    align-items: center;
   }
 
   .right {
-    order: -1
+    order: -1;
   }
 
   .left,
@@ -172,9 +141,5 @@
   .btnContainer {
     width: 100%;
     grid-template-columns: repeat(1, 1fr);
-  }
-
-  .right {
-    height: 400px;
   }
 }

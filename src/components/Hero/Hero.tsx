@@ -2,17 +2,11 @@
 
 import styles from "./Hero.module.css";
 import LayoutWrapper from "../LayoutWrapper";
-// import dynamic from "next/dynamic";
-import Scene from "../Scene/Scene";
-
 import SectionHeading from "../SectionHeading/SectionHeading";
 import SurpriseButton from "../SurpriseButton/SurpriseButton";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../animation/variants";
-
-// const Cog = dynamic(() => import("../Scenes/Cog/Cog"), {
-//   ssr: false,
-// });
+// import LogosAnimation from "../LogosAnimation/LogosAnimation";
 
 export default function Hero() {
   return (
@@ -35,27 +29,21 @@ export default function Hero() {
                 />
               </div>
               <h1 className={styles.heading}>
-                Web developer <br />
-                based in
-                <span className={styles.heading2}> Phoenix, Arizona</span>.
+                Hello World, <br />
+                My name is Chris
               </h1>
               <p className={styles.copy}>
-                Functional is a lightweight app for small teams to streamline
-                <span className={styles.span}> timesheets,</span> time off and
-                track
-                <span className={styles.span}> employee wellbeing,</span> all
-                inside the team chat.
+                I build immersive
+                <span className={styles.span}> immersive,</span> and
+                <span className={styles.span}> interactive</span> websites that
+                leave lasting impressions. Based in
+                <span className={styles.span}> Phoenix, AZ.</span>
               </p>
               <div className={styles.btnContainer}>
                 <SurpriseButton />
               </div>
             </div>
-            <div className={styles.right}>
-              <div className={styles.sceneContianer}>
-                <Scene useViewportScale={false} fixedScale={[3.5, 3.5, 3.5]} />
-              </div>
-              {/* <p className={styles.drag}> • drag •</p> */}
-            </div>{" "}
+            <div className={styles.right}>{/* <LogosAnimation /> */}</div>
           </div>
         </LayoutWrapper>
       </motion.section>

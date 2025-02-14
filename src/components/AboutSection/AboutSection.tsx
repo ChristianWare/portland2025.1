@@ -12,9 +12,8 @@ import styles from "./AboutSection.module.css";
 // Split your text into individual lines/phrases
 const aboutPhrases = [
   "I am skilled in both front-end and back-end development.",
-  "I have the ability to create comprehensive web applications",
-  "from start to finish. My tools of choice are",
-  "Next.js/React.",
+  "I have the ability to create comprehensive web applications.",
+  "From start to finish, my tools of choice are Next.js/React.",
 ];
 
 const AboutSection = () => {
@@ -24,11 +23,6 @@ const AboutSection = () => {
       <LayoutWrapper>
         <div className={styles.top}>
           <div className={styles.box}>
-            {/* <SectionHeading
-              title='Skillset'
-              color='white'
-              dotColor='whiteDot'
-            /> */}
             <div className={styles.headingContainer}>
               {aboutPhrases.map((phrase, index) => (
                 <AnimatedLine key={index}>{phrase}</AnimatedLine>
@@ -37,18 +31,11 @@ const AboutSection = () => {
           </div>
         </div>
         <div className={styles.content}></div>
-        {/* <div className={styles.processContainer}>
-          <Process />
-        </div> */}
-        {/* <div className={styles.btnContainer}>
-          <Button text='Learn More About Me' btnType='purple' href='/' />
-        </div> */}
       </LayoutWrapper>
     </section>
   );
 };
 
-// Animated Line Component
 const AnimatedLine = ({ children }: { children: React.ReactNode }) => {
   const lineRef = useRef<HTMLDivElement>(null);
 

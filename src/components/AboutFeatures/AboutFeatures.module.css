@@ -22,7 +22,7 @@
 }
 
 .copy {
-  width: 40%;
+  /* width: 40%; */
   color: var(--grayText);
   margin-bottom: 3rem;
 }
@@ -127,23 +127,7 @@
   object-fit: contain;
 }
 
-@media screen and (max-width: 968px) {
-  .top {
-    align-items: center;
-    justify-content: center;
-  }
-
-  .heading,
-  .copy {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
-
-  .copy {
-    width: 80%;
-  }
-
+@media screen and (max-width: 1568px) {
   .dataContainer {
     grid-template-columns: repeat(3, 1fr);
   }

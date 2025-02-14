@@ -4,11 +4,10 @@ import styles from "./ProjectsSection.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import Chuxly from "../../../public/images/chuxly.jpg";
-import FNF from "../../../public/images/posthero.png";
+// import FNF from "../../../public/images/posthero.png";
 import Honey from "../../../public/images/honey.png";
 import Nier from "../../../public/images/nier.png";
 import Taco from "../../../public/images/taco.webp";
-// import ProjectCard from "../ProjectCard/ProjectCard";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../animation/variants";
 import Link from "next/link";
@@ -26,17 +25,17 @@ const data = [
     description:
       "Chuxly is an e-commerce website offering wireless, portable, and home theater speakers, along with headphones, components, and accessories.",
   },
-  {
-    id: 2,
-    name: "Fonts & Footers",
-    year: 2024,
-    framework: "Next.js",
-    src: FNF,
-    link: "https://www.fontsandfooters.com/",
-    github: "https://github.com/ChristianWare/fnfii.15",
-    description:
-      "Fonts & Footers is a web development agency specializing in creating fully functional e-commerce websites for small business owners, tailored to meet their unique needs.",
-  },
+  // {
+  //   id: 2,
+  //   name: "Fonts & Footers",
+  //   year: 2024,
+  //   framework: "Next.js",
+  //   src: FNF,
+  //   link: "https://www.fontsandfooters.com/",
+  //   github: "https://github.com/ChristianWare/fnfii.15",
+  //   description:
+  //     "Fonts & Footers is a web development agency specializing in creating fully functional e-commerce websites for small business owners, tailored to meet their unique needs.",
+  // },
   {
     id: 3,
     name: "Golden Drips",
@@ -81,24 +80,11 @@ export default function ProjectsSection() {
             <SectionHeading title='My Work' color='black' dotColor='blackDot' />
           </div>
           <h2 className={styles.heading}>
-            {" "}
-            <span>Featured</span>
-            Projects
+            Featured <span>projects</span>
           </h2>
         </div>
         <div className={styles.bottom}>
           {data.map((project, index) => (
-            // <motion.div
-
-            //   key={index}
-            // >
-            //   <ProjectCard
-            //     src={project.src}
-            //     name={project.name}
-            //     description={project.description}
-            //     link={project.link}
-            //   />
-            // </motion.div>
             <motion.div
               variants={fadeIn(index % 2 !== 0 ? "up" : "left", 0.3)}
               initial='hidden'
@@ -135,13 +121,6 @@ export default function ProjectsSection() {
                 </div>
                 <div className={styles.link2}>Github Code</div>
               </div>
-              {/* <div className={styles.btnContainer}>
-          <Button
-            text='More Details'
-            btnType='primary'
-            href={`/projects/${project.slug}`}
-          />
-        </div> */}
             </motion.div>
           ))}
         </div>

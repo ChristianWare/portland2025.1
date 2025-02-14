@@ -4,6 +4,7 @@ import SectionHeading from "../SectionHeading/SectionHeading";
 import FinalCTA from "../FinalCTA/FinalCTA";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../animation/variants";
+import ContactForm from "../ContactForm/ContactForm";
 
 export default function ContactHero() {
   return (
@@ -20,21 +21,22 @@ export default function ContactHero() {
             <div className={styles.content}>
               <SectionHeading
                 title='Contact'
-                color='black'
-                dotColor='blackDot'
+                color='white'
+                dotColor='whiteDot'
               />
               <h2 className={styles.heading}>
-                <span className={styles.heading2}>Let&apos;s Kick Off</span>
+                Let&apos;s start a <br />
+                <span className={styles.heading2}> conversation</span>
                 <br />
-                a conversation <br />
               </h2>
-              <p className={styles.copy}>
+              {/* <p className={styles.copy}>
                 My portfolio demonstrates a broad range of my abilities. Each of
                 my projects are thoughtfully crafted to combine{" "}
                 <span className={styles.span}> innovative </span>
                 design with <span className={styles.span}> seamless </span>{" "}
                 functionality.
-              </p>
+              </p> */}
+              <ContactForm />
               <div className={styles.footerContainer}>
                 <FinalCTA />
               </div>

@@ -64,7 +64,7 @@ h1 {
 
 h2 {
   font-size: 4.8rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1;
 }
 
@@ -80,13 +80,13 @@ h4 {
 
 h5 {
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.04em;
 }
 
 h6 {
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.04em;
 }
 

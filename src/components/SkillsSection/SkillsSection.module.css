@@ -6,8 +6,13 @@
   padding: 15rem 0rem;
 }
 
-.sectionHeadingContainer {
-  padding: 2rem;
+.top {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .parent {
@@ -17,6 +22,17 @@
   display: flex;
   flex-direction: column;
   gap: 7rem;
+}
+
+.heading {
+  text-align: center;
+  color: var(--blue);
+}
+
+.heading span {
+  font-family: var(--BoogyBrutPoster);
+  color: var(--blue);
+  font-size: 6rem;
 }
 
 .content {

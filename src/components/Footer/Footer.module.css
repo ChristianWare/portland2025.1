@@ -11,7 +11,7 @@
 
 .top {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
   margin-bottom: 2rem;
 }
@@ -122,8 +122,11 @@
 }
 
 @media screen and (max-width: 1568px) {
-  .top {
-    grid-template-columns: repeat(2, 1fr);
+  .top, .contactInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .brandInfo {
@@ -135,6 +138,7 @@
     padding: 3rem;
     border-radius: 5px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-right: auto;
@@ -149,16 +153,10 @@
   .heading,
   .copy {
     width: 100%;
+    text-align: center;
   }
 
   .socials {
     justify-content: center;
-  }
-}
-
-@media screen and (max-width: 568px) {
-  .top {
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 5rem;
   }
 }

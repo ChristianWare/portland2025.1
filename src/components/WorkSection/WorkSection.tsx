@@ -2,7 +2,6 @@
 
 import styles from "./WorkSection.module.css";
 import Button from "../Button/Button";
-import SectionHeading2 from "../SectionHeading2/SectionHeading2";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../animation/variants";
 
@@ -33,8 +32,6 @@ const WorkSection = () => {
 
   return (
     <section className={styles.container} id='resume'>
-      <SectionHeading2 title='Work History' />
-
       <div className={styles.content}>
         <div className={styles.top}>
           <span className={styles.sectionTitle}>Relevant Experience</span>

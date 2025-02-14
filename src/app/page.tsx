@@ -12,6 +12,7 @@ import ProjectsSection from "@/components/ProjectsSection/ProjectsSection";
 import Tools from "@/components/Tools/Tools";
 import ContactHero from "@/components/ContactHero/ContactHero";
 import ClosingComments from "@/components/ClosingComments/ClosingComments";
+import AboutFeatures from "@/components/AboutFeatures/AboutFeatures";
 
 export default function Home() {
   return (
@@ -25,8 +26,9 @@ export default function Home() {
           <AboutSection />
           <SkillsSection />
           <AboutHero />
-          <Process />
           <ProjectsSection />
+          <Process />
+          <AboutFeatures />
           <Tools />
           <ClosingComments />
           <ContactHero />

@@ -130,7 +130,7 @@
   border: 1px solid var(--blue);
 }
 
-@media screen and (max-width: 1068px) {
+@media screen and (max-width: 1768px) {
   .bottom {
     grid-template-columns: repeat(1, 1fr);
   }

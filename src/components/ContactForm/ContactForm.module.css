@@ -1,5 +1,6 @@
-.container {
-  position: relative;
+.content {
+  margin-top: 3rem;
+  margin-bottom: 15rem;
 }
 
 .bottom {
@@ -25,9 +26,9 @@
 
 .headingii {
   font-size: 3rem;
-  font-weight: 500;
+  text-align: center;
   margin-bottom: 2rem;
-  font-family: var(--barlowCondensed);
+  color: var(--white);
 }
 
 .copy {
@@ -76,7 +77,6 @@
 .labelInputBox label {
   font-size: 1.2rem;
   text-transform: uppercase;
-  font-family: var(--GTAmericaMonoRegular);
   color: var(--blue);
   opacity: 0.8;
   padding-left: 0.3rem;
@@ -87,7 +87,7 @@
   height: 40px;
   width: 100%;
   border: none;
-  border-bottom: 1px solid var(--blueBorder);
+  border-bottom: 1px solid var(--white);
   background-color: var(--tan);
   color: var(--blue);
   padding: 1rem;

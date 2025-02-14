@@ -125,7 +125,7 @@ const ContactForm = () => {
             <div className={styles.btnContainer}>
               <Button
                 text={loading ? "Sending..." : "Submit"}
-                btnType='primary'
+                btnType='secondary'
                 href='/'
               />
             </div>

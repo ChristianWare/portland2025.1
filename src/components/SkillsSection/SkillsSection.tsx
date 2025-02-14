@@ -149,12 +149,19 @@ const SkillsSection = () => {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        <div className={styles.sectionHeadingContainer}>
-          <SectionHeading
-            title='Skills & Work History'
-            color='black'
-            dotColor='blackDot'
-          />
+        <div className={styles.top}>
+          <div className={styles.sectionHeadingContainer}>
+            <SectionHeading
+              title='What I can do'
+              color='black'
+              dotColor='blackDot'
+            />
+          </div>
+          <h2 className={styles.heading}>
+            Skills & 
+            <br />
+            <span>work history</span>
+          </h2>
         </div>
         <div className={styles.parent}>
           <div className={styles.content}>

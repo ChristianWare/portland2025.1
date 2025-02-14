@@ -6,7 +6,6 @@ const FinalCTA = () => {
   return (
     <section className={styles.container}>
       <div className={styles.content}>
-       
         <div className={styles.contactContainer}>
           <div className={styles.secondBox}>
             <SectionHeading title='Contact' color='white' dotColor='whiteDot' />

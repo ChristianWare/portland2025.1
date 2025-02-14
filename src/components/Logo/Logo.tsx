@@ -8,7 +8,7 @@ interface Props {
 const Logo = ({ size = "" }: Props) => {
   return (
     <Link href='/' className={`${styles.logo} ${styles[size]}`}>
-      <span> ¯\_(ツ)_/¯</span> Chris Ware
+      ¯\_(ツ)_/¯ Chris Ware
     </Link>
   );
 };

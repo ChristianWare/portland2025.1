@@ -3,10 +3,8 @@
 import styles from "./Hero.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
-// import SurpriseButton from "../SurpriseButton/SurpriseButton";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../animation/variants";
-// import LogosAnimation from "../LogosAnimation/LogosAnimation";
 
 export default function Hero() {
   return (

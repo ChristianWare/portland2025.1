@@ -7,7 +7,6 @@ interface Props {
   heading: string;
   heading2: string;
   copy: string;
-  direction?: string;
 }
 
 export default function SectionHero({
@@ -15,23 +14,22 @@ export default function SectionHero({
   heading,
   heading2,
   copy,
-  direction = "",
 }: Props) {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
-        <div className={`${styles.content} ${styles[direction]}`}>
+        <div className={styles.content}>
           <SectionHeading
             title={sectionHeaing}
             color='white'
             dotColor='whiteDot'
           />
-          <h1 className={`${styles.heading} ${styles[direction]}`}>
+          <h1 className={styles.heading}>
             {heading}
             <br />
             <span className={styles.heading2}>{heading2}</span>
           </h1>
-          <p className={`${styles.copy} ${styles[direction]}`}>{copy}</p>
+          <p className={styles.copy}>{copy}</p>
         </div>
       </LayoutWrapper>
     </section>

@@ -1,10 +1,8 @@
-"use client";
-
-import styles from "./ProjectHero.module.css";
 import LayoutWrapper from "../LayoutWrapper";
-import Torrus from "../Scenes/Torrus/Torrus";
+import styles from "./ProjectSection3d.module.css";
+import Cog from "../Scenes/Cog/Cog";
 
-export default function ProjectHero() {
+export default function ProjectSection3d() {
   return (
     <section className={styles.container}>
       <section className={styles.container}>
@@ -12,7 +10,7 @@ export default function ProjectHero() {
           <div className={styles.content}>
             <div className={styles.box}>
               <div className={styles.sceneContainer}>
-                <Torrus useViewportScale={false} fixedScale={[2.5, 2.5, 2.5]} />
+                <Cog useViewportScale={false} fixedScale={[1.5, 1.5, 1.5]} />
               </div>
             </div>
           </div>

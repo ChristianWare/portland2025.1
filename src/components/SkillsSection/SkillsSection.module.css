@@ -1,6 +1,8 @@
 .container {
   background-color: var(--white);
-  padding-bottom: 15rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .sectionHeadingContainer {
@@ -143,12 +145,9 @@
 }
 
 @media screen and (max-width: 1068px) {
-
   .list {
     grid-template-columns: repeat(3, 1fr);
   }
-
-  
 }
 
 @media screen and (max-width: 768px) {

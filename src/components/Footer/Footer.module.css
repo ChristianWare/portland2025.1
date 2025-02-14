@@ -121,7 +121,7 @@
   font-size: 1.2rem;
 }
 
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 1568px) {
   .top {
     grid-template-columns: repeat(2, 1fr);
   }

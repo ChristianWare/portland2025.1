@@ -1,6 +1,6 @@
 .container {
   background-color: var(--blue);
-  /* height: 100vh; */
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,13 +39,7 @@
   color: var(--pink);
 }
 
-.directionLeft {
-  align-items: flex-start;
-  justify-content: flex-start;
-  text-align: left;
-  margin-left: 0;
-  margin-right: auto;
-}
+
 
 @media screen and (max-width: 1068px) {
   .copy {
@@ -65,5 +59,4 @@
   .copy {
     width: 100%;
   }
-
 }

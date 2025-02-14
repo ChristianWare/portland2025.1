@@ -22,7 +22,7 @@
 .bottom {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2rem;
+  grid-gap: 1rem;
   overflow: hidden;
 }
 
@@ -146,11 +146,7 @@
   color: var(--white);
 }
 
-@media screen and (max-width: 1068px) {
-  .container {
-    padding: 0rem 7rem;
-  }
-
+@media screen and (max-width: 1368px) {
   .heading,
   .copy {
     text-align: center;
@@ -160,9 +156,9 @@
     margin-top: 1rem;
   }
 
-  .bottom {
+  /* .bottom {
     grid-template-columns: repeat(1, 1fr);
-  }
+  } */
 
   .bottomLeft {
     height: 350px;

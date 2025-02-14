@@ -9,7 +9,6 @@ export default function AboutMeSection() {
     <section className={styles.container}>
       <div className={styles.left}>
         <SectionHero
-          direction='directionLeft'
           sectionHeaing='About Me'
           heading="I'm a web developer based in"
           heading2='Phoenix, AZ'

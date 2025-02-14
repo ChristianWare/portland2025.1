@@ -13,7 +13,6 @@
 
 .heading {
   text-align: center;
-  width: 50%;
 }
 
 .heading {
@@ -34,9 +33,9 @@
   display: grid;
   grid-gap: 2rem;
   grid-template-areas:
-    "one one two two"
-    "one one three four";
-  grid-template-columns: repeat(4, 1fr);
+    "one two"
+    "three four";
+  grid-template-columns: repeat(2, 1fr);
   padding-bottom: 1rem;
   width: 100%;
   margin: 0 auto;
@@ -153,7 +152,7 @@
   margin-top: 20rem;
 }
 
-@media screen and (max-width: 1068px) {
+@media screen and (max-width: 1468px) {
   .bottom {
     grid-template-areas:
       "one one"

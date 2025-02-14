@@ -6,14 +6,7 @@ const FinalCTA = () => {
   return (
     <section className={styles.container}>
       <div className={styles.content}>
-        {/* <div className={styles.sectionheadingContainer}>
-          <SectionHeading title='Contact' color='white' dotColor='whiteDot' />
-        </div> */}
-        {/* <h2 className={styles.heading}>
-            Thank you for taking the time to review my portfolio website. I look
-            forward to speaking with you soon. Feel free to reach out to me with
-            any questions you have.
-          </h2> */}
+       
         <div className={styles.contactContainer}>
           <div className={styles.secondBox}>
             <SectionHeading title='Contact' color='white' dotColor='whiteDot' />

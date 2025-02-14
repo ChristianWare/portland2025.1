@@ -37,7 +37,6 @@ export default function ContactHero() {
                 design with <span className={styles.span}> seamless </span>{" "}
                 functionality.
               </p>
-              <span className={styles.drag}></span>
               <div className={styles.footerContainer}>
                 <FinalCTA />
               </div>

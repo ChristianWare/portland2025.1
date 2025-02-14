@@ -1,12 +1,17 @@
+
 .container {
   position: relative;
   width: 100%;
+  min-height: 100vh;
   overflow: hidden;
   background: linear-gradient(
     135deg,
     rgba(252, 210, 205, 1) 15%,
     rgba(189, 183, 213, 1) 65%
   );
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container::after {
@@ -16,13 +21,12 @@
   width: 100%;
   height: 100%;
   content: "";
-  opacity: 0.02;
+  opacity: 0.03;
   pointer-events: none;
   background: url(../../../public/noise.gif);
 }
 
 .content {
-  padding-top: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,42 +34,6 @@
   gap: 1rem;
   position: relative;
   z-index: 998;
-}
-
-.heading {
-  text-align: center;
-}
-
-.heading2 {
-  font-family: var(--BoogyBrutPoster);
-  font-size: 6rem;
-  
-}
-
-.copy,
-.span {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.4em;
-  font-size: 2rem;
-}
-
-.span {
-  font-weight: 800;
-  margin-left: 0.3rem;
-}
-
-.copy {
-  margin-bottom: 3rem;
-}
-
-.btnContainer {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2rem;
-  width: 50%;
-  margin-top: 1rem;
 }
 
 .box {
@@ -76,25 +44,12 @@
   position: absolute;
   top: 0%;
   left: 50%;
-  transform: translate(-50%, -42%);
+  transform: translate(-50%, -50%);
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  /* animation: rotateClockwise 5s linear infinite; */
 }
 
-.footerContainer {
-  z-index: 998;
-}
-
-@keyframes rotateClockwise {
-  from {
-    transform: translate(-50%, -35%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -35%) rotate(360deg);
-  }
-}
 
 @media screen and (max-width: 968px) {
   .copy,

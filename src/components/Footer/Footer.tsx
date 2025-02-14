@@ -55,7 +55,7 @@ const Footer = () => {
         <div className={styles.top}>
           <div className={styles.brandInfo}>
             <div className={styles.logoBox}>
-              <Logo size='large' iconSize='iconLarge' />
+              <Logo  />
               <p className={styles.copy}>
                 Highly skilled web developer with extensive experience in
                 building scalable, high-quality user interfaces using Next.js,

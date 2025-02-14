@@ -1,5 +1,8 @@
 .container {
   background-color: var(--purple2);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .top {

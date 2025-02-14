@@ -1,5 +1,8 @@
 .container {
   background-color: var(--purple2);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .top {
@@ -9,7 +12,6 @@
   margin-top: 10rem;
 }
 
-
 .heading {
   position: relative;
 }
@@ -17,7 +19,7 @@
 .headingContainer {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 4rem;
   margin-top: 2rem;
   overflow: hidden;
 }
@@ -28,11 +30,11 @@
   margin: 0;
   padding: 0;
   color: var(--white);
-  
+
   font-size: 2.5vw;
   font-weight: 500;
   line-height: 1.2em;
-  text-align: center;
+  /* text-align: center; */
 }
 
 @keyframes float {
@@ -257,7 +259,7 @@
   .headingContainer {
     gap: 4rem;
   }
-  
+
   .animatedLine {
     font-size: 3rem;
   }

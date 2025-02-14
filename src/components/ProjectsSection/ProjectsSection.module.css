@@ -156,10 +156,6 @@
     margin-top: 1rem;
   }
 
-  /* .bottom {
-    grid-template-columns: repeat(1, 1fr);
-  } */
-
   .bottomLeft {
     height: 350px;
   }
@@ -191,6 +187,11 @@
 
   .top {
     margin-bottom: 2rem;
+  }
+
+  .bottom {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3rem;
   }
 
   .bottomLeft {

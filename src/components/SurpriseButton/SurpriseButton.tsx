@@ -4,7 +4,11 @@ import { useRef } from "react";
 import styles from "./SurpriseButton.module.css";
 import confetti from "canvas-confetti";
 
-export default function SurpriseButton() {
+interface Props {
+  text: string;
+}
+
+export default function SurpriseButton({ text }: Props) {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -70,7 +74,7 @@ export default function SurpriseButton() {
         className={`${styles.container} ${styles.btn}`}
         onClick={handleSubmit}
       >
-        Surprise !
+        {text}
       </button>
       <audio ref={audioRef} src='/sounds/cash.mp3' />
     </>

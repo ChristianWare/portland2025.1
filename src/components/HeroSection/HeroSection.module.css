@@ -16,6 +16,8 @@
   }
 
   .left {
-    position: static;
+    display: none;
   }
+
+
 }

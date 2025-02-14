@@ -20,7 +20,7 @@ export default function HeroDetails() {
           functionality.
         </p>
         <div className={styles.btnContainer}>
-          <SurpriseButton />
+          <SurpriseButton text='Surprise!' />
         </div>
       </div>
     </section>

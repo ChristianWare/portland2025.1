@@ -1,6 +1,7 @@
+import styles from "./HeroSection.module.css";
+import AboutSection from "../AboutSection/AboutSection";
 import HeroDetails from "../HeroDetails/HeroDetails";
 import ProjectHero from "../ProjectHero/ProjectHero";
-import styles from "./HeroSection.module.css";
 
 export default function HeroSection() {
   return (
@@ -10,6 +11,7 @@ export default function HeroSection() {
       </div>
       <div className={styles.right}>
         <HeroDetails />
+        <AboutSection />
       </div>
     </section>
   );

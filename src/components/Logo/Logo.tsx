@@ -5,14 +5,10 @@ interface Props {
   size?: string;
 }
 
-const Logo = ({ size = "", }: Props) => {
+const Logo = ({ size = "" }: Props) => {
   return (
     <Link href='/' className={`${styles.logo} ${styles[size]}`}>
-      <span>
-        {" "}
-        <p>¯\_(ツ)_/¯</p>
-      </span>{" "}
-      {/* Chris Ware */}
+      <span> ¯\_(ツ)_/¯</span> Chris Ware
     </Link>
   );
 };

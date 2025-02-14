@@ -18,8 +18,8 @@ const aboutPhrases = [
 
 const AboutSection = () => {
   return (
-    <section className={styles.container}>
-      <div className={styles.sectionScroll} id='about'></div>
+    <section className={styles.container} id='about'>
+      <div className={styles.sectionScroll}></div>
       <LayoutWrapper>
         <div className={styles.top}>
           <div className={styles.box}>

@@ -45,6 +45,18 @@
   margin-top: 1rem;
 }
 
+@media screen and (max-width: 1068px) {
+  .copy {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .copy {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 568px) {
   .btnContainer {
     width: 100%;

@@ -45,7 +45,34 @@
   margin-top: 1rem;
 }
 
+.box {
+  position: relative;
+}
+
+.sceneContainer {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
 @media screen and (max-width: 1068px) {
+  .content {
+    padding-top: 15rem;
+  }
+  
+  .sceneContainer {
+    display: block;
+  }
+
+  .heading {
+      mix-blend-mode:luminosity;
+
+  }
+
   .copy {
     width: 70%;
   }

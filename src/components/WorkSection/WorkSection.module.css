@@ -73,7 +73,7 @@
   border-bottom: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1568px) {
   .top,
   .bottom {
     grid-template-columns: repeat(1, 1fr);
@@ -99,6 +99,17 @@
     margin-bottom: 5rem;
   }
 }
+
+@media screen and (max-width: 1068px) {
+  .bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .right{
+    border-top: 1px solid var(--lightGray2);
+  } 
+}
+
 
 @media screen and (max-width: 568px) {
   .heading::after {

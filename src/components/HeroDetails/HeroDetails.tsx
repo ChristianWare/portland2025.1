@@ -1,11 +1,18 @@
 import SectionHeading from "../SectionHeading/SectionHeading";
 import SurpriseButton from "../SurpriseButton/SurpriseButton";
 import styles from "./HeroDetails.module.css";
+import Cog from "../Scenes/Cog/Cog";
+
 
 export default function HeroDetails() {
   return (
     <section className={styles.container}>
       <div className={styles.content}>
+        <div className={styles.box}>
+          <div className={styles.sceneContainer}>
+            <Cog useViewportScale={false} fixedScale={[1.5, 1.5, 1.5]} />
+          </div>
+        </div>
         <SectionHeading title='portfolio' color='white' dotColor='whiteDot' />
         <h1 className={styles.heading}>
           Hello World

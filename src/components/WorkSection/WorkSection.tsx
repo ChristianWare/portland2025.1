@@ -33,7 +33,6 @@ const WorkSection = () => {
 
   return (
     <section className={styles.container} id='resume'>
-      {/* <h2 className={styles.heading}>Work History</h2> */}
       <SectionHeading2 title='Work History' />
 
       <div className={styles.content}>

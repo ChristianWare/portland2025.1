@@ -77,9 +77,10 @@
 .labelInputBox label {
   font-size: 1.2rem;
   text-transform: uppercase;
-  color: var(--blue);
+  color: var(--pink);
+  font-weight: 600;
   opacity: 0.8;
-  padding-left: 0.3rem;
+  margin-bottom: .5rem;
 }
 
 .labelInputBox input,
@@ -87,8 +88,9 @@
   height: 40px;
   width: 100%;
   border: none;
-  border-bottom: 1px solid var(--white);
-  background-color: var(--tan);
+  border: 1px solid var(--white);
+  border-radius: 7px;
+  background-color: transparent;
   color: var(--blue);
   padding: 1rem;
   width: 100%;
@@ -152,18 +154,6 @@
 }
 
 @media screen and (max-width: 568px) {
-  .container::after {
-    width: 100px;
-    height: 100px;
-    background-color: var(--accent2);
-    z-index: -1;
-  }
-
-  .container::before {
-    width: 100px;
-    height: 100px;
-    background-color: var(--accent1);
-  }
 
   .namesContainer {
     flex-direction: column;

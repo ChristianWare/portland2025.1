@@ -13,7 +13,7 @@ export default function AboutHero() {
           variants={fadeIn("", 0.3)}
           initial='hidden'
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className={styles.parent}
         >
           <div className={styles.content}>
@@ -24,7 +24,6 @@ export default function AboutHero() {
                   color='white'
                   dotColor='whiteDot'
                 />
-               
               </div>
               <div className={styles.copyContainer}>
                 <div></div>

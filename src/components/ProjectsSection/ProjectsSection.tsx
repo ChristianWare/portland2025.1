@@ -1,10 +1,9 @@
-// "use client";
+"use client";
 
 import styles from "./ProjectsSection.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import Chuxly from "../../../public/images/chuxly.jpg";
-// import FNF from "../../../public/images/posthero.png";
 import Honey from "../../../public/images/honey.png";
 import Nier from "../../../public/images/nier.png";
 import Taco from "../../../public/images/taco.webp";
@@ -12,6 +11,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../../../animation/variants";
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 const data = [
   {
@@ -25,17 +25,6 @@ const data = [
     description:
       "Chuxly is an e-commerce website offering wireless, portable, and home theater speakers, along with headphones, components, and accessories.",
   },
-  // {
-  //   id: 2,
-  //   name: "Fonts & Footers",
-  //   year: 2024,
-  //   framework: "Next.js",
-  //   src: FNF,
-  //   link: "https://www.fontsandfooters.com/",
-  //   github: "https://github.com/ChristianWare/fnfii.15",
-  //   description:
-  //     "Fonts & Footers is a web development agency specializing in creating fully functional e-commerce websites for small business owners, tailored to meet their unique needs.",
-  // },
   {
     id: 3,
     name: "Golden Drips",
@@ -72,6 +61,41 @@ const data = [
 ];
 
 export default function ProjectsSection() {
+  const rotationAngle = useRef(0);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const delta = currentScrollY - lastScrollY.current;
+      lastScrollY.current = currentScrollY;
+
+      rotationAngle.current += delta * 0.15;
+
+      const imgContainers = document.querySelectorAll(
+        `.${styles.imgContainer}`
+      );
+      imgContainers.forEach((container) => {
+        (container as HTMLElement).style.transform =
+          `rotate(${rotationAngle.current}deg)`;
+      });
+    };
+
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <section className={styles.container} id='projects'>
       <LayoutWrapper>
@@ -89,7 +113,7 @@ export default function ProjectsSection() {
               variants={fadeIn(index % 2 !== 0 ? "up" : "left", 0.3)}
               initial='hidden'
               whileInView={"show"}
-              viewport={{ once: false, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.3 }}
               key={index}
               className={styles.cardContainer}
             >

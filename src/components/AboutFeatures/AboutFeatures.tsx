@@ -99,7 +99,7 @@ export default function AboutFeatures() {
         variants={fadeIn("", 0.3)}
         initial='hidden'
         whileInView={"show"}
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.3 }}
         className={styles.parent}
       >
         <LayoutWrapper>
@@ -124,10 +124,11 @@ export default function AboutFeatures() {
           <div className={styles.dataContainer}>
             {data.map((x, index) => (
               <motion.div
-                variants={fadeIn(index % 2 !== 0 ? "up" : "left", 0.3)}
+                // variants={fadeIn(index % 2 !== 0 ? "up" : "left", 0.3)}
+                variants={fadeIn("", 0.3)}
                 initial='hidden'
                 whileInView={"show"}
-                viewport={{ once: false, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.3 }}
                 key={index}
                 className={styles.content}
               >

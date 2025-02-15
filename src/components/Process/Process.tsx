@@ -68,7 +68,6 @@ const Process = () => {
               ))}
             </div>
           </div>
-          {/* <Offer /> */}
         </LayoutWrapper>
       </div>
     </section>

@@ -5,11 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./AboutSection.module.css";
-// import Button from "../Button/Button";
-// import Process from "../Process/Process";
-// import SectionHeading from "../SectionHeading/SectionHeading";
 
-// Split your text into individual lines/phrases
 const aboutPhrases = [
   "I am skilled in both front-end and back-end development.",
   "I have the ability to create comprehensive web applications.",

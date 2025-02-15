@@ -145,7 +145,9 @@ export default function Nav() {
                 </Link>
               </li>
             ))}
-            <Button text='Contact' btnType='primary' href='/' />
+            <div className={styles.btnContainer}>
+              <Button text='Contact' btnType='primary' href='/' />
+            </div>
           </ul>
         </div>
         <div

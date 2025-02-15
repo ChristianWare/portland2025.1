@@ -54,7 +54,7 @@ export default function Tools() {
               variants={fadeIn("", 0.3)}
               initial='hidden'
               whileInView={"show"}
-              viewport={{ once: false, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.3 }}
               className={styles.heading}
             >
               My preferred tools for building <br />
@@ -65,12 +65,13 @@ export default function Tools() {
             </p>
           </div>
           <div className={styles.bottom}>
-            {data.map((x, index) => (
+            {data.map((x) => (
               <motion.div
-                variants={fadeIn(index % 2 !== 0 ? "left" : "right", 0.3)}
+                // variants={fadeIn(index % 2 !== 0 ? "left" : "right", 0.3)}
+                variants={fadeIn("", 0.3)}
                 initial='hidden'
                 whileInView={"show"}
-                viewport={{ once: false, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.3 }}
                 key={x.id}
                 className={`${styles.card} ${styles[x.gridArea]}`}
               >

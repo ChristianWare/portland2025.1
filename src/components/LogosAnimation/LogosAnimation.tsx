@@ -148,7 +148,7 @@ export default function LogosAnimation() {
             variants={fadeIn("left", 0.3)}
             initial='hidden'
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             className={styles.right}
             onMouseEnter={() => handleHover(data[currentIconIndex].icon)}
             onMouseLeave={() => handleHover(null)}

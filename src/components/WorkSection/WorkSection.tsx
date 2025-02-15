@@ -59,9 +59,10 @@ const WorkSection = () => {
               {data.map((x, index) => (
                 <li key={index} className={styles.name}>
                   <motion.div
-                    variants={fadeIn("left", 0.3)}
+                    variants={fadeIn("", 0.3)}
                     initial='hidden'
                     whileInView={"show"}
+                    viewport={{ once: true, amount: 0.3 }}
                   >
                     {x.title} - {x.company}
                   </motion.div>

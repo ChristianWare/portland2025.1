@@ -158,7 +158,7 @@ const SkillsSection = () => {
             />
           </div>
           <h2 className={styles.heading}>
-            Skills & 
+            Skills &
             <br />
             <span>work history</span>
           </h2>
@@ -175,17 +175,18 @@ const SkillsSection = () => {
                     onMouseLeave={() => handleHover(null)}
                   >
                     <motion.div
-                      variants={fadeIn("right", 0.3)}
+                      variants={fadeIn("", 0.3)}
                       initial='hidden'
                       whileInView={"show"}
-                      viewport={{ once: false, amount: 0.3 }}
+                      viewport={{ once: true, amount: 0.3 }}
                     >
                       {item.icon2}
                     </motion.div>
                     <motion.div
-                      variants={fadeIn("right", 0.3)}
+                      variants={fadeIn("", 0.3)}
                       initial='hidden'
                       whileInView={"show"}
+                      viewport={{ once: true, amount: 0.3 }}
                     >
                       {item.name}
                     </motion.div>
@@ -194,10 +195,10 @@ const SkillsSection = () => {
               </ul>
             </div>
             <motion.div
-              variants={fadeIn("left", 0.3)}
+              variants={fadeIn("", 0.3)}
               initial='hidden'
               whileInView={"show"}
-              viewport={{ once: false, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.3 }}
               className={styles.right}
             >
               {isPaused && activeIcon

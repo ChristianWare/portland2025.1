@@ -92,6 +92,8 @@
   mask-size: auto 100%;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+    transition: box-shadow 0.2s ease-in; /* Isolate transition to only box-shadow */
+
 }
 
 .img {

@@ -1,12 +1,22 @@
+"use client";
+
 import SectionHeading from "../SectionHeading/SectionHeading";
 import SurpriseButton from "../SurpriseButton/SurpriseButton";
 import styles from "./HeroDetails.module.css";
 import Cog from "../Scenes/Cog/Cog";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../../animation/variants";
 
 export default function HeroDetails() {
   return (
     <section className={styles.container}>
-      <div className={styles.content}>
+      <motion.div
+        variants={fadeIn("", 0.3)}
+        initial='hidden'
+        whileInView={"show"}
+        viewport={{ once: true, amount: 0.3 }}
+        className={styles.content}
+      >
         <div className={styles.box}>
           <div className={styles.sceneContainer}>
             <Cog useViewportScale={false} fixedScale={[1.5, 1.5, 1.5]} />
@@ -25,7 +35,7 @@ export default function HeroDetails() {
         <div className={styles.btnContainer}>
           <SurpriseButton text='Surprise!' />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

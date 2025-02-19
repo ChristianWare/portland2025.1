@@ -1,8 +1,8 @@
 "use client";
 
+import styles from "./HeroDetails.module.css";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import SurpriseButton from "../SurpriseButton/SurpriseButton";
-import styles from "./HeroDetails.module.css";
 import Cog from "../Scenes/Cog/Cog";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../animation/variants";

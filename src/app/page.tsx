@@ -4,9 +4,9 @@ import styles from "./page.module.css";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import ProjectSection3d from "@/components/ProjectSection3d/ProjectSection3d";
 import HeroDetails from "@/components/HeroDetails/HeroDetails";
-import AboutSection from "@/components/AboutSection/AboutSection";
-import SkillsSection from "@/components/SkillsSection/SkillsSection";
-import AboutHero from "@/components/AboutHero/AboutHero";
+// import AboutSection from "@/components/AboutSection/AboutSection";
+// import SkillsSection from "@/components/SkillsSection/SkillsSection";
+// import AboutHero from "@/components/AboutHero/AboutHero";
 import Process from "@/components/Process/Process";
 import ProjectsSection from "@/components/ProjectsSection/ProjectsSection";
 import Tools from "@/components/Tools/Tools";
@@ -23,12 +23,12 @@ export default function Home() {
         </div>
         <div className={styles.right}>
           <HeroDetails />
-          <AboutSection />
-          <SkillsSection />
-          <AboutHero />
           <ProjectsSection />
-          <Process />
+          {/* <AboutSection /> */}
           <AboutFeatures />
+          {/* <SkillsSection /> */}
+          {/* <AboutHero /> */}
+          <Process />
           <Tools />
           <ClosingComments />
           <ContactHero />

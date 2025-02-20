@@ -30,7 +30,7 @@
 .dataContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2rem;
+  grid-gap: 1rem;
   /* margin-bottom: 20rem; */
 }
 
@@ -43,7 +43,7 @@
   padding: 2rem;
   border-radius: 10px;
   background-color: var(--blue);
-  position: relative;
+  /* position: relative; */
 }
 
 .content::after {
@@ -93,6 +93,14 @@
   font-size: 1.6rem;
 }
 
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
 .iconContainer {
   display: flex;
   align-items: center;
@@ -127,7 +135,7 @@
   object-fit: contain;
 }
 
-@media screen and (max-width: 1568px) {
+@media screen and (max-width: 1268px) {
   .dataContainer {
     grid-template-columns: repeat(3, 1fr);
   }

@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./AboutFeatures.module.css";
 import Analytics from "../../../public/icons/analytics.svg";
 import Git from "../../../public/icons/git.svg";
@@ -11,8 +13,9 @@ import WebDev from "../../../public/icons/webDev.svg";
 import WebDesign from "../../../public/icons/webDesign.svg";
 import LayoutWrapper from "../LayoutWrapper";
 import SectionHeading from "../SectionHeading/SectionHeading";
-import { motion } from "framer-motion";
-import { fadeIn } from "../../../animation/variants";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
 const data = [
   {
@@ -95,13 +98,7 @@ const data = [
 export default function AboutFeatures() {
   return (
     <section className={styles.container} id='features'>
-      <motion.div
-        variants={fadeIn("", 0.3)}
-        initial='hidden'
-        whileInView={"show"}
-        viewport={{ once: true, amount: 0.3 }}
-        className={styles.parent}
-      >
+      <div className={styles.parent}>
         <LayoutWrapper>
           <div className={styles.top}>
             <SectionHeading
@@ -121,29 +118,60 @@ export default function AboutFeatures() {
               experiences.
             </p>
           </div>
-          <div className={styles.dataContainer}>
-            {data.map((x, index) => (
-              <motion.div
-                // variants={fadeIn(index % 2 !== 0 ? "up" : "left", 0.3)}
-                variants={fadeIn("", 0.3)}
-                initial='hidden'
-                whileInView={"show"}
-                viewport={{ once: true, amount: 0.3 }}
-                key={index}
-                className={styles.content}
-              >
-                <div className={styles.left}>
-                  <div className={styles.iconContainer}>{x.icon}</div>
+          <AnimatedLine>
+            <div className={styles.dataContainer}>
+              {data.map((x, index) => (
+                <div key={index} className={styles.content}>
+                  <div className={styles.left}>
+                    <div className={styles.iconContainer}>{x.icon}</div>
+                  </div>
+                  <div className={styles.right}>
+                    <h3 className={styles.title}>{x.title}</h3>
+                  </div>
                 </div>
-                <div className={styles.right}>
-                  <h3 className={styles.title}>{x.title}</h3>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-          {/* <WorkSection /> */}
+              ))}
+            </div>
+          </AnimatedLine>
         </LayoutWrapper>
-      </motion.div>
+      </div>
     </section>
   );
 }
+
+const AnimatedLine = ({ children }: { children: React.ReactNode }) => {
+  const lineRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        lineRef.current,
+        {
+          opacity: 0,
+          left: "-200px",
+        },
+        {
+          opacity: 1,
+          left: "0",
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: lineRef.current,
+            scrub: true,
+            start: "top bottom-=100px",
+            end: "bottom center",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <h2 ref={lineRef} className={styles.animatedLine}>
+      {children}
+    </h2>
+  );
+};

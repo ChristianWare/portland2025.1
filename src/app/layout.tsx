@@ -41,6 +41,12 @@ const NaNHoloCondensedBold = localFont({
   display: "swap",
 });
 
+const SamsungSharpSansBd = localFont({
+  src: "../../public/fonts/SamsungSharpSansBd.woff2",
+  variable: "--SamsungSharpSansBd",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Christian Ware's Portfolio Website",
   description:
@@ -55,7 +61,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${InterTight.variable} ${BoogyBrutPoster.variable} ${HoloCondensedBold.variable} ${nbGroteskProMonoBold.variable} ${nbGrotesk85Schwer.variable} ${NaNHoloCondensedBold.variable}`}
+        className={`${InterTight.variable} ${BoogyBrutPoster.variable} ${HoloCondensedBold.variable} ${nbGroteskProMonoBold.variable} ${nbGrotesk85Schwer.variable} ${NaNHoloCondensedBold.variable} ${SamsungSharpSansBd.variable}`}
       >
         <Nav />
         {children}

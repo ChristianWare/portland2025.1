@@ -16,9 +16,19 @@
 }
 
 .heading {
-  color: var(--white);
+  color: #ffffff;       
   text-align: center;
+  font-size: 7rem;
+  transform: scale(1);   
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
 }
+
+.heading:hover {
+  transform: scale(1.4);
+  color: #ff87c1;
+}
+
 
 .heading2 {
   color: var(--white);
@@ -63,14 +73,13 @@
   .content {
     padding-top: 15rem;
   }
-  
+
   .sceneContainer {
     display: block;
   }
 
   .heading {
-      mix-blend-mode:luminosity;
-
+    mix-blend-mode: luminosity;
   }
 
   .copy {

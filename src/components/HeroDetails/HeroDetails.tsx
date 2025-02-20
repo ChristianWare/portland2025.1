@@ -4,30 +4,36 @@ import styles from "./HeroDetails.module.css";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import SurpriseButton from "../SurpriseButton/SurpriseButton";
 import Cog from "../Scenes/Cog/Cog";
-import { motion } from "framer-motion";
-import { fadeIn } from "../../../animation/variants";
+import TextCursorProximity from "../TextCursorProximity/TextCursorProximity";
+import { useRef } from "react";
 
 export default function HeroDetails() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
   return (
-    <section className={styles.container}>
-      <motion.div
-        variants={fadeIn("", 0.3)}
-        initial='hidden'
-        whileInView={"show"}
-        viewport={{ once: true, amount: 0.3 }}
-        className={styles.content}
-      >
+    <section className={styles.container} ref={containerRef}>
+      <div className={styles.content}>
         <div className={styles.box}>
           <div className={styles.sceneContainer}>
             <Cog useViewportScale={false} fixedScale={[1.5, 1.5, 1.5]} />
           </div>
         </div>
         <SectionHeading title='portfolio' color='white' dotColor='whiteDot' />
-        <h1 className={styles.heading}>
-          Hello World
-          <br />
-          <span className={styles.heading2}>My name is Christian</span>
-        </h1>
+        <TextCursorProximity
+          label='Hello World'
+          className={styles.heading}
+          styles={{
+            transform: {
+              from: "scale(1)",
+              to: "scale(1.4)",
+            },
+            color: { from: "#ffffff", to: "#ff87c1" },
+          }}
+          falloff='gaussian'
+          radius={100}
+          containerRef={containerRef}
+        />
+        <h1 className={styles.heading2}>My name is Christian</h1>
         <p className={styles.copy}>
           Phoenix, AZ based developer with a strong interest in ecommerce
           websites, UI design and full stack web applications.
@@ -35,7 +41,7 @@ export default function HeroDetails() {
         <div className={styles.btnContainer}>
           <SurpriseButton text='Surprise!' />
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }
